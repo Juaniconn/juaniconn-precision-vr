@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Check, ArrowRight } from "lucide-react";
+import { Check, ArrowRight, ExternalLink } from "lucide-react";
 
 export const Kits = () => {
   const kits = [
@@ -13,7 +13,8 @@ export const Kits = () => {
         "Batería +50 horas por tracker",
         "Peso: 16g por tracker"
       ],
-      featured: false
+      featured: false,
+      link: "https://buy.stripe.com/dRm00k1bneIteETdrT7g40f"
     },
     {
       name: "Kit 8 Trackers",
@@ -25,7 +26,8 @@ export const Kits = () => {
         "Batería +50 horas por tracker",
         "Peso: 16g por tracker"
       ],
-      featured: true
+      featured: true,
+      link: "https://buy.stripe.com/4gw3cwaLX6bXaoD87z7g40g"
     },
     {
       name: "Kit 10 Trackers",
@@ -37,12 +39,13 @@ export const Kits = () => {
         "Batería +50 horas por tracker",
         "Peso: 16g por tracker"
       ],
-      featured: false
+      featured: false,
+      link: "https://buy.stripe.com/bJeeVe7zLbwhcwL4Vn7g40h"
     }
   ];
   
   return (
-    <section className="py-24 bg-background">
+    <section id="kits" className="py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -87,14 +90,17 @@ export const Kits = () => {
               </div>
               
               <Button 
+                asChild
                 className={`w-full py-6 text-lg font-semibold transition-smooth group ${
                   kit.featured 
                     ? 'bg-primary hover:bg-primary-glow text-primary-foreground glow-effect' 
                     : 'bg-secondary hover:bg-primary text-foreground hover:text-primary-foreground'
                 }`}
               >
-                Comprar Ahora
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                <a href={kit.link} target="_blank" rel="noopener noreferrer">
+                  Comprar Ahora
+                  <ExternalLink className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                </a>
               </Button>
             </div>
           ))}
