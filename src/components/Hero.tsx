@@ -2,6 +2,13 @@ import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-tracker.jpg";
 import { ArrowRight } from "lucide-react";
 
+const scrollToSection = (id: string) => {
+  const element = document.getElementById(id);
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' });
+  }
+};
+
 export const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden gradient-hero">
@@ -38,6 +45,7 @@ export const Hero = () => {
               <Button 
                 size="lg" 
                 className="bg-primary hover:bg-primary-glow text-primary-foreground font-semibold px-8 py-6 text-lg glow-effect transition-smooth group"
+                onClick={() => scrollToSection('kits')}
               >
                 Comprar Ahora
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -47,6 +55,7 @@ export const Hero = () => {
                 size="lg" 
                 variant="outline"
                 className="border-border hover:bg-secondary text-foreground font-semibold px-8 py-6 text-lg transition-smooth"
+                onClick={() => scrollToSection('features')}
               >
                 Ver Características
               </Button>

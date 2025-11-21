@@ -1,6 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
+const scrollToSection = (id: string) => {
+  const element = document.getElementById(id);
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' });
+  }
+};
+
 export const FinalCTA = () => {
   return (
     <section className="py-32 bg-background relative overflow-hidden">
@@ -23,6 +30,7 @@ export const FinalCTA = () => {
             <Button 
               size="lg" 
               className="bg-primary hover:bg-primary-glow text-primary-foreground font-semibold px-12 py-8 text-xl glow-effect transition-smooth group"
+              onClick={() => scrollToSection('kits')}
             >
               Comprar Ahora
               <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform" />
