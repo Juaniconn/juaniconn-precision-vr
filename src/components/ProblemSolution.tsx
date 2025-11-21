@@ -2,8 +2,8 @@ import { AlertCircle, CheckCircle } from "lucide-react";
 
 export const ProblemSolution = () => {
   const problems = [
-    "Baja precisión en el tracking",
-    "Falta de compatibilidad con VRChat",
+    "Baja de precisión en el tracking (BNO085, BMI160)",
+    "Desconexión por conexión 2.4GHz inconsistente",
     "Latencia alta y tracking inconsistente",
     "Equipos costosos e incómodos"
   ];
