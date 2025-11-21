@@ -16,6 +16,18 @@ export const Kits = () => {
       featured: false
     },
     {
+      name: "Kit 8 Trackers",
+      description: "Balance perfecto entre precisión y comodidad",
+      items: [
+        "8 Trackers SlimeVR ICM-45686",
+        "1 Dongle Holyiot nRF52840",
+        "8 Straps elásticos premium",
+        "Batería +50 horas por tracker",
+        "Peso: 16g por tracker"
+      ],
+      featured: true
+    },
+    {
       name: "Kit 10 Trackers",
       description: "Tracking completo con máxima precisión",
       items: [
@@ -25,7 +37,7 @@ export const Kits = () => {
         "Batería +50 horas por tracker",
         "Peso: 16g por tracker"
       ],
-      featured: true
+      featured: false
     }
   ];
   
@@ -41,7 +53,7 @@ export const Kits = () => {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {kits.map((kit, index) => (
             <div 
               key={index}
