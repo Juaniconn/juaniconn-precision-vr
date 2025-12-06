@@ -2,68 +2,28 @@ import { Star } from "lucide-react";
 
 export const Testimonials = () => {
   const testimonials = [
-    {
-      name: "Carlos Mendoza",
-      country: "México",
-      avatar: "CM",
-      rating: 5,
-      text: "Los Juaniconn son increíbles. La batería realmente dura más de 50 horas y el tracking es súper preciso en VRChat. Mejor que otras opciones más caras."
-    },
-    {
-      name: "Sofía Ramírez",
-      country: "Argentina",
-      avatar: "SR",
-      rating: 5,
-      text: "Llevo meses usando el kit de 10 trackers y no puedo estar más feliz. Son livianos, cómodos y la latencia es imperceptible. 100% recomendados."
-    },
-    {
-      name: "Diego Torres",
-      country: "Colombia",
-      avatar: "DT",
-      rating: 5,
-      text: "El envío fue rápido y el soporte por Discord es excelente. Los trackers funcionan perfectos con SlimeVR y la calidad de construcción es premium."
-    }
+    { name: "Carlos Mendoza", country: "México", avatar: "CM", text: "Precisión increíble. Nunca tuve mejor tracking en VRChat." },
+    { name: "Sofía Ramírez", country: "Argentina", avatar: "SR", text: "El envío llegó rapidísimo y el soporte es excelente." },
+    { name: "Diego Torres", country: "Colombia", avatar: "DT", text: "Ligero, cómodo y estable. Súper recomendado." },
+    { name: "María García", country: "España", avatar: "MG", text: "La calidad de construcción es premium. Muy satisfecha." },
   ];
   
   return (
-    <section className="py-24 bg-card">
+    <section id="testimonials" className="section-padding bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Lo que Dicen <span className="text-gradient">Nuestros Usuarios</span>
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Experiencias reales de la comunidad VR en Latinoamérica
-          </p>
+          <span className="text-sm font-semibold text-primary tracking-widest uppercase mb-4 block">Testimonios</span>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display tracking-wide">LO QUE DICEN <span className="text-gradient">NUESTROS USUARIOS</span></h2>
         </div>
-        
-        <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
-          {testimonials.map((testimonial, index) => (
-            <div 
-              key={index}
-              className="p-8 bg-background rounded-xl border border-border hover:border-primary/50 transition-smooth animate-fade-in"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <div className="flex items-center gap-4 mb-6">
-                <div className="h-16 w-16 rounded-full bg-primary/20 flex items-center justify-center text-primary-glow font-bold text-xl">
-                  {testimonial.avatar}
-                </div>
-                
-                <div>
-                  <h4 className="font-bold text-lg">{testimonial.name}</h4>
-                  <p className="text-sm text-muted-foreground">{testimonial.country}</p>
-                </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+          {testimonials.map((t, index) => (
+            <div key={index} className="floating-card p-6 animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
+              <div className="flex items-center gap-4 mb-4">
+                <div className="h-14 w-14 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-lg">{t.avatar}</div>
+                <div><h4 className="font-semibold">{t.name}</h4><p className="text-sm text-muted-foreground">{t.country}</p></div>
               </div>
-              
-              <div className="flex gap-1 mb-4">
-                {Array.from({ length: testimonial.rating }).map((_, i) => (
-                  <Star key={i} className="h-5 w-5 fill-primary-glow text-primary-glow" />
-                ))}
-              </div>
-              
-              <p className="text-foreground/90 leading-relaxed">
-                "{testimonial.text}"
-              </p>
+              <div className="flex gap-1 mb-3">{[...Array(5)].map((_, i) => <Star key={i} className="h-4 w-4 fill-primary text-primary" />)}</div>
+              <p className="text-foreground/90 font-light italic">"{t.text}"</p>
             </div>
           ))}
         </div>
