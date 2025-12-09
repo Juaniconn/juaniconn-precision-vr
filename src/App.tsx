@@ -8,6 +8,7 @@ import Smols from "./pages/Smols";
 import Contacto from "./pages/Contacto";
 import PoliticaPrivacidad from "./pages/PoliticaPrivacidad";
 import PoliticaVenta from "./pages/PoliticaVenta";
+import Productos from "./pages/Productos";
 import Devoluciones from "./pages/Devoluciones";
 import NotFound from "./pages/NotFound";
 
@@ -22,6 +23,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/smols" element={<Smols />} />
+          <Route path="/productos" element={<Productos />} />
           <Route path="/contacto" element={<Contacto />} />
           <Route path="/politica-privacidad" element={<PoliticaPrivacidad />} />
           <Route path="/politica-venta" element={<PoliticaVenta />} />

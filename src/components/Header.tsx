@@ -24,6 +24,7 @@ export const Header = () => {
 
   const navItems = [
     { label: "Inicio", to: "/" },
+    { label: "Productos", to: "/productos" },
     { label: "Smols", to: "/smols" },
     { label: "Kits", action: () => scrollToSection('kits') },
     { label: "Características", action: () => scrollToSection('features') },
