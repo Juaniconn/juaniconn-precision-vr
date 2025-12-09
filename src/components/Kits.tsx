@@ -1,43 +1,49 @@
 import { Button } from "@/components/ui/button";
-import { Check, ArrowRight, ExternalLink, Star } from "lucide-react";
+import { Check, Star, ExternalLink, Sparkles } from "lucide-react";
 
 export const Kits = () => {
   const kits = [
     {
-      name: "Kit 6 Trackers",
+      name: "Starter Pack",
+      subtitle: "6 Trackers",
+      icon: "⭐",
       description: "Perfecto para comenzar con Full Body Tracking",
       items: [
-        "6 Trackers ICM-45686",
+        "6 Trackers Juaniconn ICM-45686",
         "1 Dongle Holyiot nRF52840",
         "6 Straps elásticas",
-        "Batería +50 hrs",
-        "Peso 16g cada uno"
+        "Peso 16g · +50h batería",
+        "Colores: Blanco, Negro, Rojo"
       ],
       featured: false,
       link: "https://buy.stripe.com/dRm00k1bneIteETdrT7g40f"
     },
     {
-      name: "Kit 8 Trackers",
-      description: "Balance perfecto entre precisión y comodidad",
+      name: "Advanced Pack",
+      subtitle: "8 Trackers",
+      icon: "🔥",
+      description: "Ideal para VRChat FBT completo",
       items: [
-        "8 Trackers ICM-45686",
+        "8 Trackers Juaniconn ICM-45686",
         "1 Dongle Holyiot nRF52840",
         "8 Straps elásticas",
-        "Batería +50 hrs",
-        "Peso 16g cada uno"
+        "Latencia 25–35 dBi",
+        "Colores: Blanco, Negro, Rojo"
       ],
       featured: true,
-      link: "https://buy.stripe.com/4gw3cwaLX6bXaoD87z7g40g"
+      link: "https://buy.stripe.com/4gM3cwaLX6bXaoD87z7g40g"
     },
     {
-      name: "Kit 10 Trackers",
-      description: "Tracking completo con máxima precisión",
+      name: "Pro Pack",
+      subtitle: "10 Trackers",
+      icon: "💎",
+      description: "Para creadores, bailarines y setups avanzados",
       items: [
-        "10 Trackers ICM-45686",
+        "10 Trackers Juaniconn ICM-45686",
         "1 Dongle Holyiot nRF52840",
         "10 Straps elásticas",
-        "Batería +50 hrs",
-        "Peso 16g cada uno"
+        "Máxima precisión",
+        "Colores: Blanco, Negro, Rojo"
       ],
       featured: false,
       link: "https://buy.stripe.com/bJeeVe7zLbwhcwL4Vn7g40h"
@@ -48,6 +54,8 @@ export const Kits = () => {
     <section id="kits" className="section-padding bg-background relative overflow-hidden">
       {/* Background effects */}
       <div className="absolute inset-0 gradient-spotlight opacity-30" />
+      <div className="bokeh-light w-72 h-72 bg-mint/20 top-20 right-[5%]" />
+      <div className="bokeh-light w-48 h-48 bg-pink/15 bottom-40 left-[10%]" style={{ animationDelay: '3s' }} />
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16 animate-fade-in">
@@ -55,10 +63,15 @@ export const Kits = () => {
             Nuestros Productos
           </span>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-display tracking-wide mb-6">
-            KITS <span className="text-gradient">DISPONIBLES</span>
+            JUANICONN <span className="text-gradient-rainbow">TRACKERS</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto font-light">
-            Elige el kit perfecto para tu experiencia de Full Body Tracking
+          <p className="text-xl text-foreground/80 font-medium mb-4">
+            ¿Listo para llevar tu cuerpo al juego?
+          </p>
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto font-light leading-relaxed">
+            Cada set incluye trackers ensamblados, straps elásticas y dongle NRF optimizado para baja latencia. 
+            Los Juaniconn Trackers usan sensores ICM-45686, batería de +50 horas y peso ultraligero de 16g. 
+            Compatibles con SlimeVR, VRChat y SteamVR.
           </p>
         </div>
         
@@ -66,16 +79,16 @@ export const Kits = () => {
           {kits.map((kit, index) => (
             <div 
               key={index}
-              className={`relative p-8 rounded-3xl border transition-smooth animate-fade-in ${
+              className={`relative premium-card p-8 transition-smooth animate-fade-in ${
                 kit.featured 
-                  ? 'bg-card border-primary glow-effect scale-[1.02]' 
-                  : 'bg-card border-border hover:border-primary/30'
+                  ? 'scale-[1.02] z-10' 
+                  : 'hover:scale-[1.01]'
               }`}
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {kit.featured && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                  <span className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground text-sm font-semibold rounded-full shadow-lg">
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-20">
+                  <span className="inline-flex items-center gap-2 px-5 py-2 btn-rainbow-solid text-sm font-bold rounded-full shadow-lg">
                     <Star className="h-4 w-4 fill-current" />
                     Más Popular
                   </span>
@@ -83,13 +96,15 @@ export const Kits = () => {
               )}
               
               <div className="text-center mb-8 pt-4">
-                <h3 className="text-3xl font-display tracking-wide mb-3">{kit.name.toUpperCase()}</h3>
-                <p className="text-muted-foreground font-light">{kit.description}</p>
+                <span className="text-4xl mb-3 block">{kit.icon}</span>
+                <h3 className="text-3xl font-display tracking-wide mb-1">{kit.name.toUpperCase()}</h3>
+                <p className="text-primary font-semibold text-lg">{kit.subtitle}</p>
+                <p className="text-muted-foreground font-light mt-2">{kit.description}</p>
               </div>
               
               <div className="space-y-3 mb-8">
                 {kit.items.map((item, i) => (
-                  <div key={i} className="flex items-center gap-3 p-3 bg-background/50 rounded-lg">
+                  <div key={i} className="flex items-center gap-3 p-3 bg-background/50 rounded-xl border border-border/30">
                     <div className="h-6 w-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
                       <Check className="h-3.5 w-3.5 text-primary" />
                     </div>
@@ -100,14 +115,14 @@ export const Kits = () => {
               
               <Button 
                 asChild
-                className={`w-full py-7 text-lg font-semibold transition-smooth group rounded-xl ${
+                className={`w-full py-7 text-lg font-bold transition-smooth group rounded-2xl ${
                   kit.featured 
-                    ? 'bg-primary hover:bg-primary-glow text-primary-foreground glow-effect' 
-                    : 'bg-secondary hover:bg-primary text-foreground hover:text-primary-foreground'
+                    ? 'btn-rainbow-solid' 
+                    : 'btn-rainbow bg-card hover:bg-secondary text-foreground'
                 }`}
               >
                 <a href={kit.link} target="_blank" rel="noopener noreferrer">
-                  Comprar Ahora
+                  Agregar al carrito
                   <ExternalLink className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </a>
               </Button>
