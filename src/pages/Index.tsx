@@ -1,10 +1,10 @@
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
-import { ProblemSolution } from "@/components/ProblemSolution";
-import { Features } from "@/components/Features";
-import { DesignComfort } from "@/components/DesignComfort";
 import { Kits } from "@/components/Kits";
-import { WhyJuaniconn } from "@/components/WhyJuaniconn";
+import { CustomSet } from "@/components/CustomSet";
+import { ReplacementParts } from "@/components/ReplacementParts";
+import { TechSection } from "@/components/TechSection";
+import { WhyYouLoveIt } from "@/components/WhyYouLoveIt";
 import { Testimonials } from "@/components/Testimonials";
 import { Shipping } from "@/components/Shipping";
 import { FAQ } from "@/components/FAQ";
@@ -13,14 +13,14 @@ import { Footer } from "@/components/Footer";
 
 const Index = () => {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-background">
       <Header />
       <Hero />
-      <ProblemSolution />
-      <Features />
-      <DesignComfort />
       <Kits />
-      <WhyJuaniconn />
+      <CustomSet />
+      <ReplacementParts />
+      <TechSection />
+      <WhyYouLoveIt />
       <Testimonials />
       <Shipping />
       <FAQ />
