@@ -85,7 +85,7 @@ export const Header = () => {
   const aboutItems = [
     { name: "Acerca de Juaniconn", href: "/contacto", icon: Users },
     { name: "Nuestra misión", href: "/contacto", icon: Target },
-    { name: "Garantía", href: "/devoluciones", icon: Shield },
+    { name: "Garantía y Devoluciones", href: "/garantia-devoluciones", icon: Shield },
     { name: "Política de privacidad", href: "/politica-privacidad", icon: FileText },
     { name: "Términos y condiciones", href: "/politica-venta", icon: Scale },
   ];
@@ -197,47 +197,52 @@ export const Header = () => {
             {/* Arrow indicator */}
             <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-white rotate-45 rounded-sm" />
             
-            {/* Column 1 - Productos (White) */}
-            <div className="w-72 bg-white p-6">
-              <div className="flex items-center gap-2 mb-6">
-                <Package className="w-5 h-5 text-gray-400" />
-                <h3 className="text-gray-400 text-sm font-medium uppercase tracking-wider">Productos</h3>
-              </div>
-              <p className="text-xs text-gray-400 mb-6">Trackers</p>
-              
-              <div className="space-y-6">
-                {productItems.map((section, idx) => (
-                  <div key={idx}>
-                    <h4 className="text-gray-800 font-semibold text-sm mb-3">{section.title}</h4>
-                    <ul className="space-y-2">
-                      {section.items.map((item, itemIdx) => (
-                        <li key={itemIdx}>
-                          <NavLink 
-                            to={item.href}
-                            className="flex items-center justify-between text-gray-600 hover:text-primary text-sm py-1 group transition-colors"
-                            onClick={() => setIsMenuOpen(false)}
-                          >
-                            <span>{item.name}</span>
-                            <ChevronRight className="w-4 h-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
-                          </NavLink>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Column 2 - Quiénes Somos (Black with blue glow) */}
-            <div className="w-64 bg-black p-6 relative overflow-hidden">
-              {/* Blue glow effect */}
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-transparent pointer-events-none" />
-              <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/20 rounded-full blur-3xl pointer-events-none" />
+            {/* Column 1 - Productos (Mint gradient) */}
+            <div className="w-72 bg-gradient-to-br from-background to-card p-6 relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-mint/10 to-transparent pointer-events-none" />
+              <div className="absolute top-0 left-0 w-32 h-32 bg-mint/20 rounded-full blur-3xl pointer-events-none" />
               
               <div className="relative">
                 <div className="flex items-center gap-2 mb-6">
-                  <Users className="w-5 h-5 text-blue-400" />
-                  <h3 className="text-blue-400 text-sm font-medium uppercase tracking-wider">Quiénes Somos</h3>
+                  <Package className="w-5 h-5 text-mint" />
+                  <h3 className="text-mint text-sm font-medium uppercase tracking-wider">Productos</h3>
+                </div>
+                <p className="text-xs text-foreground/50 mb-6">Trackers</p>
+                
+                <div className="space-y-6">
+                  {productItems.map((section, idx) => (
+                    <div key={idx}>
+                      <h4 className="text-foreground font-semibold text-sm mb-3">{section.title}</h4>
+                      <ul className="space-y-2">
+                        {section.items.map((item, itemIdx) => (
+                          <li key={itemIdx}>
+                            <NavLink 
+                              to={item.href}
+                              className="flex items-center justify-between text-foreground/70 hover:text-mint text-sm py-1 group transition-colors"
+                              onClick={() => setIsMenuOpen(false)}
+                            >
+                              <span>{item.name}</span>
+                              <ChevronRight className="w-4 h-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-mint" />
+                            </NavLink>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Column 2 - Quiénes Somos (Soft blue/pink glow) */}
+            <div className="w-64 bg-card p-6 relative overflow-hidden">
+              {/* Soft blue glow effect */}
+              <div className="absolute inset-0 bg-gradient-to-br from-soft-blue/10 to-soft-pink/5 pointer-events-none" />
+              <div className="absolute top-0 right-0 w-32 h-32 bg-soft-blue/20 rounded-full blur-3xl pointer-events-none" />
+              
+              <div className="relative">
+                <div className="flex items-center gap-2 mb-6">
+                  <Users className="w-5 h-5 text-soft-blue" />
+                  <h3 className="text-soft-blue text-sm font-medium uppercase tracking-wider">Quiénes Somos</h3>
                 </div>
                 
                 <ul className="space-y-3">
@@ -245,10 +250,10 @@ export const Header = () => {
                     <li key={idx}>
                       <NavLink 
                         to={item.href}
-                        className="flex items-center gap-3 text-white/70 hover:text-white text-sm py-1 group transition-colors"
+                        className="flex items-center gap-3 text-foreground/70 hover:text-foreground text-sm py-1 group transition-colors"
                         onClick={() => setIsMenuOpen(false)}
                       >
-                        <item.icon className="w-4 h-4 text-blue-400/60 group-hover:text-blue-400 transition-colors" />
+                        <item.icon className="w-4 h-4 text-soft-blue/60 group-hover:text-soft-blue transition-colors" />
                         <span>{item.name}</span>
                       </NavLink>
                     </li>
@@ -257,16 +262,16 @@ export const Header = () => {
               </div>
             </div>
 
-            {/* Column 3 - Recursos (Black with purple glow) */}
-            <div className="w-64 bg-black p-6 relative overflow-hidden">
-              {/* Purple glow effect */}
-              <div className="absolute inset-0 bg-gradient-to-bl from-purple-500/10 to-transparent pointer-events-none" />
-              <div className="absolute bottom-0 left-0 w-32 h-32 bg-purple-500/20 rounded-full blur-3xl pointer-events-none" />
+            {/* Column 3 - Recursos (Soft pink glow) */}
+            <div className="w-64 bg-card p-6 relative overflow-hidden">
+              {/* Pink glow effect */}
+              <div className="absolute inset-0 bg-gradient-to-bl from-soft-pink/10 to-soft-orange/5 pointer-events-none" />
+              <div className="absolute bottom-0 left-0 w-32 h-32 bg-soft-pink/20 rounded-full blur-3xl pointer-events-none" />
               
               <div className="relative">
                 <div className="flex items-center gap-2 mb-6">
-                  <Wrench className="w-5 h-5 text-purple-400" />
-                  <h3 className="text-purple-400 text-sm font-medium uppercase tracking-wider">Recursos</h3>
+                  <Wrench className="w-5 h-5 text-soft-pink" />
+                  <h3 className="text-soft-pink text-sm font-medium uppercase tracking-wider">Recursos</h3>
                 </div>
                 
                 <ul className="space-y-3">
@@ -277,19 +282,19 @@ export const Header = () => {
                           href={item.href}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex items-center gap-3 text-white/70 hover:text-white text-sm py-1 group transition-colors"
+                          className="flex items-center gap-3 text-foreground/70 hover:text-foreground text-sm py-1 group transition-colors"
                           onClick={() => setIsMenuOpen(false)}
                         >
-                          <item.icon className="w-4 h-4 text-purple-400/60 group-hover:text-purple-400 transition-colors" />
+                          <item.icon className="w-4 h-4 text-soft-pink/60 group-hover:text-soft-pink transition-colors" />
                           <span>{item.name}</span>
                         </a>
                       ) : (
                         <NavLink 
                           to={item.href}
-                          className="flex items-center gap-3 text-white/70 hover:text-white text-sm py-1 group transition-colors"
+                          className="flex items-center gap-3 text-foreground/70 hover:text-foreground text-sm py-1 group transition-colors"
                           onClick={() => setIsMenuOpen(false)}
                         >
-                          <item.icon className="w-4 h-4 text-purple-400/60 group-hover:text-purple-400 transition-colors" />
+                          <item.icon className="w-4 h-4 text-soft-pink/60 group-hover:text-soft-pink transition-colors" />
                           <span>{item.name}</span>
                         </NavLink>
                       )}
