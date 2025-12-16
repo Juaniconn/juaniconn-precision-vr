@@ -2,7 +2,7 @@ import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { Kits } from "@/components/Kits";
 import { CustomSet } from "@/components/CustomSet";
-import { ReplacementParts } from "@/components/ReplacementParts";
+// import { ReplacementParts } from "@/components/ReplacementParts"; // Hidden until further notice
 import { TechSection } from "@/components/TechSection";
 import { WhyYouLoveIt } from "@/components/WhyYouLoveIt";
 import { Testimonials } from "@/components/Testimonials";
@@ -18,7 +18,7 @@ const Index = () => {
       <Hero />
       <Kits />
       <CustomSet />
-      <ReplacementParts />
+      {/* <ReplacementParts /> Hidden until further notice */}
       <TechSection />
       <WhyYouLoveIt />
       <Testimonials />

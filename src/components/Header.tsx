@@ -3,14 +3,11 @@ import { NavLink } from "./NavLink";
 import { 
   Menu, 
   X, 
-  ShoppingCart, 
-  User, 
   ChevronRight,
   Cpu,
   Package,
   Settings,
   Wrench,
-  Cable,
   HelpCircle,
   FileText,
   Shield,
@@ -152,23 +149,10 @@ export const Header = () => {
             <span className="relative text-white text-sm font-medium tracking-wide hidden sm:block">menu</span>
           </button>
 
-          {/* Right Section - Icons */}
-          <div className="flex items-center gap-2">
-            {/* User Icon */}
-            <button className="relative w-10 h-10 flex items-center justify-center rounded-full bg-black/60 border border-white/20 hover:border-white/40 transition-all duration-300 group">
-              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-              <User className="w-4 h-4 text-white/80 group-hover:text-white transition-colors" />
-            </button>
-
-            {/* Cart Icon */}
-            <button className="relative w-10 h-10 flex items-center justify-center rounded-full bg-black/60 border border-white/20 hover:border-white/40 transition-all duration-300 group">
-              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-              <ShoppingCart className="w-4 h-4 text-white/80 group-hover:text-white transition-colors" />
-            </button>
-
-            {/* Discord Icon with gradient */}
+          {/* Right Section - Discord Icon only */}
+          <div className="flex items-center">
             <a 
-              href="https://discord.gg/UE2QDNf3sK" 
+              href="https://discord.gg/juaniconn" 
               target="_blank" 
               rel="noopener noreferrer"
               className="relative w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 border border-white/20 hover:border-white/40 transition-all duration-300 group hover:scale-105"

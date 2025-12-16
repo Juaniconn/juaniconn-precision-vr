@@ -12,7 +12,7 @@ export const Kits = () => {
         "6 Trackers Juaniconn ICM-45686",
         "1 Dongle Holyiot nRF52840",
         "6 Straps elásticas",
-        "Peso 16g · +50h batería",
+        "Peso 10g · +50h batería",
         "Colores: Blanco, Negro, Rojo"
       ],
       featured: false,
@@ -27,7 +27,7 @@ export const Kits = () => {
         "8 Trackers Juaniconn ICM-45686",
         "1 Dongle Holyiot nRF52840",
         "8 Straps elásticas",
-        "Latencia 25–35 dBi",
+        "Peso 10g · Latencia 25–35 dBi",
         "Colores: Blanco, Negro, Rojo"
       ],
       featured: true,
@@ -42,7 +42,7 @@ export const Kits = () => {
         "10 Trackers Juaniconn ICM-45686",
         "1 Dongle Holyiot nRF52840",
         "10 Straps elásticas",
-        "Máxima precisión",
+        "Peso 10g · Máxima precisión",
         "Colores: Blanco, Negro, Rojo"
       ],
       featured: false,
@@ -70,18 +70,18 @@ export const Kits = () => {
           </p>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto font-light leading-relaxed">
             Cada set incluye trackers ensamblados, straps elásticas y dongle NRF optimizado para baja latencia. 
-            Los Juaniconn Trackers usan sensores ICM-45686, batería de +50 horas y peso ultraligero de 16g. 
+            Los Juaniconn Trackers usan sensores ICM-45686, batería de +50 horas y peso ultraligero de 10g. 
             Compatibles con SlimeVR, VRChat y SteamVR.
           </p>
         </div>
         
-        <div className="grid md:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto items-stretch">
           {kits.map((kit, index) => (
             <div 
               key={index}
-              className={`relative premium-card p-8 transition-smooth animate-fade-in ${
+              className={`relative premium-card p-8 transition-smooth animate-fade-in flex flex-col ${
                 kit.featured 
-                  ? 'scale-[1.02] z-10' 
+                  ? 'md:scale-[1.02] z-10' 
                   : 'hover:scale-[1.01]'
               }`}
               style={{ animationDelay: `${index * 0.1}s` }}
@@ -102,7 +102,7 @@ export const Kits = () => {
                 <p className="text-muted-foreground font-light mt-2">{kit.description}</p>
               </div>
               
-              <div className="space-y-3 mb-8">
+              <div className="space-y-3 mb-8 flex-grow">
                 {kit.items.map((item, i) => (
                   <div key={i} className="flex items-center gap-3 p-3 bg-background/50 rounded-xl border border-border/30">
                     <div className="h-6 w-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
@@ -113,19 +113,19 @@ export const Kits = () => {
                 ))}
               </div>
               
-              <Button 
-                asChild
-                className={`w-full py-7 text-lg font-bold transition-smooth group rounded-2xl ${
+              <a 
+                href={kit.link} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className={`w-full py-4 text-lg font-bold transition-smooth group rounded-2xl flex items-center justify-center gap-2 ${
                   kit.featured 
                     ? 'btn-rainbow-solid' 
                     : 'btn-rainbow bg-card hover:bg-secondary text-foreground'
                 }`}
               >
-                <a href={kit.link} target="_blank" rel="noopener noreferrer">
-                  Agregar al carrito
-                  <ExternalLink className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                </a>
-              </Button>
+                Comprar ahora
+                <ExternalLink className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              </a>
             </div>
           ))}
         </div>
