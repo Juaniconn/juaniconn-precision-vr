@@ -4,7 +4,7 @@ import trackerInternal from "@/assets/tracker-internal.webp";
 const specs = [
   { icon: Cpu, title: "Sensor ICM-45686", description: "Tracking fluido y estable" },
   { icon: Battery, title: "+50 Horas", description: "Batería de larga duración" },
-  { icon: Zap, title: "Solo 16 Gramos", description: "Ultra ligero" },
+  { icon: Zap, title: "Solo 10 Gramos", description: "Ultra ligero" },
   { icon: Wifi, title: "NRF52840 StableLink", description: "Latencia 25-35 dBi" },
   { icon: Settings, title: "Firmware Optimizado", description: "Actualizaciones constantes" },
   { icon: Globe, title: "Compatibilidad Total", description: "SlimeVR, SteamVR, VRChat" }
