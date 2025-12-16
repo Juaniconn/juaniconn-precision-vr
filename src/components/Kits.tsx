@@ -1,13 +1,11 @@
-import { Button } from "@/components/ui/button";
-import { Check, Star, ExternalLink, Sparkles } from "lucide-react";
+import { Check, ExternalLink, Star } from "lucide-react";
 
 export const Kits = () => {
   const kits = [
     {
-      name: "Starter Pack",
+      name: "STARTER PACK",
       subtitle: "6 Trackers",
-      icon: "⭐",
-      description: "Perfecto para comenzar con Full Body Tracking",
+      description: "Perfecto para comenzar con Full Body Tracking.",
       items: [
         "6 Trackers Juaniconn ICM-45686",
         "1 Dongle Holyiot nRF52840",
@@ -19,10 +17,9 @@ export const Kits = () => {
       link: "https://buy.stripe.com/dRm00k1bneIteETdrT7g40f"
     },
     {
-      name: "Advanced Pack",
+      name: "ADVANCED PACK",
       subtitle: "8 Trackers",
-      icon: "🔥",
-      description: "Ideal para VRChat FBT completo",
+      description: "Ideal para VRChat FBT completo.",
       items: [
         "8 Trackers Juaniconn ICM-45686",
         "1 Dongle Holyiot nRF52840",
@@ -34,10 +31,9 @@ export const Kits = () => {
       link: "https://buy.stripe.com/4gM3cwaLX6bXaoD87z7g40g"
     },
     {
-      name: "Pro Pack",
+      name: "PRO PACK",
       subtitle: "10 Trackers",
-      icon: "💎",
-      description: "Para creadores, bailarines y setups avanzados",
+      description: "Para creadores, bailarines y setups avanzados.",
       items: [
         "10 Trackers Juaniconn ICM-45686",
         "1 Dongle Holyiot nRF52840",
@@ -49,85 +45,113 @@ export const Kits = () => {
       link: "https://buy.stripe.com/bJeeVe7zLbwhcwL4Vn7g40h"
     }
   ];
-  
+
   return (
-    <section id="kits" className="section-padding bg-background relative overflow-hidden">
-      {/* Background effects */}
-      <div className="absolute inset-0 gradient-spotlight opacity-30" />
-      <div className="bokeh-light w-72 h-72 bg-mint/20 top-20 right-[5%]" />
-      <div className="bokeh-light w-48 h-48 bg-pink/15 bottom-40 left-[10%]" style={{ animationDelay: '3s' }} />
+    <section id="kits" className="py-24 bg-background relative overflow-hidden">
+      {/* Subtle background gradient */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-card/30 to-background" />
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-16 animate-fade-in">
-          <span className="text-sm font-semibold text-primary tracking-widest uppercase mb-4 block">
+        {/* Section Header */}
+        <div className="text-center mb-16">
+          <span className="inline-block px-4 py-2 rounded-full bg-mint/10 text-mint text-sm font-medium tracking-wider uppercase mb-6">
             Nuestros Productos
           </span>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display tracking-wide mb-6">
-            JUANICONN <span className="text-gradient-rainbow">TRACKERS</span>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight mb-6">
+            JUANICONN <span className="bg-gradient-to-r from-mint via-pink to-blue bg-clip-text text-transparent">TRACKERS</span>
           </h2>
-          <p className="text-xl text-foreground/80 font-medium mb-4">
-            ¿Listo para llevar tu cuerpo al juego?
-          </p>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto font-light leading-relaxed">
-            Cada set incluye trackers ensamblados, straps elásticas y dongle NRF optimizado para baja latencia. 
-            Los Juaniconn Trackers usan sensores ICM-45686, batería de +50 horas y peso ultraligero de 10g. 
-            Compatibles con SlimeVR, VRChat y SteamVR.
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            Elige el pack perfecto para tu experiencia VR
           </p>
         </div>
-        
-        <div className="grid md:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto items-stretch">
+
+        {/* Products Grid - Perfect 3 columns */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
           {kits.map((kit, index) => (
-            <div 
+            <div
               key={index}
-              className={`relative premium-card p-8 transition-smooth animate-fade-in flex flex-col ${
-                kit.featured 
-                  ? 'md:scale-[1.02] z-10' 
-                  : 'hover:scale-[1.01]'
-              }`}
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className="relative group"
             >
+              {/* Featured Badge - positioned outside card flow */}
               {kit.featured && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-20">
-                  <span className="inline-flex items-center gap-2 px-5 py-2 btn-rainbow-solid text-sm font-bold rounded-full shadow-lg">
-                    <Star className="h-4 w-4 fill-current" />
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-10 pointer-events-none">
+                  <span className="inline-flex items-center gap-1.5 px-4 py-1.5 bg-gradient-to-r from-mint via-yellow to-pink text-background text-xs font-bold rounded-full shadow-lg">
+                    <Star className="h-3 w-3 fill-current" />
                     Más Popular
                   </span>
                 </div>
               )}
-              
-              <div className="text-center mb-8 pt-4">
-                <span className="text-4xl mb-3 block">{kit.icon}</span>
-                <h3 className="text-3xl font-display tracking-wide mb-1">{kit.name.toUpperCase()}</h3>
-                <p className="text-primary font-semibold text-lg">{kit.subtitle}</p>
-                <p className="text-muted-foreground font-light mt-2">{kit.description}</p>
-              </div>
-              
-              <div className="space-y-3 mb-8 flex-grow">
-                {kit.items.map((item, i) => (
-                  <div key={i} className="flex items-center gap-3 p-3 bg-background/50 rounded-xl border border-border/30">
-                    <div className="h-6 w-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-                      <Check className="h-3.5 w-3.5 text-primary" />
-                    </div>
-                    <span className="text-foreground/90 text-sm">{item}</span>
-                  </div>
-                ))}
-              </div>
-              
-              <a 
-                href={kit.link} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className={`w-full py-4 text-lg font-bold transition-smooth group rounded-2xl flex items-center justify-center gap-2 ${
-                  kit.featured 
-                    ? 'btn-rainbow-solid' 
-                    : 'btn-rainbow bg-card hover:bg-secondary text-foreground'
-                }`}
+
+              {/* Card with animated rainbow border */}
+              <div 
+                className={`
+                  relative h-full rounded-3xl p-[2px] overflow-hidden
+                  ${kit.featured 
+                    ? 'bg-gradient-to-r from-mint via-pink to-blue animate-rainbow-flow bg-[length:200%_200%]' 
+                    : 'bg-gradient-to-r from-mint/50 via-pink/50 to-blue/50'
+                  }
+                  transition-all duration-500 group-hover:shadow-[0_0_40px_rgba(169,234,203,0.3)]
+                `}
               >
-                Comprar ahora
-                <ExternalLink className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </a>
+                {/* Inner card content */}
+                <div className="relative h-full bg-card/95 backdrop-blur-xl rounded-[22px] p-8 flex flex-col">
+                  {/* Header */}
+                  <div className="text-center mb-8 pt-2">
+                    <h3 className="text-2xl md:text-3xl font-display font-bold tracking-wide mb-2">
+                      {kit.name}
+                    </h3>
+                    <p className="text-mint font-semibold text-lg mb-3">
+                      {kit.subtitle}
+                    </p>
+                    <p className="text-muted-foreground text-sm">
+                      {kit.description}
+                    </p>
+                  </div>
+
+                  {/* Features List */}
+                  <div className="space-y-3 mb-8 flex-grow">
+                    {kit.items.map((item, i) => (
+                      <div 
+                        key={i} 
+                        className="flex items-center gap-3 p-3 rounded-xl bg-background/50 border border-border/30 transition-colors group-hover:border-mint/30"
+                      >
+                        <div className="flex-shrink-0 h-5 w-5 rounded-full bg-mint/20 flex items-center justify-center">
+                          <Check className="h-3 w-3 text-mint" />
+                        </div>
+                        <span className="text-foreground/90 text-sm">{item}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* CTA Button */}
+                  <a
+                    href={kit.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`
+                      relative w-full py-4 rounded-2xl font-bold text-lg
+                      flex items-center justify-center gap-2
+                      transition-all duration-300
+                      ${kit.featured
+                        ? 'bg-gradient-to-r from-mint via-yellow to-pink text-background hover:shadow-[0_0_30px_rgba(169,234,203,0.5)] hover:scale-[1.02]'
+                        : 'bg-background/80 border-2 border-mint/50 text-foreground hover:bg-mint/10 hover:border-mint hover:shadow-[0_0_20px_rgba(169,234,203,0.3)]'
+                      }
+                    `}
+                  >
+                    Comprar ahora
+                    <ExternalLink className="h-5 w-5 transition-transform group-hover:translate-x-0.5" />
+                  </a>
+                </div>
+              </div>
             </div>
           ))}
+        </div>
+
+        {/* Bottom info */}
+        <div className="mt-16 text-center">
+          <p className="text-muted-foreground text-sm">
+            Todos los packs incluyen dongle NRF optimizado • Compatible con SlimeVR, VRChat y SteamVR
+          </p>
         </div>
       </div>
     </section>
