@@ -114,42 +114,23 @@ export const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Left content - Text */}
           <div className="text-center lg:text-left space-y-6 animate-fade-in">
-            {/* Tech badge */}
-            <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-white/5 border border-mint/20 backdrop-blur-md">
-              <div className="w-2 h-2 bg-mint rounded-full animate-pulse" />
-              <span className="text-sm font-medium bg-gradient-to-r from-mint to-soft-blue bg-clip-text text-transparent">
-                Full Body VR Tracking
-              </span>
-            </div>
-            
             {/* Main title H1 */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight leading-[1.1]">
               <span className="text-white">Juaniconn Trackers</span>
               <br />
               <span className="bg-gradient-to-r from-mint via-soft-blue to-soft-pink bg-clip-text text-transparent">
-                Tecnología que Mueve tu Mundo en VR
+                Full Body Tracking para VR
               </span>
             </h1>
             
             {/* Subtitle H2 */}
-            <h2 className="text-lg md:text-xl lg:text-2xl text-white/70 font-light flex flex-wrap items-center justify-center lg:justify-start gap-3">
-              <span className="inline-flex items-center gap-2">
-                <span className="w-1.5 h-1.5 bg-mint rounded-full" />
-                Ultra ligeros de 10g
-              </span>
-              <span className="inline-flex items-center gap-2">
-                <span className="w-1.5 h-1.5 bg-soft-blue rounded-full" />
-                +50h de batería
-              </span>
-              <span className="inline-flex items-center gap-2">
-                <span className="w-1.5 h-1.5 bg-soft-pink rounded-full" />
-                Precisión total en VRChat y SteamVR
-              </span>
+            <h2 className="text-xl md:text-2xl text-white/60 font-light">
+              10g · +50h batería · Compatible con VRChat y SteamVR
             </h2>
             
             {/* Description */}
-            <p className="text-base md:text-lg text-white/50 font-light max-w-xl mx-auto lg:mx-0 leading-relaxed">
-              Trackers compactos, inteligentes y diseñados para que experimentes movimiento real dentro del mundo virtual. Tecnología premium con sensores ICM-45686 y compatibilidad total con SlimeVR.
+            <p className="text-base md:text-lg text-white/40 font-light max-w-lg mx-auto lg:mx-0">
+              Trackers compactos con sensores ICM-45686 y compatibilidad con SlimeVR.
             </p>
             
             {/* CTA Buttons */}
