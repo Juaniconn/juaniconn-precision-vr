@@ -11,7 +11,7 @@ const features = [
   {
     icon: Feather,
     title: "Ligero",
-    description: "Apenas 16g por tracker.",
+    description: "Apenas 10g por tracker.",
     color: "lime"
   },
   {
