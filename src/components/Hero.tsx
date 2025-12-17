@@ -229,7 +229,7 @@ export const Hero = () => {
             
             <div className="absolute -top-6 -right-6 bg-[#0a0a12]/95 backdrop-blur-xl rounded-2xl px-5 py-4 border border-soft-pink/40 shadow-xl shadow-soft-pink/20">
               <div className="text-xs text-white/50 mb-1">Peso</div>
-              <div className="text-2xl font-bold bg-gradient-to-r from-soft-pink to-pastel-yellow bg-clip-text text-transparent">10g</div>
+              <div className="text-2xl font-bold text-soft-pink">10g</div>
             </div>
             
             <div className="absolute top-1/2 -right-4 transform translate-x-1/2 -translate-y-1/2 bg-[#0a0a12]/95 backdrop-blur-xl rounded-2xl px-4 py-3 border border-soft-blue/40 shadow-xl hidden xl:block">
