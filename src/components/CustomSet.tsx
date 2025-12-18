@@ -13,9 +13,13 @@ export const CustomSet = () => {
       <div className="absolute top-1/2 left-0 w-96 h-96 bg-soft-pink/10 rounded-full blur-[150px] -translate-y-1/2" />
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16 animate-fade-in">
-          <span className="text-sm font-semibold text-mint tracking-widest uppercase mb-4 block">Personaliza</span>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display">SET <span className="bg-gradient-to-r from-mint via-soft-pink to-soft-blue bg-clip-text text-transparent">PERSONALIZADO</span></h2>
-          <p className="text-xl text-muted-foreground mt-4 max-w-2xl mx-auto">¿Necesitas una configuración especial? Contáctanos en Discord para una cotización personalizada.</p>
+          <span className="text-sm font-semibold text-mint tracking-widest uppercase mb-4 block">Personaliza tu Set</span>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display">SET <span className="text-mint">PERSONALIZADO JUANICONN</span></h2>
+          <div className="mt-8 max-w-2xl mx-auto space-y-4">
+            <p className="text-lg text-foreground/90">¿Necesitas una configuración especial para tu espacio o tu estilo de juego?</p>
+            <p className="text-foreground/80">Creamos soluciones a medida para usuarios que buscan el mejor rendimiento, comodidad y flexibilidad en VR.</p>
+            <p className="text-foreground/80">Cuéntanos exactamente lo que necesitas y te ayudaremos a armar un paquete completamente adaptado a ti.</p>
+          </div>
         </div>
         
         <div className="max-w-3xl mx-auto">
@@ -28,21 +32,20 @@ export const CustomSet = () => {
             
             {/* Discord CTA */}
             <div className="space-y-6 animate-fade-in text-center md:text-left">
-              <h3 className="text-2xl font-display text-white">Cotización Personalizada</h3>
-              <p className="text-muted-foreground">
-                Selecciona los puntos exactos que necesitas trackear. Nuestro equipo te ayudará a crear el set perfecto para ti.
+              <p className="text-foreground/90">
+                Contáctanos en Discord para una cotización personalizada.
               </p>
-              
+
               <div className="relative group inline-block w-full">
                 <div className="absolute -inset-1 rainbow-border rounded-full opacity-70 group-hover:opacity-100 blur-sm" />
-                <a 
-                  href="https://discord.gg/juaniconn" 
-                  target="_blank" 
+                <a
+                  href="https://discord.gg/Wu6wJX72qX"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="relative w-full bg-background hover:bg-card font-semibold py-5 text-lg rounded-full border border-mint/50 flex items-center justify-center gap-3 transition-all"
                 >
-                  <DiscordIcon className="h-6 w-6 text-[#5865F2]" />
-                  <span className="bg-gradient-to-r from-mint via-soft-pink to-soft-blue bg-clip-text text-transparent">Cotizar en Discord</span>
+                  <span className="text-2xl">👉</span>
+                  <span className="text-mint">Crear mi Set en Discord</span>
                 </a>
               </div>
             </div>

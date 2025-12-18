@@ -1,6 +1,7 @@
 import { Star } from "lucide-react";
 
 export const Testimonials = () => {
+  const isPlaceholder = true;
   const testimonials = [
     { name: "Carlos Mendoza", country: "México", avatar: "CM", text: "Precisión increíble. Nunca tuve mejor tracking en VRChat. Los movimientos se sienten naturales." },
     { name: "Sofía Ramírez", country: "Argentina", avatar: "SR", text: "El envío llegó rapidísimo y el soporte en Discord es excelente. ¡24/7 de verdad!" },
@@ -17,8 +18,15 @@ export const Testimonials = () => {
         <div className="text-center mb-16 animate-fade-in">
           <span className="text-sm font-semibold text-mint tracking-widest uppercase mb-4 block">Testimonios</span>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-display tracking-wide">
-            LO QUE DICEN <span className="bg-gradient-to-r from-mint via-soft-pink to-soft-blue bg-clip-text text-transparent">NUESTROS USUARIOS</span>
+            LO QUE DICEN <span className="text-mint">NUESTROS USUARIOS</span>
           </h2>
+          {isPlaceholder && (
+            <div className="mt-8 max-w-2xl mx-auto bg-mint/10 rounded-lg p-6 border border-mint/30">
+              <p className="text-foreground/90">
+                Muy pronto añadiremos testimonios reales de nuestros usuarios, incluyendo videos cortos y experiencias dentro de VRChat. Queremos mostrar resultados reales con clientes reales para que puedas ver el rendimiento auténtico de los trackers Juaniconn.
+              </p>
+            </div>
+          )}
         </div>
         
         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">

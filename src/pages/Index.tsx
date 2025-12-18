@@ -2,6 +2,8 @@ import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { Kits } from "@/components/Kits";
 import { CustomSet } from "@/components/CustomSet";
+import { FullMovement } from "@/components/FullMovement";
+import { Warranty } from "@/components/Warranty";
 import { TechSection } from "@/components/TechSection";
 import { ExperienceSection } from "@/components/ExperienceSection";
 import { WhyYouLoveIt } from "@/components/WhyYouLoveIt";
@@ -18,6 +20,8 @@ const Index = () => {
       <Hero />
       <Kits />
       <CustomSet />
+      <FullMovement />
+      <Warranty />
       <TechSection />
       <ExperienceSection />
       <WhyYouLoveIt />
