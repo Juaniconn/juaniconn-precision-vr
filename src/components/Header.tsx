@@ -51,7 +51,7 @@ export const Header = () => {
     { name: "Starter Pack (6 Trackers)", href: "https://buy.stripe.com/dRm00k1bneIteETdrT7g40f", external: true },
     { name: "Advanced Pack (8 Trackers)", href: "https://buy.stripe.com/4gM3cwaLX6bXaoD87z7g40g", external: true },
     { name: "Pro Pack (10 Trackers)", href: "https://buy.stripe.com/bJeeVe7zLbwhcwL4Vn7g40h", external: true },
-    { name: "Crear mi Set (Personalizado)", href: "https://discord.gg/juaniconn", external: true },
+    { name: "Crear mi Set", href: "https://discord.gg/Wu6wJX72qX", external: true },
   ];
 
   const aboutItems = [
@@ -112,7 +112,7 @@ export const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden flex items-center justify-center w-9 h-9 rounded-full bg-black/60 border border-white/20"
+            className="md:hidden flex items-center justify-center w-9 h-9 rounded-full bg-black/60 border border-white/20 ml-0"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X className="w-5 h-5 text-white" /> : <Menu className="w-5 h-5 text-white" />}
@@ -223,7 +223,7 @@ export const Header = () => {
 
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
-        <div className="fixed inset-0 z-40 bg-black/95 backdrop-blur-xl pt-20 px-6 overflow-y-auto md:hidden">
+        <div className="fixed inset-0 z-40 bg-black/95 backdrop-blur-xl pt-20 px-4 overflow-y-auto md:hidden">
           <div className="flex flex-col w-full space-y-6">
             {/* Productos */}
             <div>

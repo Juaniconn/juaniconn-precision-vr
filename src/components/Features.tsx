@@ -11,7 +11,7 @@ export const Features = () => {
     {
       icon: Feather,
       title: "Peso Ultraligero",
-      value: "16g",
+      value: "10g",
       description: "Tan ligeros que olvidarás que los llevas puestos"
     },
     {

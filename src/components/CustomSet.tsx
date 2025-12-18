@@ -13,12 +13,10 @@ export const CustomSet = () => {
       <div className="absolute top-1/2 left-0 w-96 h-96 bg-soft-pink/10 rounded-full blur-[150px] -translate-y-1/2" />
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16 animate-fade-in">
-          <span className="text-sm font-semibold text-mint tracking-widest uppercase mb-4 block">Personaliza tu Set</span>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display">SET <span className="text-mint">PERSONALIZADO JUANICONN</span></h2>
+          <span className="text-sm font-semibold text-mint tracking-widest uppercase mb-4 block">Personalización</span>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display">SET <span className="text-mint">PERSONALIZADO</span></h2>
           <div className="mt-8 max-w-2xl mx-auto space-y-4">
-            <p className="text-lg text-foreground/90">¿Necesitas una configuración especial para tu espacio o tu estilo de juego?</p>
-            <p className="text-foreground/80">Creamos soluciones a medida para usuarios que buscan el mejor rendimiento, comodidad y flexibilidad en VR.</p>
-            <p className="text-foreground/80">Cuéntanos exactamente lo que necesitas y te ayudaremos a armar un paquete completamente adaptado a ti.</p>
+            <p className="text-lg text-foreground/90">¿Necesitas una configuración especial? Contáctanos en Discord.</p>
           </div>
         </div>
         

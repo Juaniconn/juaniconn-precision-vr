@@ -12,7 +12,7 @@ export const ProblemSolution = () => {
     { icon: Cpu, text: "Ultra precisión gracias al ICM-45686" },
     { icon: Zap, text: "Latencia de 25–35 dBi" },
     { icon: Battery, text: "+50 horas de batería" },
-    { icon: Feather, text: "Diseño compacto de 16g" },
+    { icon: Feather, text: "Diseño compacto de 10g" },
   ];
   
   return (
