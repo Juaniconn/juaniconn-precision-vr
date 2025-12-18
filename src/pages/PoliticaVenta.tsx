@@ -100,7 +100,7 @@ const PoliticaVenta = () => {
                   <p className="text-muted-foreground leading-relaxed">
                     Si tienes dudas sobre tu compra o necesitas asistencia, estaremos felices de ayudarte a través de nuestro{" "}
                     <a 
-                      href="https://discord.gg/UE2QDNf3sK" 
+                      href="https://discord.gg/juaniconn" 
                       target="_blank" 
                       rel="noopener noreferrer" 
                       className="text-primary hover:underline font-medium"

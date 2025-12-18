@@ -6,10 +6,10 @@ const Devoluciones = () => {
   const sections = [
     {
       icon: Shield,
-      title: "Garantía de Fabricación",
+      title: "90 Días de Garantía",
       content: (
         <>
-          Todos nuestros productos cuentan con una garantía contra defectos de fabricación por un periodo de <strong className="text-foreground">30 días</strong> a partir de la fecha de entrega. Esto cubre únicamente fallos que afecten el funcionamiento normal del producto y que no sean consecuencia de un mal uso.
+          Todos nuestros trackers cuentan con <strong className="text-foreground">90 días de garantía</strong> contra defectos de fabricación. Incluye reparación o reemplazo sin costo.
         </>
       )
     },
@@ -107,7 +107,7 @@ const Devoluciones = () => {
                   <p className="text-muted-foreground leading-relaxed">
                     Si necesitas ayuda con una garantía o devolución, por favor contáctanos a través de nuestro{" "}
                     <a 
-                      href="https://discord.gg/UE2QDNf3sK" 
+                      href="https://discord.gg/juaniconn" 
                       target="_blank" 
                       rel="noopener noreferrer" 
                       className="text-primary hover:underline font-medium"

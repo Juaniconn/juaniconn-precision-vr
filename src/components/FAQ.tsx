@@ -2,14 +2,14 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 
 export const FAQ = () => {
   const faqs = [
-    { q: "¿Son compatibles con SlimeVR?", a: "Sí, 100% compatibles con el software SlimeVR. También funcionan con SteamVR y cualquier juego que soporte Full Body Tracking." },
-    { q: "¿Cuánto dura la batería?", a: "Más de 50 horas de uso continuo. Puedes jugar varios días sin necesidad de recargar." },
-    { q: "¿Incluyen straps?", a: "Sí, todos los kits incluyen straps elásticos premium de alta calidad, cómodos para sesiones largas." },
-    { q: "¿Funciona en VRChat?", a: "Totalmente compatible con VRChat, NeosVR, ChilloutVR y cualquier aplicación de SteamVR." },
-    { q: "¿Cuánto tarda el envío?", a: "Envíos a México en 1-2 días. Internacionales en 5-7 días hábiles. Todos los envíos incluyen tracking." },
-    { q: "¿Tienen soporte técnico?", a: "Sí, soporte 24/7 en nuestro Discord oficial. Respondemos en español siempre." },
-    { q: "¿Cuánto pesa cada tracker?", a: "Solo 16 gramos cada uno. Ultra ligeros para máxima comodidad." },
-    { q: "¿Puedo pedir colores personalizados?", a: "Sí, ofrecemos Blanco, Negro y Rojo Juaniconn. Para otros colores, contáctanos en Discord." },
+    { q: "¿Es compatible con SlimeVR?", a: "Sí, completamente compatible. Nuestros trackers utilizan el protocolo nativo de SlimeVR." },
+    { q: "¿Cuánto dura la batería?", a: "Más de 50 horas por carga completa. Puedes jugar varios días sin necesidad de recargar." },
+    { q: "¿Cuánto pesa cada tracker?", a: "Solo 10 gramos. Ultra ligeros para máxima comodidad en sesiones largas." },
+    { q: "¿Qué incluye cada paquete?", a: "Trackers, straps elásticos premium, dongle NRF52840, cable USB-C y guía digital." },
+    { q: "¿Tienen soporte técnico?", a: "Sí, soporte 24/7 vía Discord. Respondemos en español siempre." },
+    { q: "¿Hacen envíos internacionales?", a: "Sí, envíos a México en 1-2 días, internacionales en 5-7 días hábiles. Todos incluyen tracking." },
+    { q: "¿Funciona con VRChat?", a: "Totalmente compatible con VRChat, NeosVR, ChilloutVR y cualquier aplicación de SteamVR." },
+    { q: "¿Puedo pedir colores personalizados?", a: "Sí, ofrecemos Blanco, Negro y Rojo Juaniconn. Para configuraciones especiales, contáctanos en Discord." },
   ];
   
   return (

@@ -2,8 +2,8 @@ import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { Kits } from "@/components/Kits";
 import { CustomSet } from "@/components/CustomSet";
-// import { ReplacementParts } from "@/components/ReplacementParts"; // Hidden until further notice
 import { TechSection } from "@/components/TechSection";
+import { ExperienceSection } from "@/components/ExperienceSection";
 import { WhyYouLoveIt } from "@/components/WhyYouLoveIt";
 import { Testimonials } from "@/components/Testimonials";
 import { Shipping } from "@/components/Shipping";
@@ -18,8 +18,8 @@ const Index = () => {
       <Hero />
       <Kits />
       <CustomSet />
-      {/* <ReplacementParts /> Hidden until further notice */}
       <TechSection />
+      <ExperienceSection />
       <WhyYouLoveIt />
       <Testimonials />
       <Shipping />

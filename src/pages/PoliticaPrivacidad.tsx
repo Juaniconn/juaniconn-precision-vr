@@ -82,7 +82,7 @@ const PoliticaPrivacidad = () => {
                   <p className="text-muted-foreground leading-relaxed">
                     Si deseas acceder, modificar o eliminar tus datos personales, o tienes alguna duda respecto al manejo de los mismos, puedes contactarnos a través de nuestro{" "}
                     <a 
-                      href="https://discord.gg/UE2QDNf3sK" 
+                      href="https://discord.gg/juaniconn" 
                       target="_blank" 
                       rel="noopener noreferrer" 
                       className="text-primary hover:underline font-medium"
