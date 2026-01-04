@@ -14,7 +14,7 @@ export const Kits = () => {
         "Colores: Blanco, Negro, Rojo"
       ],
       featured: false,
-      link: "https://buy.stripe.com/dRm00k1bneIteETdrT7g40f"
+      link: "https://buy.stripe.com/bJe28s1bn0RD9kz4Vn7g40k"
     },
     {
       name: "ADVANCED PACK",
@@ -28,7 +28,7 @@ export const Kits = () => {
         "Colores: Blanco, Negro, Rojo"
       ],
       featured: true,
-      link: "https://buy.stripe.com/4gM3cwaLX6bXaoD87z7g40g"
+      link: "https://buy.stripe.com/00w00kf2d0RDfIXcnP7g40j"
     },
     {
       name: "PRO PACK",
@@ -42,7 +42,7 @@ export const Kits = () => {
         "Colores: Blanco, Negro, Rojo"
       ],
       featured: false,
-      link: "https://buy.stripe.com/bJeeVe7zLbwhcwL4Vn7g40h"
+      link: "https://buy.stripe.com/5kQbJ22fr57T8gv73v7g40l"
     }
   ];
 
