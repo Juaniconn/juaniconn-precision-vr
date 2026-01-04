@@ -48,10 +48,10 @@ export const Header = () => {
   }, []);
 
   const productItems = [
-    { name: "Starter Pack (6 Trackers)", href: "https://buy.stripe.com/dRm00k1bneIteETdrT7g40f", external: true },
-    { name: "Advanced Pack (8 Trackers)", href: "https://buy.stripe.com/4gM3cwaLX6bXaoD87z7g40g", external: true },
-    { name: "Pro Pack (10 Trackers)", href: "https://buy.stripe.com/bJeeVe7zLbwhcwL4Vn7g40h", external: true },
-    { name: "Crear mi Set", href: "https://discord.gg/Wu6wJX72qX", external: true },
+    { name: "Starter Pack (6 Trackers)", href: "https://buy.stripe.com/bJe28s1bn0RD9kz4Vn7g40k", external: true },
+    { name: "Advanced Pack (8 Trackers)", href: "https://buy.stripe.com/00w00kf2d0RDfIXcnP7g40j", external: true },
+    { name: "Pro Pack (10 Trackers)", href: "https://buy.stripe.com/5kQbJ22fr57T8gv73v7g40l", external: true },
+    { name: "Crear mi Set", href: "https://discord.gg/juaniconn", external: true },
   ];
 
   const aboutItems = [
