@@ -7,7 +7,7 @@ export const Kits = () => {
       subtitle: "6 Trackers",
       description: "Perfecto para comenzar con Full Body Tracking.",
       items: [
-        "6 Trackers Juaniconn ICM-45686",
+        "6 Trackers Beekonz ICM-45686",
         "1 Dongle Holyiot nRF52840",
         "6 Straps elásticas",
         "Peso 10g · +50h batería",
@@ -21,7 +21,7 @@ export const Kits = () => {
       subtitle: "8 Trackers",
       description: "Ideal para VRChat FBT completo.",
       items: [
-        "8 Trackers Juaniconn ICM-45686",
+        "8 Trackers Beekonz ICM-45686",
         "1 Dongle Holyiot nRF52840",
         "8 Straps elásticas",
         "Peso 10g · Latencia 25–35 dBi",
@@ -35,7 +35,7 @@ export const Kits = () => {
       subtitle: "10 Trackers",
       description: "Para creadores, bailarines y setups avanzados.",
       items: [
-        "10 Trackers Juaniconn ICM-45686",
+        "10 Trackers Beekonz ICM-45686",
         "1 Dongle Holyiot nRF52840",
         "10 Straps elásticas",
         "Peso 10g · Máxima precisión",
@@ -54,11 +54,11 @@ export const Kits = () => {
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <span className="inline-block px-4 py-2 rounded-full bg-mint/10 text-mint text-sm font-medium tracking-wider uppercase mb-6">
+          <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium tracking-wider uppercase mb-6">
             Nuestros Productos
           </span>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight mb-6">
-            JUANICONN <span className="bg-gradient-to-r from-mint via-pink to-blue bg-clip-text text-transparent">TRACKERS</span>
+            BEEKONZ <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">TRACKERS</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Elige el pack perfecto para tu experiencia VR
@@ -75,22 +75,22 @@ export const Kits = () => {
               {/* Featured Badge - positioned outside card flow */}
               {kit.featured && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-10 pointer-events-none">
-                  <span className="inline-flex items-center gap-1.5 px-4 py-1.5 bg-gradient-to-r from-mint via-yellow to-pink text-background text-xs font-bold rounded-full shadow-lg">
+                  <span className="inline-flex items-center gap-1.5 px-4 py-1.5 bg-gradient-to-r from-primary via-accent to-secondary text-primary-foreground text-xs font-bold rounded-full shadow-lg shadow-primary/30">
                     <Star className="h-3 w-3 fill-current" />
                     Más Popular
                   </span>
                 </div>
               )}
 
-              {/* Card with animated rainbow border */}
+              {/* Card with animated neon border */}
               <div 
                 className={`
                   relative h-full rounded-3xl p-[2px] overflow-hidden
                   ${kit.featured 
-                    ? 'bg-gradient-to-r from-mint via-pink to-blue animate-rainbow-flow bg-[length:200%_200%]' 
-                    : 'bg-gradient-to-r from-mint/50 via-pink/50 to-blue/50'
+                    ? 'bg-gradient-to-r from-primary via-secondary to-primary animate-rainbow-flow bg-[length:200%_200%]' 
+                    : 'bg-gradient-to-r from-primary/50 via-secondary/50 to-primary/50'
                   }
-                  transition-all duration-500 group-hover:shadow-[0_0_40px_rgba(169,234,203,0.3)]
+                  transition-all duration-500 group-hover:shadow-[0_0_40px_rgba(107,255,63,0.4)]
                 `}
               >
                 {/* Inner card content */}
@@ -100,7 +100,7 @@ export const Kits = () => {
                     <h3 className="text-2xl md:text-3xl font-display font-bold tracking-wide mb-2">
                       {kit.name}
                     </h3>
-                    <p className="text-mint font-semibold text-lg mb-3">
+                    <p className="text-primary font-semibold text-lg mb-3">
                       {kit.subtitle}
                     </p>
                     <p className="text-muted-foreground text-sm">
@@ -113,10 +113,10 @@ export const Kits = () => {
                     {kit.items.map((item, i) => (
                       <div 
                         key={i} 
-                        className="flex items-center gap-3 p-3 rounded-xl bg-background/50 border border-border/30 transition-colors group-hover:border-mint/30"
+                        className="flex items-center gap-3 p-3 rounded-xl bg-background/50 border border-border/30 transition-colors group-hover:border-primary/30"
                       >
-                        <div className="flex-shrink-0 h-5 w-5 rounded-full bg-mint/20 flex items-center justify-center">
-                          <Check className="h-3 w-3 text-mint" />
+                        <div className="flex-shrink-0 h-5 w-5 rounded-full bg-primary/20 flex items-center justify-center">
+                          <Check className="h-3 w-3 text-primary" />
                         </div>
                         <span className="text-foreground/90 text-sm">{item}</span>
                       </div>
@@ -133,8 +133,8 @@ export const Kits = () => {
                       flex items-center justify-center gap-2
                       transition-all duration-300
                       ${kit.featured
-                        ? 'bg-gradient-to-r from-mint via-yellow to-pink text-background hover:shadow-[0_0_30px_rgba(169,234,203,0.5)] hover:scale-[1.02]'
-                        : 'bg-background/80 border-2 border-mint/50 text-foreground hover:bg-mint/10 hover:border-mint hover:shadow-[0_0_20px_rgba(169,234,203,0.3)]'
+                        ? 'bg-gradient-to-r from-primary via-accent to-secondary text-primary-foreground hover:shadow-[0_0_30px_rgba(107,255,63,0.5)] hover:scale-[1.02]'
+                        : 'bg-background/80 border-2 border-primary/50 text-foreground hover:bg-primary/10 hover:border-primary hover:shadow-[0_0_20px_rgba(107,255,63,0.3)]'
                       }
                     `}
                   >

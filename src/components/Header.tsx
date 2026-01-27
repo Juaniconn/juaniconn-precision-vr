@@ -51,11 +51,11 @@ export const Header = () => {
     { name: "Starter Pack (6 Trackers)", href: "https://buy.stripe.com/bJe28s1bn0RD9kz4Vn7g40k", external: true },
     { name: "Advanced Pack (8 Trackers)", href: "https://buy.stripe.com/00w00kf2d0RDfIXcnP7g40j", external: true },
     { name: "Pro Pack (10 Trackers)", href: "https://buy.stripe.com/5kQbJ22fr57T8gv73v7g40l", external: true },
-    { name: "Crear mi Set", href: "https://discord.gg/juaniconn", external: true },
+    { name: "Crear mi Set", href: "https://discord.gg/beekonz", external: true },
   ];
 
   const aboutItems = [
-    { name: "Acerca de Juaniconn", href: "/acerca-de", icon: Users },
+    { name: "Acerca de Beekonz", href: "/acerca-de", icon: Users },
     { name: "Nuestra Misión", href: "/mision", icon: Target },
     { name: "Garantía y Devoluciones", href: "/garantia-devoluciones", icon: Shield },
     { name: "Política de Privacidad", href: "/politica-privacidad", icon: FileText },
@@ -73,49 +73,49 @@ export const Header = () => {
       <header className={`fixed top-4 left-1/2 -translate-x-1/2 z-50 transition-all duration-500 ${
         isScrolled ? 'top-2' : 'top-4'
       }`}>
-        <nav className="flex items-center gap-2 px-3 py-2 bg-black/60 backdrop-blur-xl rounded-full border border-white/10 shadow-2xl">
+        <nav className="flex items-center gap-2 px-3 py-2 bg-background/80 backdrop-blur-xl rounded-full border border-primary/20 shadow-2xl shadow-primary/10">
           {/* Logo */}
           <NavLink 
             to="/" 
-            className="flex items-center gap-2 px-3 py-2 rounded-full bg-white/5 hover:bg-white/10 transition-all duration-300 group"
+            className="flex items-center gap-2 px-3 py-2 rounded-full bg-primary/10 hover:bg-primary/20 transition-all duration-300 group"
           >
             <div className="relative w-7 h-7 flex items-center justify-center">
-              <div className="absolute inset-0 bg-gradient-to-br from-mint to-soft-blue rounded-lg opacity-80 group-hover:opacity-100 transition-opacity" />
-              <Cpu className="relative w-4 h-4 text-white" />
+              <div className="absolute inset-0 bg-gradient-to-br from-primary to-secondary rounded-lg opacity-80 group-hover:opacity-100 transition-opacity" />
+              <Cpu className="relative w-4 h-4 text-primary-foreground" />
             </div>
-            <span className="text-white font-display text-base tracking-wider hidden sm:block">Juaniconn</span>
-            <Sparkles className="w-3 h-3 text-mint animate-pulse hidden sm:block" />
+            <span className="text-foreground font-display text-base tracking-wider hidden sm:block">Beekonz</span>
+            <Sparkles className="w-3 h-3 text-primary animate-pulse hidden sm:block" />
           </NavLink>
 
           {/* Menu Button - Desktop */}
           <button 
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="menu-trigger hidden md:flex items-center gap-2 px-4 py-2 bg-black/80 rounded-full border border-white/20 hover:border-mint/50 transition-all duration-300 group"
+            className="menu-trigger hidden md:flex items-center gap-2 px-4 py-2 bg-background rounded-full border border-border hover:border-primary/50 transition-all duration-300 group"
           >
             <div className="flex flex-col gap-1">
-              <span className={`block w-4 h-0.5 bg-white transition-all duration-300 ${isMenuOpen ? 'translate-y-1.5 rotate-45' : ''}`} />
-              <span className={`block w-4 h-0.5 bg-white transition-all duration-300 ${isMenuOpen ? 'opacity-0' : ''}`} />
-              <span className={`block w-4 h-0.5 bg-white transition-all duration-300 ${isMenuOpen ? '-translate-y-1.5 -rotate-45' : ''}`} />
+              <span className={`block w-4 h-0.5 bg-foreground transition-all duration-300 ${isMenuOpen ? 'translate-y-1.5 rotate-45' : ''}`} />
+              <span className={`block w-4 h-0.5 bg-foreground transition-all duration-300 ${isMenuOpen ? 'opacity-0' : ''}`} />
+              <span className={`block w-4 h-0.5 bg-foreground transition-all duration-300 ${isMenuOpen ? '-translate-y-1.5 -rotate-45' : ''}`} />
             </div>
-            <span className="text-white text-sm font-medium">menu</span>
+            <span className="text-foreground text-sm font-medium">menu</span>
           </button>
 
           {/* Discord Icon */}
           <a 
-            href="https://discord.gg/juaniconn" 
+            href="https://discord.gg/beekonz" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="w-9 h-9 flex items-center justify-center rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 border border-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105"
+            className="w-9 h-9 flex items-center justify-center rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 border border-secondary/30 hover:border-secondary/60 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-secondary/30"
           >
-            <DiscordIcon className="w-5 h-5 text-white" />
+            <DiscordIcon className="w-5 h-5 text-foreground" />
           </a>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden flex items-center justify-center w-9 h-9 rounded-full bg-black/60 border border-white/20 ml-0"
+            className="md:hidden flex items-center justify-center w-9 h-9 rounded-full bg-background border border-border ml-0"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
-            {isMobileMenuOpen ? <X className="w-5 h-5 text-white" /> : <Menu className="w-5 h-5 text-white" />}
+            {isMobileMenuOpen ? <X className="w-5 h-5 text-foreground" /> : <Menu className="w-5 h-5 text-foreground" />}
           </button>
         </nav>
 
@@ -125,16 +125,16 @@ export const Header = () => {
             ? 'opacity-100 translate-y-0 pointer-events-auto' 
             : 'opacity-0 -translate-y-4 pointer-events-none'
         }`}>
-          <div className="relative flex rounded-3xl overflow-hidden shadow-2xl border border-white/10">
-            <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-card rotate-45 rounded-sm border-l border-t border-white/10" />
+          <div className="relative flex rounded-3xl overflow-hidden shadow-2xl shadow-primary/20 border border-primary/20">
+            <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-card rotate-45 rounded-sm border-l border-t border-primary/20" />
             
             {/* Productos */}
             <div className="w-64 bg-gradient-to-br from-background to-card p-6 relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-mint/10 to-transparent pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent pointer-events-none" />
               <div className="relative">
                 <div className="flex items-center gap-2 mb-6">
-                  <Package className="w-5 h-5 text-mint" />
-                  <h3 className="text-mint text-sm font-medium uppercase tracking-wider">Productos</h3>
+                  <Package className="w-5 h-5 text-primary" />
+                  <h3 className="text-primary text-sm font-medium uppercase tracking-wider">Productos</h3>
                 </div>
                 <ul className="space-y-3">
                   {productItems.map((item, idx) => (
@@ -143,11 +143,11 @@ export const Header = () => {
                         href={item.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center justify-between text-foreground/70 hover:text-mint text-sm py-1 group transition-colors"
+                        className="flex items-center justify-between text-muted-foreground hover:text-primary text-sm py-1 group transition-colors"
                         onClick={() => setIsMenuOpen(false)}
                       >
                         <span>{item.name}</span>
-                        <ChevronRight className="w-4 h-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-mint" />
+                        <ChevronRight className="w-4 h-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-primary" />
                       </a>
                     </li>
                   ))}
@@ -157,21 +157,21 @@ export const Header = () => {
 
             {/* Quiénes Somos */}
             <div className="w-56 bg-card p-6 relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-soft-blue/10 to-soft-pink/5 pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-br from-secondary/10 to-transparent pointer-events-none" />
               <div className="relative">
                 <div className="flex items-center gap-2 mb-6">
-                  <Users className="w-5 h-5 text-soft-blue" />
-                  <h3 className="text-soft-blue text-sm font-medium uppercase tracking-wider">Quiénes Somos</h3>
+                  <Users className="w-5 h-5 text-secondary" />
+                  <h3 className="text-secondary text-sm font-medium uppercase tracking-wider">Quiénes Somos</h3>
                 </div>
                 <ul className="space-y-3">
                   {aboutItems.map((item, idx) => (
                     <li key={idx}>
                       <NavLink 
                         to={item.href}
-                        className="flex items-center gap-3 text-foreground/70 hover:text-foreground text-sm py-1 group transition-colors"
+                        className="flex items-center gap-3 text-muted-foreground hover:text-foreground text-sm py-1 group transition-colors"
                         onClick={() => setIsMenuOpen(false)}
                       >
-                        <item.icon className="w-4 h-4 text-soft-blue/60 group-hover:text-soft-blue transition-colors" />
+                        <item.icon className="w-4 h-4 text-secondary/60 group-hover:text-secondary transition-colors" />
                         <span>{item.name}</span>
                       </NavLink>
                     </li>
@@ -182,11 +182,11 @@ export const Header = () => {
 
             {/* Recursos */}
             <div className="w-56 bg-card p-6 relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-bl from-soft-pink/10 to-soft-orange/5 pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-bl from-accent/10 to-transparent pointer-events-none" />
               <div className="relative">
                 <div className="flex items-center gap-2 mb-6">
-                  <Zap className="w-5 h-5 text-soft-pink" />
-                  <h3 className="text-soft-pink text-sm font-medium uppercase tracking-wider">Recursos</h3>
+                  <Zap className="w-5 h-5 text-accent" />
+                  <h3 className="text-accent text-sm font-medium uppercase tracking-wider">Recursos</h3>
                 </div>
                 <ul className="space-y-3">
                   {resourceItems.map((item, idx) => (
@@ -196,19 +196,19 @@ export const Header = () => {
                           href={item.href}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex items-center gap-3 text-foreground/70 hover:text-foreground text-sm py-1 group transition-colors"
+                          className="flex items-center gap-3 text-muted-foreground hover:text-foreground text-sm py-1 group transition-colors"
                           onClick={() => setIsMenuOpen(false)}
                         >
-                          <item.icon className="w-4 h-4 text-soft-pink/60 group-hover:text-soft-pink transition-colors" />
+                          <item.icon className="w-4 h-4 text-accent/60 group-hover:text-accent transition-colors" />
                           <span>{item.name}</span>
                         </a>
                       ) : (
                         <NavLink 
                           to={item.href}
-                          className="flex items-center gap-3 text-foreground/70 hover:text-foreground text-sm py-1 group transition-colors"
+                          className="flex items-center gap-3 text-muted-foreground hover:text-foreground text-sm py-1 group transition-colors"
                           onClick={() => setIsMenuOpen(false)}
                         >
-                          <item.icon className="w-4 h-4 text-soft-pink/60 group-hover:text-soft-pink transition-colors" />
+                          <item.icon className="w-4 h-4 text-accent/60 group-hover:text-accent transition-colors" />
                           <span>{item.name}</span>
                         </NavLink>
                       )}
@@ -223,11 +223,11 @@ export const Header = () => {
 
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
-        <div className="fixed inset-0 z-40 bg-black/95 backdrop-blur-xl pt-20 px-4 overflow-y-auto md:hidden">
+        <div className="fixed inset-0 z-40 bg-background/98 backdrop-blur-xl pt-20 px-4 overflow-y-auto md:hidden">
           <div className="flex flex-col w-full space-y-6">
             {/* Productos */}
             <div>
-              <h3 className="text-mint text-sm font-medium uppercase tracking-wider mb-4 flex items-center gap-2">
+              <h3 className="text-primary text-sm font-medium uppercase tracking-wider mb-4 flex items-center gap-2">
                 <Package className="w-4 h-4" />
                 Productos
               </h3>
@@ -238,7 +238,7 @@ export const Header = () => {
                       href={item.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-white/70 hover:text-white text-sm flex items-center gap-2"
+                      className="text-muted-foreground hover:text-foreground text-sm flex items-center gap-2"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
                       <ChevronRight className="w-3 h-3" />
@@ -251,7 +251,7 @@ export const Header = () => {
 
             {/* Quiénes Somos */}
             <div>
-              <h3 className="text-soft-blue text-sm font-medium uppercase tracking-wider mb-4 flex items-center gap-2">
+              <h3 className="text-secondary text-sm font-medium uppercase tracking-wider mb-4 flex items-center gap-2">
                 <Users className="w-4 h-4" />
                 Quiénes Somos
               </h3>
@@ -260,10 +260,10 @@ export const Header = () => {
                   <li key={idx}>
                     <NavLink 
                       to={item.href}
-                      className="text-white/70 hover:text-white text-sm flex items-center gap-3"
+                      className="text-muted-foreground hover:text-foreground text-sm flex items-center gap-3"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
-                      <item.icon className="w-4 h-4 text-soft-blue/60" />
+                      <item.icon className="w-4 h-4 text-secondary/60" />
                       {item.name}
                     </NavLink>
                   </li>
@@ -273,7 +273,7 @@ export const Header = () => {
 
             {/* Recursos */}
             <div>
-              <h3 className="text-soft-pink text-sm font-medium uppercase tracking-wider mb-4 flex items-center gap-2">
+              <h3 className="text-accent text-sm font-medium uppercase tracking-wider mb-4 flex items-center gap-2">
                 <Zap className="w-4 h-4" />
                 Recursos
               </h3>
@@ -285,19 +285,19 @@ export const Header = () => {
                         href={item.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-white/70 hover:text-white text-sm flex items-center gap-3"
+                        className="text-muted-foreground hover:text-foreground text-sm flex items-center gap-3"
                         onClick={() => setIsMobileMenuOpen(false)}
                       >
-                        <item.icon className="w-4 h-4 text-soft-pink/60" />
+                        <item.icon className="w-4 h-4 text-accent/60" />
                         {item.name}
                       </a>
                     ) : (
                       <NavLink 
                         to={item.href}
-                        className="text-white/70 hover:text-white text-sm flex items-center gap-3"
+                        className="text-muted-foreground hover:text-foreground text-sm flex items-center gap-3"
                         onClick={() => setIsMobileMenuOpen(false)}
                       >
-                        <item.icon className="w-4 h-4 text-soft-pink/60" />
+                        <item.icon className="w-4 h-4 text-accent/60" />
                         {item.name}
                       </NavLink>
                     )}
@@ -307,12 +307,12 @@ export const Header = () => {
             </div>
 
             {/* Discord CTA */}
-            <div className="pt-4 border-t border-white/10">
+            <div className="pt-4 border-t border-border">
               <a 
-                href="https://discord.gg/juaniconn"
+                href="https://discord.gg/beekonz"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-3 w-full py-3 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-xl text-white font-medium"
+                className="flex items-center justify-center gap-3 w-full py-3 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-xl text-foreground font-medium hover:shadow-lg hover:shadow-secondary/30 transition-all"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 <DiscordIcon className="w-5 h-5" />

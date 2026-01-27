@@ -44,6 +44,7 @@ export default {
         accent: {
           DEFAULT: "hsl(var(--accent))",
           foreground: "hsl(var(--accent-foreground))",
+          orange: "hsl(var(--accent-orange))",
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",
@@ -53,13 +54,22 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        // Rainbow palette colors
+        // Neon palette colors
+        neon: {
+          green: "hsl(var(--neon-green))",
+          cyan: "hsl(var(--neon-cyan))",
+          yellow: "hsl(var(--neon-yellow))",
+          orange: "hsl(var(--neon-orange))",
+        },
+        // Legacy rainbow colors mapped to neon
         mint: "hsl(var(--mint))",
         lime: "hsl(var(--lime))",
         yellow: "hsl(var(--yellow))",
         orange: "hsl(var(--orange))",
         pink: "hsl(var(--pink))",
         blue: "hsl(var(--blue))",
+        "soft-blue": "hsl(var(--soft-blue))",
+        "soft-pink": "hsl(var(--soft-pink))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -106,10 +116,10 @@ export default {
         },
         "pulse-glow": {
           "0%, 100%": {
-            boxShadow: "0 0 20px hsl(var(--mint) / 0.3)",
+            boxShadow: "0 0 20px hsl(var(--neon-green) / 0.3)",
           },
           "50%": {
-            boxShadow: "0 0 50px hsl(var(--mint) / 0.6)",
+            boxShadow: "0 0 50px hsl(var(--neon-green) / 0.6)",
           },
         },
         "float": {
@@ -130,6 +140,14 @@ export default {
             opacity: "1",
           },
         },
+        "neon-pulse": {
+          "0%, 100%": {
+            filter: "brightness(1) drop-shadow(0 0 10px hsl(var(--neon-green) / 0.5))",
+          },
+          "50%": {
+            filter: "brightness(1.2) drop-shadow(0 0 20px hsl(var(--neon-green) / 0.8))",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -138,6 +156,7 @@ export default {
         "pulse-glow": "pulse-glow 2s ease-in-out infinite",
         "float": "float 6s ease-in-out infinite",
         "scale-in": "scale-in 0.3s ease-out",
+        "neon-pulse": "neon-pulse 2s ease-in-out infinite",
       },
       backgroundSize: {
         "200%": "200% 100%",

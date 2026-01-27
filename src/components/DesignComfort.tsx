@@ -21,7 +21,7 @@ export const DesignComfort = () => {
             <div className="absolute inset-0 bg-primary/10 blur-[100px] rounded-full" />
             <img 
               src={trackerDetail} 
-              alt="Detalle del tracker Juaniconn mostrando diseño ergonómico" 
+              alt="Detalle del tracker Beekonz mostrando diseño ergonómico" 
               className="relative z-10 rounded-3xl shadow-2xl w-full hover:scale-[1.02] transition-smooth"
             />
           </div>
@@ -44,7 +44,7 @@ export const DesignComfort = () => {
             </p>
             
             <p className="text-lg text-primary font-medium italic">
-              "Juaniconn no solo busca precisión: busca un tracking que disfrutes usar."
+              "Beekonz no solo busca precisión: busca un tracking que disfrutes usar."
             </p>
             
             <div className="space-y-4 pt-4">
