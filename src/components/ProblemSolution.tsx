@@ -38,7 +38,7 @@ export const ProblemSolution = () => {
           {/* Solution statement */}
           <div className="text-center mb-16 animate-fade-in" style={{ animationDelay: '0.2s' }}>
             <p className="text-xl md:text-2xl text-foreground font-medium leading-relaxed max-w-3xl mx-auto">
-              Juaniconn ofrece una opción accesible, moderna y precisa diseñada especialmente 
+              Beekonz ofrece una opción accesible, moderna y precisa diseñada especialmente 
               para la comunidad hispana de VR.
             </p>
           </div>
@@ -70,7 +70,7 @@ export const ProblemSolution = () => {
                 <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center">
                   <CheckCircle className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="text-2xl font-display tracking-wide">SOLUCIÓN JUANICONN</h3>
+                <h3 className="text-2xl font-display tracking-wide">SOLUCIÓN BEEKONZ</h3>
               </div>
               
               {solutions.map((solution, index) => (

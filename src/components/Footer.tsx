@@ -6,19 +6,19 @@ export const Footer = () => {
     <footer className="relative py-16 bg-card border-t border-border/50 overflow-hidden">
       {/* Background effects */}
       <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-50" />
-      <div className="absolute bottom-0 left-1/4 w-96 h-48 bg-mint/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 right-1/4 w-96 h-48 bg-soft-blue/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 left-1/4 w-96 h-48 bg-primary/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 right-1/4 w-96 h-48 bg-secondary/5 rounded-full blur-3xl" />
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-mint to-soft-blue flex items-center justify-center">
-                <Zap className="w-4 h-4 text-background" />
+              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
+                <Zap className="w-4 h-4 text-primary-foreground" />
               </div>
-              <h3 className="text-2xl font-display font-bold bg-gradient-to-r from-mint via-soft-pink to-soft-blue bg-clip-text text-transparent">
-                Juaniconn
+              <h3 className="text-2xl font-display font-bold bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
+                Beekonz
               </h3>
             </div>
             <p className="text-muted-foreground text-sm leading-relaxed">
@@ -36,17 +36,17 @@ export const Footer = () => {
               <li>
                 <NavLink 
                   to="/contacto" 
-                  className="text-muted-foreground hover:text-mint transition-all duration-300 flex items-center gap-2 group"
+                  className="text-muted-foreground hover:text-primary transition-all duration-300 flex items-center gap-2 group"
                 >
                   <span className="group-hover:translate-x-1 transition-transform duration-300">Contacto</span>
                 </NavLink>
               </li>
               <li>
                 <a 
-                  href="https://discord.gg/UE2QDNf3sK" 
+                  href="https://discord.gg/beekonz" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-mint transition-all duration-300 flex items-center gap-2 group"
+                  className="text-muted-foreground hover:text-primary transition-all duration-300 flex items-center gap-2 group"
                 >
                   <MessageCircle className="h-4 w-4" />
                   <span className="group-hover:translate-x-1 transition-transform duration-300">Discord</span>
@@ -55,8 +55,8 @@ export const Footer = () => {
               </li>
               <li>
                 <NavLink 
-                  to="/smols" 
-                  className="text-muted-foreground hover:text-mint transition-all duration-300 flex items-center gap-2 group"
+                  to="/especificaciones-tecnicas" 
+                  className="text-muted-foreground hover:text-primary transition-all duration-300 flex items-center gap-2 group"
                 >
                   <span className="group-hover:translate-x-1 transition-transform duration-300">Especificaciones</span>
                 </NavLink>
@@ -71,7 +71,7 @@ export const Footer = () => {
               <li>
                 <NavLink 
                   to="/politica-privacidad" 
-                  className="text-muted-foreground hover:text-mint transition-all duration-300 flex items-center gap-2 group"
+                  className="text-muted-foreground hover:text-primary transition-all duration-300 flex items-center gap-2 group"
                 >
                   <span className="group-hover:translate-x-1 transition-transform duration-300">Privacidad</span>
                 </NavLink>
@@ -79,15 +79,15 @@ export const Footer = () => {
               <li>
                 <NavLink 
                   to="/politica-venta" 
-                  className="text-muted-foreground hover:text-mint transition-all duration-300 flex items-center gap-2 group"
+                  className="text-muted-foreground hover:text-primary transition-all duration-300 flex items-center gap-2 group"
                 >
                   <span className="group-hover:translate-x-1 transition-transform duration-300">Política de Venta</span>
                 </NavLink>
               </li>
               <li>
                 <NavLink 
-                  to="/devoluciones" 
-                  className="text-muted-foreground hover:text-mint transition-all duration-300 flex items-center gap-2 group"
+                  to="/garantia-devoluciones" 
+                  className="text-muted-foreground hover:text-primary transition-all duration-300 flex items-center gap-2 group"
                 >
                   <span className="group-hover:translate-x-1 transition-transform duration-300">Garantía y Devoluciones</span>
                 </NavLink>
@@ -101,10 +101,10 @@ export const Footer = () => {
             <ul className="space-y-3 text-sm">
               <li>
                 <a 
-                  href="https://instagram.com/juaniconntv" 
+                  href="https://instagram.com/beekonz" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-soft-pink transition-all duration-300 flex items-center gap-2 group"
+                  className="text-muted-foreground hover:text-secondary transition-all duration-300 flex items-center gap-2 group"
                 >
                   <Instagram className="h-4 w-4" />
                   <span className="group-hover:translate-x-1 transition-transform duration-300">Instagram</span>
@@ -113,10 +113,10 @@ export const Footer = () => {
               </li>
               <li>
                 <a 
-                  href="https://tiktok.com/@juaniconn" 
+                  href="https://tiktok.com/@beekonz" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-soft-pink transition-all duration-300 flex items-center gap-2 group"
+                  className="text-muted-foreground hover:text-secondary transition-all duration-300 flex items-center gap-2 group"
                 >
                   <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
@@ -133,10 +133,10 @@ export const Footer = () => {
         <div className="pt-8 border-t border-border/30">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-muted-foreground">
-              © 2024 Juaniconn Trackers. Todos los derechos reservados.
+              © 2024 Beekonz Trackers. Todos los derechos reservados.
             </p>
             <p className="text-xs text-muted-foreground/60">
-              Hecho con <span className="text-soft-pink">❤</span> para la comunidad VR hispana
+              Hecho con <span className="text-secondary">❤</span> para la comunidad VR hispana
             </p>
           </div>
         </div>

@@ -38,7 +38,7 @@ const Contacto = () => {
                   <MessageCircle className="h-12 w-12 text-primary" />
                 </div>
                 
-                <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">Discord Juaniconn</h2>
+                <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">Discord Beekonz</h2>
                 <p className="text-muted-foreground mb-8 max-w-lg mx-auto">
                   Únete a nuestra comunidad para obtener soporte, compartir experiencias y estar al tanto de las últimas novedades.
                 </p>
@@ -49,7 +49,7 @@ const Contacto = () => {
                   className="bg-primary hover:bg-primary/90 text-primary-foreground px-10 py-6 text-lg font-display font-semibold rounded-xl shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-all duration-300"
                 >
                   <a
-                    href="https://discord.gg/UE2QDNf3sK"
+                    href="https://discord.gg/beekonz"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -67,7 +67,7 @@ const Contacto = () => {
                 </div>
                 <h3 className="font-display font-bold text-xl mb-2">Comunidad Activa</h3>
                 <p className="text-muted-foreground text-sm">
-                  Comparte tips, tutoriales y experiencias con otros usuarios de Juaniconn Trackers
+                  Comparte tips, tutoriales y experiencias con otros usuarios de Beekonz Trackers
                 </p>
               </div>
 

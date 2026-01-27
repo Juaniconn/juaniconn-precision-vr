@@ -16,11 +16,11 @@ export const CustomSet = () => {
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header - matching global pattern */}
         <div className="text-center mb-16 animate-fade-in">
-          <span className="text-sm font-semibold text-mint tracking-widest uppercase mb-4 block">
+          <span className="text-sm font-semibold text-primary tracking-widest uppercase mb-4 block">
             Personalización
           </span>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-display tracking-wide mb-6">
-            PERSONALIZACIÓN <span className="bg-gradient-to-r from-mint via-soft-blue to-soft-pink bg-clip-text text-transparent">SET PERSONALIZADO</span>
+            PERSONALIZACIÓN <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">SET PERSONALIZADO</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto font-light">
             Configura un set a tu medida. Nosotros lo armamos por ti.
@@ -29,17 +29,17 @@ export const CustomSet = () => {
 
         {/* Two-column layout */}
         <div className="grid lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
-          {/* Left: Image with mint border */}
+          {/* Left: Image with neon border */}
           <div className="relative animate-fade-in" style={{ animationDelay: '0.1s' }}>
             {/* Outer glow */}
-            <div className="absolute -inset-8 bg-gradient-to-br from-mint/10 via-transparent to-soft-pink/8 rounded-3xl blur-3xl" />
+            <div className="absolute -inset-8 bg-gradient-to-br from-primary/15 via-transparent to-secondary/10 rounded-3xl blur-3xl" />
             
-            {/* Soft mint border frame */}
+            {/* Neon border frame */}
             <div className="relative">
               <div 
                 className="absolute -inset-[3px] rounded-2xl opacity-50"
                 style={{
-                  background: 'linear-gradient(135deg, rgba(169,234,203,0.4), rgba(169,234,203,0.15))',
+                  background: 'linear-gradient(135deg, rgba(107,255,63,0.4), rgba(0,229,255,0.3))',
                 }}
               />
               <div className="absolute inset-[1px] rounded-2xl bg-background/20" />
@@ -67,27 +67,27 @@ export const CustomSet = () => {
                   style={{ animationDelay: `${0.25 + index * 0.08}s` }}
                 >
                   <div className="flex-shrink-0 mt-1.5">
-                    <div className="w-1.5 h-1.5 rounded-full bg-mint" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-primary" />
                   </div>
                   <span className="text-foreground/70 font-light">{bullet}</span>
                 </div>
               ))}
             </div>
 
-            {/* Rainbow border button */}
+            {/* Neon border button */}
             <div className="pt-4">
               <a 
-                href="https://discord.gg/Wu6wJX72qX"
+                href="https://discord.gg/beekonz"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="relative group inline-block"
               >
-                <div className="absolute -inset-[2px] rainbow-border rounded-full opacity-70 group-hover:opacity-100 transition-opacity" />
+                <div className="absolute -inset-[2px] bg-gradient-to-r from-primary via-secondary to-primary rounded-full opacity-70 group-hover:opacity-100 transition-opacity animate-rainbow-flow bg-[length:200%_100%]" />
                 <div className="absolute inset-[1px] rounded-full bg-gradient-to-br from-background via-background/90 to-background" />
                 <button 
-                  className="relative px-8 py-3 rounded-full border border-mint/40 group-hover:border-mint/60 transition-all font-semibold"
+                  className="relative px-8 py-3 rounded-full border border-primary/40 group-hover:border-primary/60 transition-all font-semibold"
                 >
-                  <span className="bg-gradient-to-r from-mint via-soft-blue to-soft-pink bg-clip-text text-transparent text-base">
+                  <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent text-base">
                     Crear mi Set en Discord
                   </span>
                 </button>

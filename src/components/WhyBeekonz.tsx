@@ -1,6 +1,6 @@
 import { Palette, Globe, Wrench, Users, Shield } from "lucide-react";
 
-export const WhyJuaniconn = () => {
+export const WhyBeekonz = () => {
   const reasons = [
     { icon: Palette, title: "Diseños Personalizados", description: "Opciones únicas para tu estilo" },
     { icon: Globe, title: "Envíos Internacionales", description: "Entrega rápida a todo el mundo" },
@@ -14,7 +14,7 @@ export const WhyJuaniconn = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in">
           <span className="text-sm font-semibold text-primary tracking-widest uppercase mb-4 block">Por Qué Elegirnos</span>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display tracking-wide">¿POR QUÉ <span className="text-gradient">JUANICONN</span>?</h2>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display tracking-wide">¿POR QUÉ <span className="text-gradient">BEEKONZ</span>?</h2>
         </div>
         <div className="grid md:grid-cols-5 gap-6 max-w-6xl mx-auto">
           {reasons.map((reason, index) => (
