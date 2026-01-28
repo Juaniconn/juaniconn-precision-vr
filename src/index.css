@@ -2,112 +2,122 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Beekonz Design System - Tech Neon Gamer
-   Primary: #6BFF3F (Brand Green) | Secondary: #00E5FF (Tech Cyan)
-   Accent Yellow: #FFC83D | Accent Orange: #FF9F1C
-   Background: #0B1C2D → #08141F | Text: #EAFBFF / #8FA3B8
-   Tipografías: Bebas Neue (display) + Lato (body)
+/* Beekonz Design System - Premium Tech Brand
+   Primary Dark: #25010B (Deep burgundy)
+   Primary Light: #FBF4F4 (Cream background)
+   Accent Gold: #F3CC80 (CTAs and highlights)
+   Text Primary: #25010B | Text Secondary: #5a3a40
 */
 
 @layer base {
   :root {
-    /* Background: #0B1C2D → #08141F */
-    --background: 207 55% 11%;
-    --background-dark: 207 55% 8%;
-    --foreground: 193 100% 96%;
+    /* Background - Light cream */
+    --background: 0 22% 97%;
+    --background-dark: 0 20% 94%;
+    --foreground: 346 96% 8%;
 
-    /* Card backgrounds */
-    --card: 207 55% 13%;
-    --card-foreground: 193 100% 96%;
+    /* Card backgrounds - White */
+    --card: 0 0% 100%;
+    --card-foreground: 346 96% 8%;
 
-    --popover: 207 55% 13%;
-    --popover-foreground: 193 100% 96%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 346 96% 8%;
 
-    /* Primary: Brand Green #6BFF3F */
-    --primary: 105 100% 62%;
-    --primary-foreground: 207 55% 8%;
+    /* Primary: Deep Burgundy #25010B */
+    --primary: 346 96% 8%;
+    --primary-foreground: 0 22% 97%;
     
-    --primary-glow: 105 100% 70%;
-    --primary-dark: 105 80% 50%;
+    --primary-glow: 346 80% 15%;
+    --primary-dark: 346 96% 5%;
 
-    /* Secondary: Tech Cyan #00E5FF */
-    --secondary: 189 100% 50%;
-    --secondary-foreground: 207 55% 8%;
+    /* Secondary: Accent Gold #F3CC80 */
+    --secondary: 39 82% 73%;
+    --secondary-foreground: 346 96% 8%;
 
-    /* Muted: Secondary text #8FA3B8 */
-    --muted: 207 40% 18%;
-    --muted-foreground: 210 22% 64%;
+    /* Muted: Derived from primary */
+    --muted: 0 15% 92%;
+    --muted-foreground: 346 30% 35%;
 
-    /* Accent Yellow: #FFC83D */
-    --accent: 42 100% 62%;
-    --accent-foreground: 207 55% 8%;
+    /* Accent: Same as secondary gold */
+    --accent: 39 82% 73%;
+    --accent-foreground: 346 96% 8%;
 
-    /* Accent Orange: #FF9F1C */
-    --accent-orange: 35 100% 55%;
+    /* Accent Orange for alerts (subtle) */
+    --accent-orange: 30 100% 55%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 193 100% 96%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 207 40% 20%;
-    --input: 207 40% 18%;
-    --ring: 105 100% 62%;
+    --border: 346 20% 88%;
+    --input: 346 20% 90%;
+    --ring: 39 82% 73%;
 
     --radius: 1rem;
     
-    /* Neon colors */
-    --neon-green: 105 100% 62%;
-    --neon-cyan: 189 100% 50%;
-    --neon-yellow: 42 100% 62%;
-    --neon-orange: 35 100% 55%;
+    /* Brand colors for direct use */
+    --brand-dark: 346 96% 8%;
+    --brand-light: 0 22% 97%;
+    --brand-gold: 39 82% 73%;
+    --brand-gold-hover: 39 75% 65%;
     
-    /* Legacy rainbow colors mapped to new palette */
-    --mint: 105 100% 62%;
-    --lime: 105 100% 70%;
-    --yellow: 42 100% 62%;
-    --orange: 35 100% 55%;
-    --pink: 189 100% 50%;
-    --blue: 189 100% 50%;
-    --soft-blue: 189 100% 50%;
-    --soft-pink: 189 100% 60%;
+    /* Legacy color mappings - redirect to new palette */
+    --neon-green: 39 82% 73%;
+    --neon-cyan: 346 96% 8%;
+    --neon-yellow: 39 82% 73%;
+    --neon-orange: 30 100% 55%;
     
-    /* Gradients */
+    --mint: 39 82% 73%;
+    --lime: 39 75% 65%;
+    --yellow: 39 82% 73%;
+    --orange: 30 100% 55%;
+    --pink: 346 96% 8%;
+    --blue: 346 80% 15%;
+    --soft-blue: 346 60% 25%;
+    --soft-pink: 346 40% 40%;
+    
+    /* Gradients - Updated for warm palette */
     --gradient-rainbow: linear-gradient(
       90deg,
-      hsl(var(--neon-green)),
-      hsl(var(--neon-cyan)),
-      hsl(var(--neon-green))
+      hsl(var(--secondary)),
+      hsl(var(--primary)),
+      hsl(var(--secondary))
     );
-    --gradient-primary: linear-gradient(135deg, hsl(var(--neon-green)), hsl(var(--neon-cyan)));
-    --gradient-hero: radial-gradient(ellipse at top, hsl(207 55% 14%) 0%, hsl(207 55% 8%) 100%);
-    --gradient-spotlight: radial-gradient(circle at 50% 50%, hsl(var(--neon-green) / 0.15) 0%, transparent 50%);
-    --gradient-dark: linear-gradient(180deg, hsl(207 55% 11%) 0%, hsl(207 55% 8%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--primary)));
+    --gradient-hero: linear-gradient(180deg, hsl(0 22% 97%) 0%, hsl(0 20% 94%) 100%);
+    --gradient-spotlight: radial-gradient(circle at 50% 50%, hsl(var(--secondary) / 0.15) 0%, transparent 50%);
+    --gradient-dark: linear-gradient(180deg, hsl(var(--primary)) 0%, hsl(var(--primary-dark)) 100%);
     --gradient-section: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--background-dark)) 100%);
     
-    /* Shadows - Neon glow effects */
-    --shadow-glow: 0 0 40px hsl(var(--neon-green) / 0.4);
-    --shadow-glow-cyan: 0 0 40px hsl(var(--neon-cyan) / 0.4);
-    --shadow-soft: 0 8px 32px hsl(0 0% 0% / 0.5);
-    --shadow-card: 0 4px 24px hsl(0 0% 0% / 0.4);
-    --shadow-rainbow: 0 0 30px hsl(var(--neon-green) / 0.4), 0 0 60px hsl(var(--neon-cyan) / 0.25);
-    --shadow-neon: 0 0 20px hsl(var(--neon-green) / 0.5), 0 0 40px hsl(var(--neon-green) / 0.3);
+    /* Shadows - Warm, premium feel */
+    --shadow-glow: 0 0 40px hsl(var(--secondary) / 0.3);
+    --shadow-glow-cyan: 0 0 40px hsl(var(--secondary) / 0.3);
+    --shadow-soft: 0 8px 32px hsl(var(--primary) / 0.08);
+    --shadow-card: 0 4px 24px hsl(var(--primary) / 0.06);
+    --shadow-rainbow: 0 0 30px hsl(var(--secondary) / 0.3);
+    --shadow-neon: 0 0 20px hsl(var(--secondary) / 0.4);
     
     /* Transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 
-    --sidebar-background: 207 55% 11%;
-    --sidebar-foreground: 193 100% 96%;
-    --sidebar-primary: 105 100% 62%;
-    --sidebar-primary-foreground: 207 55% 8%;
-    --sidebar-accent: 207 40% 18%;
-    --sidebar-accent-foreground: 193 100% 96%;
-    --sidebar-border: 207 40% 20%;
-    --sidebar-ring: 105 100% 62%;
+    --sidebar-background: 0 22% 97%;
+    --sidebar-foreground: 346 96% 8%;
+    --sidebar-primary: 39 82% 73%;
+    --sidebar-primary-foreground: 346 96% 8%;
+    --sidebar-accent: 0 15% 92%;
+    --sidebar-accent-foreground: 346 96% 8%;
+    --sidebar-border: 346 20% 88%;
+    --sidebar-ring: 39 82% 73%;
   }
 
   .dark {
-    --background: 207 55% 8%;
-    --foreground: 193 100% 96%;
+    --background: 346 96% 8%;
+    --foreground: 0 22% 97%;
+    --card: 346 80% 12%;
+    --card-foreground: 0 22% 97%;
+    --muted: 346 40% 20%;
+    --muted-foreground: 346 20% 70%;
+    --border: 346 40% 20%;
   }
 }
 
@@ -152,7 +162,7 @@
   }
   
   .text-gradient {
-    background: var(--gradient-primary);
+    background: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--primary)));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -199,7 +209,7 @@
     transition: var(--transition-bounce);
   }
   
-  /* Neon border animated */
+  /* Premium border with gold accent */
   .rainbow-border {
     position: relative;
     background: hsl(var(--card));
@@ -211,7 +221,7 @@
     position: absolute;
     inset: -2px;
     border-radius: calc(var(--radius) + 2px);
-    background: var(--gradient-rainbow);
+    background: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--primary)), hsl(var(--secondary)));
     background-size: 300% 100%;
     animation: rainbow-flow 4s linear infinite;
     z-index: -1;
@@ -222,11 +232,11 @@
     opacity: 0.7;
   }
   
-  /* Button neon border */
+  /* Button with gold border */
   .btn-rainbow {
     position: relative;
     overflow: hidden;
-    background: hsl(var(--background));
+    background: hsl(var(--card));
     border: none;
   }
   
@@ -236,7 +246,7 @@
     inset: 0;
     border-radius: inherit;
     padding: 2px;
-    background: var(--gradient-rainbow);
+    background: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--primary)), hsl(var(--secondary)));
     background-size: 300% 100%;
     animation: rainbow-flow 3s linear infinite;
     -webkit-mask: 
@@ -250,18 +260,20 @@
   }
   
   .btn-rainbow-solid {
-    background: var(--gradient-rainbow);
-    background-size: 200% 100%;
-    animation: rainbow-flow 3s linear infinite;
-    color: hsl(var(--background));
+    background: hsl(var(--secondary));
+    color: hsl(var(--primary));
     font-weight: 600;
   }
+
+  .btn-rainbow-solid:hover {
+    background: hsl(var(--brand-gold-hover));
+  }
   
-  /* Grid pattern overlay */
+  /* Subtle grid pattern */
   .grid-pattern {
     background-image: 
-      linear-gradient(hsl(var(--neon-green) / 0.05) 1px, transparent 1px),
-      linear-gradient(90deg, hsl(var(--neon-green) / 0.05) 1px, transparent 1px);
+      linear-gradient(hsl(var(--primary) / 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--primary) / 0.03) 1px, transparent 1px);
     background-size: 60px 60px;
   }
   
@@ -271,16 +283,17 @@
   }
   
   .floating-card:hover {
-    @apply border-primary/40 -translate-y-1;
+    @apply border-secondary/40 -translate-y-1;
     box-shadow: var(--shadow-glow);
   }
   
-  /* Premium card with neon glow */
+  /* Premium card with gold accent */
   .premium-card {
     position: relative;
     background: hsl(var(--card));
     border-radius: 1.5rem;
     overflow: hidden;
+    border: 1px solid hsl(var(--border));
   }
   
   .premium-card::before {
@@ -289,7 +302,7 @@
     inset: 0;
     border-radius: inherit;
     padding: 1px;
-    background: var(--gradient-rainbow);
+    background: linear-gradient(135deg, hsl(var(--secondary) / 0.5), hsl(var(--primary) / 0.3), hsl(var(--secondary) / 0.5));
     background-size: 300% 100%;
     animation: rainbow-flow 5s linear infinite;
     -webkit-mask: 
@@ -318,20 +331,12 @@
     text-wrap: balance;
   }
   
-  /* Snowflake effect */
-  .snowflake {
-    position: absolute;
-    color: hsl(var(--foreground) / 0.3);
-    animation: snowfall linear infinite;
-    pointer-events: none;
-  }
-  
-  /* Bokeh lights */
+  /* Bokeh lights - warm tones */
   .bokeh-light {
     position: absolute;
     border-radius: 50%;
     filter: blur(40px);
-    opacity: 0.4;
+    opacity: 0.3;
     animation: bokeh-float 8s ease-in-out infinite;
   }
 }
@@ -382,19 +387,19 @@
   
   @keyframes pulse-glow {
     0%, 100% {
-      box-shadow: 0 0 20px hsl(var(--neon-green) / 0.3);
+      box-shadow: 0 0 20px hsl(var(--secondary) / 0.2);
     }
     50% {
-      box-shadow: 0 0 50px hsl(var(--neon-green) / 0.6);
+      box-shadow: 0 0 50px hsl(var(--secondary) / 0.4);
     }
   }
   
   @keyframes pulse-rainbow {
     0%, 100% {
-      box-shadow: 0 0 20px hsl(var(--neon-green) / 0.4), 0 0 40px hsl(var(--neon-cyan) / 0.2);
+      box-shadow: 0 0 20px hsl(var(--secondary) / 0.3);
     }
     50% {
-      box-shadow: 0 0 40px hsl(var(--neon-green) / 0.6), 0 0 80px hsl(var(--neon-cyan) / 0.4);
+      box-shadow: 0 0 40px hsl(var(--secondary) / 0.5);
     }
   }
   
@@ -404,23 +409,6 @@
     }
     50% {
       transform: translateY(-10px);
-    }
-  }
-  
-  @keyframes snowfall {
-    0% {
-      transform: translateY(-10vh) rotate(0deg);
-      opacity: 0;
-    }
-    10% {
-      opacity: 1;
-    }
-    90% {
-      opacity: 1;
-    }
-    100% {
-      transform: translateY(100vh) rotate(360deg);
-      opacity: 0;
     }
   }
   
@@ -445,12 +433,12 @@
     }
   }
   
-  @keyframes neon-pulse {
+  @keyframes gold-pulse {
     0%, 100% {
-      filter: brightness(1) drop-shadow(0 0 10px hsl(var(--neon-green) / 0.5));
+      filter: brightness(1) drop-shadow(0 0 10px hsl(var(--secondary) / 0.3));
     }
     50% {
-      filter: brightness(1.2) drop-shadow(0 0 20px hsl(var(--neon-green) / 0.8));
+      filter: brightness(1.1) drop-shadow(0 0 20px hsl(var(--secondary) / 0.5));
     }
   }
   
@@ -490,7 +478,7 @@
     animation: shimmer 2s infinite;
   }
   
-  .animate-neon-pulse {
-    animation: neon-pulse 2s ease-in-out infinite;
+  .animate-gold-pulse {
+    animation: gold-pulse 2s ease-in-out infinite;
   }
 }

@@ -54,14 +54,14 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        // Neon palette colors
-        neon: {
-          green: "hsl(var(--neon-green))",
-          cyan: "hsl(var(--neon-cyan))",
-          yellow: "hsl(var(--neon-yellow))",
-          orange: "hsl(var(--neon-orange))",
+        // Brand colors for direct use
+        brand: {
+          dark: "hsl(var(--brand-dark))",
+          light: "hsl(var(--brand-light))",
+          gold: "hsl(var(--brand-gold))",
+          "gold-hover": "hsl(var(--brand-gold-hover))",
         },
-        // Legacy rainbow colors mapped to neon
+        // Legacy color mappings - kept for compatibility
         mint: "hsl(var(--mint))",
         lime: "hsl(var(--lime))",
         yellow: "hsl(var(--yellow))",
@@ -116,10 +116,10 @@ export default {
         },
         "pulse-glow": {
           "0%, 100%": {
-            boxShadow: "0 0 20px hsl(var(--neon-green) / 0.3)",
+            boxShadow: "0 0 20px hsl(var(--secondary) / 0.2)",
           },
           "50%": {
-            boxShadow: "0 0 50px hsl(var(--neon-green) / 0.6)",
+            boxShadow: "0 0 50px hsl(var(--secondary) / 0.4)",
           },
         },
         "float": {
@@ -140,12 +140,12 @@ export default {
             opacity: "1",
           },
         },
-        "neon-pulse": {
+        "gold-pulse": {
           "0%, 100%": {
-            filter: "brightness(1) drop-shadow(0 0 10px hsl(var(--neon-green) / 0.5))",
+            filter: "brightness(1) drop-shadow(0 0 10px hsl(var(--secondary) / 0.3))",
           },
           "50%": {
-            filter: "brightness(1.2) drop-shadow(0 0 20px hsl(var(--neon-green) / 0.8))",
+            filter: "brightness(1.1) drop-shadow(0 0 20px hsl(var(--secondary) / 0.5))",
           },
         },
       },
@@ -156,7 +156,7 @@ export default {
         "pulse-glow": "pulse-glow 2s ease-in-out infinite",
         "float": "float 6s ease-in-out infinite",
         "scale-in": "scale-in 0.3s ease-out",
-        "neon-pulse": "neon-pulse 2s ease-in-out infinite",
+        "gold-pulse": "gold-pulse 2s ease-in-out infinite",
       },
       backgroundSize: {
         "200%": "200% 100%",

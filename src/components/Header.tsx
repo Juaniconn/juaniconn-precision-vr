@@ -13,13 +13,30 @@ import {
   Download,
   Users,
   Target,
-  Sparkles,
   Zap
 } from "lucide-react";
 
 const DiscordIcon = ({ className }: { className?: string }) => (
   <svg className={className} viewBox="0 0 24 24" fill="currentColor">
     <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
+  </svg>
+);
+
+const TikTokIcon = ({ className }: { className?: string }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+  </svg>
+);
+
+const InstagramIcon = ({ className }: { className?: string }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+  </svg>
+);
+
+const FacebookIcon = ({ className }: { className?: string }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
   </svg>
 );
 
@@ -51,7 +68,7 @@ export const Header = () => {
     { name: "Starter Pack (6 Trackers)", href: "https://buy.stripe.com/bJe28s1bn0RD9kz4Vn7g40k", external: true },
     { name: "Advanced Pack (8 Trackers)", href: "https://buy.stripe.com/00w00kf2d0RDfIXcnP7g40j", external: true },
     { name: "Pro Pack (10 Trackers)", href: "https://buy.stripe.com/5kQbJ22fr57T8gv73v7g40l", external: true },
-    { name: "Crear mi Set", href: "https://discord.gg/beekonz", external: true },
+    { name: "Crear mi Set", href: "https://discord.gg/ekr3ERWJQ6", external: true },
   ];
 
   const aboutItems = [
@@ -68,29 +85,35 @@ export const Header = () => {
     { name: "Especificaciones Técnicas", href: "/especificaciones-tecnicas", icon: Zap },
   ];
 
+  const socialLinks = [
+    { name: "Discord", href: "https://discord.gg/ekr3ERWJQ6", icon: DiscordIcon },
+    { name: "TikTok", href: "https://www.tiktok.com/@beekonz", icon: TikTokIcon },
+    { name: "Instagram", href: "https://www.instagram.com/beekonz/", icon: InstagramIcon },
+    { name: "Facebook", href: "https://www.facebook.com/profile.php?id=100083643665008", icon: FacebookIcon },
+  ];
+
   return (
     <>
       <header className={`fixed top-4 left-1/2 -translate-x-1/2 z-50 transition-all duration-500 ${
         isScrolled ? 'top-2' : 'top-4'
       }`}>
-        <nav className="flex items-center gap-2 px-3 py-2 bg-background/80 backdrop-blur-xl rounded-full border border-primary/20 shadow-2xl shadow-primary/10">
+        <nav className="flex items-center gap-2 px-3 py-2 bg-card/95 backdrop-blur-xl rounded-full border border-border shadow-lg">
           {/* Logo */}
           <NavLink 
             to="/" 
-            className="flex items-center gap-2 px-3 py-2 rounded-full bg-primary/10 hover:bg-primary/20 transition-all duration-300 group"
+            className="flex items-center gap-2 px-3 py-2 rounded-full bg-primary/5 hover:bg-primary/10 transition-all duration-300 group"
           >
             <div className="relative w-7 h-7 flex items-center justify-center">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary to-secondary rounded-lg opacity-80 group-hover:opacity-100 transition-opacity" />
+              <div className="absolute inset-0 bg-primary rounded-lg" />
               <Cpu className="relative w-4 h-4 text-primary-foreground" />
             </div>
             <span className="text-foreground font-display text-base tracking-wider hidden sm:block">Beekonz</span>
-            <Sparkles className="w-3 h-3 text-primary animate-pulse hidden sm:block" />
           </NavLink>
 
           {/* Menu Button - Desktop */}
           <button 
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="menu-trigger hidden md:flex items-center gap-2 px-4 py-2 bg-background rounded-full border border-border hover:border-primary/50 transition-all duration-300 group"
+            className="menu-trigger hidden md:flex items-center gap-2 px-4 py-2 bg-card rounded-full border border-border hover:border-secondary/50 transition-all duration-300 group"
           >
             <div className="flex flex-col gap-1">
               <span className={`block w-4 h-0.5 bg-foreground transition-all duration-300 ${isMenuOpen ? 'translate-y-1.5 rotate-45' : ''}`} />
@@ -100,19 +123,25 @@ export const Header = () => {
             <span className="text-foreground text-sm font-medium">menu</span>
           </button>
 
-          {/* Discord Icon */}
-          <a 
-            href="https://discord.gg/beekonz" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="w-9 h-9 flex items-center justify-center rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 border border-secondary/30 hover:border-secondary/60 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-secondary/30"
-          >
-            <DiscordIcon className="w-5 h-5 text-foreground" />
-          </a>
+          {/* Social Icons */}
+          <div className="hidden md:flex items-center gap-1">
+            {socialLinks.slice(0, 2).map((social) => (
+              <a 
+                key={social.name}
+                href={social.href}
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-9 h-9 flex items-center justify-center rounded-full bg-primary/5 border border-border hover:bg-secondary hover:border-secondary hover:text-secondary-foreground transition-all duration-300"
+                title={social.name}
+              >
+                <social.icon className="w-4 h-4" />
+              </a>
+            ))}
+          </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden flex items-center justify-center w-9 h-9 rounded-full bg-background border border-border ml-0"
+            className="md:hidden flex items-center justify-center w-9 h-9 rounded-full bg-card border border-border ml-0"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X className="w-5 h-5 text-foreground" /> : <Menu className="w-5 h-5 text-foreground" />}
@@ -125,16 +154,16 @@ export const Header = () => {
             ? 'opacity-100 translate-y-0 pointer-events-auto' 
             : 'opacity-0 -translate-y-4 pointer-events-none'
         }`}>
-          <div className="relative flex rounded-3xl overflow-hidden shadow-2xl shadow-primary/20 border border-primary/20">
-            <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-card rotate-45 rounded-sm border-l border-t border-primary/20" />
+          <div className="relative flex rounded-3xl overflow-hidden shadow-2xl border border-border bg-card">
+            <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-card rotate-45 rounded-sm border-l border-t border-border" />
             
             {/* Productos */}
-            <div className="w-64 bg-gradient-to-br from-background to-card p-6 relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent pointer-events-none" />
+            <div className="w-64 bg-card p-6 relative overflow-hidden border-r border-border">
+              <div className="absolute inset-0 bg-gradient-to-br from-secondary/5 to-transparent pointer-events-none" />
               <div className="relative">
                 <div className="flex items-center gap-2 mb-6">
-                  <Package className="w-5 h-5 text-primary" />
-                  <h3 className="text-primary text-sm font-medium uppercase tracking-wider">Productos</h3>
+                  <Package className="w-5 h-5 text-secondary" />
+                  <h3 className="text-secondary text-sm font-medium uppercase tracking-wider">Productos</h3>
                 </div>
                 <ul className="space-y-3">
                   {productItems.map((item, idx) => (
@@ -143,11 +172,11 @@ export const Header = () => {
                         href={item.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center justify-between text-muted-foreground hover:text-primary text-sm py-1 group transition-colors"
+                        className="flex items-center justify-between text-muted-foreground hover:text-secondary text-sm py-1 group transition-colors"
                         onClick={() => setIsMenuOpen(false)}
                       >
                         <span>{item.name}</span>
-                        <ChevronRight className="w-4 h-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-primary" />
+                        <ChevronRight className="w-4 h-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-secondary" />
                       </a>
                     </li>
                   ))}
@@ -156,12 +185,12 @@ export const Header = () => {
             </div>
 
             {/* Quiénes Somos */}
-            <div className="w-56 bg-card p-6 relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-secondary/10 to-transparent pointer-events-none" />
+            <div className="w-56 bg-card p-6 relative overflow-hidden border-r border-border">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent pointer-events-none" />
               <div className="relative">
                 <div className="flex items-center gap-2 mb-6">
-                  <Users className="w-5 h-5 text-secondary" />
-                  <h3 className="text-secondary text-sm font-medium uppercase tracking-wider">Quiénes Somos</h3>
+                  <Users className="w-5 h-5 text-primary" />
+                  <h3 className="text-primary text-sm font-medium uppercase tracking-wider">Quiénes Somos</h3>
                 </div>
                 <ul className="space-y-3">
                   {aboutItems.map((item, idx) => (
@@ -171,7 +200,7 @@ export const Header = () => {
                         className="flex items-center gap-3 text-muted-foreground hover:text-foreground text-sm py-1 group transition-colors"
                         onClick={() => setIsMenuOpen(false)}
                       >
-                        <item.icon className="w-4 h-4 text-secondary/60 group-hover:text-secondary transition-colors" />
+                        <item.icon className="w-4 h-4 text-primary/60 group-hover:text-secondary transition-colors" />
                         <span>{item.name}</span>
                       </NavLink>
                     </li>
@@ -182,11 +211,11 @@ export const Header = () => {
 
             {/* Recursos */}
             <div className="w-56 bg-card p-6 relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-bl from-accent/10 to-transparent pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-bl from-secondary/5 to-transparent pointer-events-none" />
               <div className="relative">
                 <div className="flex items-center gap-2 mb-6">
-                  <Zap className="w-5 h-5 text-accent" />
-                  <h3 className="text-accent text-sm font-medium uppercase tracking-wider">Recursos</h3>
+                  <Zap className="w-5 h-5 text-secondary" />
+                  <h3 className="text-secondary text-sm font-medium uppercase tracking-wider">Recursos</h3>
                 </div>
                 <ul className="space-y-3">
                   {resourceItems.map((item, idx) => (
@@ -199,7 +228,7 @@ export const Header = () => {
                           className="flex items-center gap-3 text-muted-foreground hover:text-foreground text-sm py-1 group transition-colors"
                           onClick={() => setIsMenuOpen(false)}
                         >
-                          <item.icon className="w-4 h-4 text-accent/60 group-hover:text-accent transition-colors" />
+                          <item.icon className="w-4 h-4 text-secondary/60 group-hover:text-secondary transition-colors" />
                           <span>{item.name}</span>
                         </a>
                       ) : (
@@ -208,7 +237,7 @@ export const Header = () => {
                           className="flex items-center gap-3 text-muted-foreground hover:text-foreground text-sm py-1 group transition-colors"
                           onClick={() => setIsMenuOpen(false)}
                         >
-                          <item.icon className="w-4 h-4 text-accent/60 group-hover:text-accent transition-colors" />
+                          <item.icon className="w-4 h-4 text-secondary/60 group-hover:text-secondary transition-colors" />
                           <span>{item.name}</span>
                         </NavLink>
                       )}
@@ -227,7 +256,7 @@ export const Header = () => {
           <div className="flex flex-col w-full space-y-6">
             {/* Productos */}
             <div>
-              <h3 className="text-primary text-sm font-medium uppercase tracking-wider mb-4 flex items-center gap-2">
+              <h3 className="text-secondary text-sm font-medium uppercase tracking-wider mb-4 flex items-center gap-2">
                 <Package className="w-4 h-4" />
                 Productos
               </h3>
@@ -238,7 +267,7 @@ export const Header = () => {
                       href={item.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-muted-foreground hover:text-foreground text-sm flex items-center gap-2"
+                      className="text-muted-foreground hover:text-secondary text-sm flex items-center gap-2"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
                       <ChevronRight className="w-3 h-3" />
@@ -251,7 +280,7 @@ export const Header = () => {
 
             {/* Quiénes Somos */}
             <div>
-              <h3 className="text-secondary text-sm font-medium uppercase tracking-wider mb-4 flex items-center gap-2">
+              <h3 className="text-primary text-sm font-medium uppercase tracking-wider mb-4 flex items-center gap-2">
                 <Users className="w-4 h-4" />
                 Quiénes Somos
               </h3>
@@ -263,7 +292,7 @@ export const Header = () => {
                       className="text-muted-foreground hover:text-foreground text-sm flex items-center gap-3"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
-                      <item.icon className="w-4 h-4 text-secondary/60" />
+                      <item.icon className="w-4 h-4 text-primary/60" />
                       {item.name}
                     </NavLink>
                   </li>
@@ -273,7 +302,7 @@ export const Header = () => {
 
             {/* Recursos */}
             <div>
-              <h3 className="text-accent text-sm font-medium uppercase tracking-wider mb-4 flex items-center gap-2">
+              <h3 className="text-secondary text-sm font-medium uppercase tracking-wider mb-4 flex items-center gap-2">
                 <Zap className="w-4 h-4" />
                 Recursos
               </h3>
@@ -288,7 +317,7 @@ export const Header = () => {
                         className="text-muted-foreground hover:text-foreground text-sm flex items-center gap-3"
                         onClick={() => setIsMobileMenuOpen(false)}
                       >
-                        <item.icon className="w-4 h-4 text-accent/60" />
+                        <item.icon className="w-4 h-4 text-secondary/60" />
                         {item.name}
                       </a>
                     ) : (
@@ -297,7 +326,7 @@ export const Header = () => {
                         className="text-muted-foreground hover:text-foreground text-sm flex items-center gap-3"
                         onClick={() => setIsMobileMenuOpen(false)}
                       >
-                        <item.icon className="w-4 h-4 text-accent/60" />
+                        <item.icon className="w-4 h-4 text-secondary/60" />
                         {item.name}
                       </NavLink>
                     )}
@@ -306,18 +335,25 @@ export const Header = () => {
               </ul>
             </div>
 
-            {/* Discord CTA */}
+            {/* Social Links */}
             <div className="pt-4 border-t border-border">
-              <a 
-                href="https://discord.gg/beekonz"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-3 w-full py-3 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-xl text-foreground font-medium hover:shadow-lg hover:shadow-secondary/30 transition-all"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                <DiscordIcon className="w-5 h-5" />
-                Únete a Discord
-              </a>
+              <h3 className="text-muted-foreground text-sm font-medium uppercase tracking-wider mb-4">
+                Síguenos
+              </h3>
+              <div className="flex items-center gap-3">
+                {socialLinks.map((social) => (
+                  <a 
+                    key={social.name}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 flex items-center justify-center rounded-full bg-primary text-primary-foreground hover:bg-secondary hover:text-secondary-foreground transition-all"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    <social.icon className="w-5 h-5" />
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
         </div>

@@ -9,22 +9,28 @@ export const Shipping = () => {
   ];
   
   return (
-    <section id="shipping" className="section-padding bg-card">
+    <section id="shipping" className="section-padding bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in">
-          <span className="text-sm font-semibold text-primary tracking-widest uppercase mb-4 block">Logística</span>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display tracking-wide">ENVÍOS Y <span className="text-gradient">SOPORTE</span></h2>
+          <span className="text-sm font-semibold text-secondary tracking-widest uppercase mb-4 block">Logística</span>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display tracking-wide text-foreground">
+            ENVÍOS Y <span className="text-secondary">SOPORTE</span>
+          </h2>
         </div>
         <div className="grid md:grid-cols-4 gap-6 max-w-5xl mx-auto">
           {features.map((f, i) => (
-            <div key={i} className="floating-card p-6 text-center animate-fade-in" style={{ animationDelay: `${i * 0.1}s` }}>
-              <div className="mb-4 inline-flex p-4 bg-primary/10 rounded-full"><f.icon className="h-7 w-7 text-primary" /></div>
-              <h3 className="text-xl font-semibold mb-2">{f.title}</h3>
+            <div key={i} className="bg-card border border-border rounded-2xl p-6 text-center animate-fade-in hover:border-secondary/40 transition-all duration-300 hover:shadow-lg" style={{ animationDelay: `${i * 0.1}s` }}>
+              <div className="mb-4 inline-flex p-4 bg-secondary/20 rounded-full">
+                <f.icon className="h-7 w-7 text-secondary" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2 text-foreground">{f.title}</h3>
               <p className="text-muted-foreground font-light">{f.description}</p>
             </div>
           ))}
         </div>
-        <p className="mt-12 text-center text-lg text-muted-foreground max-w-2xl mx-auto">Envíos seguros y rastreables a todo el mundo.</p>
+        <p className="mt-12 text-center text-lg text-muted-foreground max-w-2xl mx-auto">
+          Envíos seguros y rastreables a todo el mundo.
+        </p>
       </div>
     </section>
   );

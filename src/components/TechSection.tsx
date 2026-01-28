@@ -9,18 +9,18 @@ export const TechSection = () => {
   ];
 
   return (
-    <section id="tech" className="section-padding bg-background relative overflow-hidden">
-      {/* Subtle background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-card/20 to-background" />
+    <section id="tech" className="section-padding bg-muted/30 relative overflow-hidden">
+      {/* Subtle background pattern */}
+      <div className="absolute inset-0 grid-pattern opacity-50" />
 
       <div className="container mx-auto px-4 relative z-10">
-        {/* Section Header - matching global pattern */}
+        {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in">
-          <span className="text-sm font-semibold text-mint tracking-widest uppercase mb-4 block">
+          <span className="text-sm font-semibold text-secondary tracking-widest uppercase mb-4 block">
             Conectividad
           </span>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display tracking-wide mb-6">
-            CONECTIVIDAD <span className="bg-gradient-to-r from-mint via-soft-blue to-soft-pink bg-clip-text text-transparent">ESTABLE</span>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display tracking-wide mb-6 text-foreground">
+            CONECTIVIDAD <span className="text-secondary">ESTABLE</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto font-light">
             Comunicación confiable en todo momento.
@@ -32,17 +32,17 @@ export const TechSection = () => {
           {/* Left: Image with soft border */}
           <div className="relative animate-fade-in" style={{ animationDelay: '0.1s' }}>
             {/* Outer glow */}
-            <div className="absolute -inset-8 bg-gradient-to-br from-soft-blue/10 via-transparent to-mint/8 rounded-3xl blur-3xl" />
+            <div className="absolute -inset-8 bg-gradient-to-br from-secondary/15 via-transparent to-primary/10 rounded-3xl blur-3xl" />
             
             {/* Soft border frame */}
             <div className="relative">
               <div 
-                className="absolute -inset-[3px] rounded-2xl opacity-50"
+                className="absolute -inset-[3px] rounded-2xl"
                 style={{
-                  background: 'linear-gradient(135deg, rgba(137,215,255,0.35), rgba(169,234,203,0.15))',
+                  background: 'linear-gradient(135deg, hsl(39, 82%, 73%, 0.4), hsl(346, 96%, 8%, 0.2))',
                 }}
               />
-              <div className="absolute inset-[1px] rounded-2xl bg-background/20" />
+              <div className="absolute inset-[1px] rounded-2xl bg-card" />
               <img 
                 src={trackerInternal} 
                 alt="Tracker render interno" 
@@ -58,7 +58,7 @@ export const TechSection = () => {
               Nuestros trackers utilizan un enlace inalámbrico optimizado que mantiene una señal estable incluso en espacios de 3×5m hasta 5×5m.
             </p>
 
-            {/* Feature cards - minimal style */}
+            {/* Feature cards */}
             <div className="space-y-4">
               {features.map((feature, index) => (
                 <div 
@@ -68,8 +68,8 @@ export const TechSection = () => {
                 >
                   {/* Icon */}
                   <div className="flex-shrink-0">
-                    <div className="w-10 h-10 rounded-lg bg-mint/10 flex items-center justify-center group-hover:bg-mint/15 transition-all">
-                      <feature.icon className="w-5 h-5 text-mint" />
+                    <div className="w-10 h-10 rounded-lg bg-secondary/20 flex items-center justify-center group-hover:bg-secondary/30 transition-all">
+                      <feature.icon className="w-5 h-5 text-secondary" />
                     </div>
                   </div>
                   {/* Content */}
@@ -77,7 +77,7 @@ export const TechSection = () => {
                     <h3 className="font-semibold text-foreground mb-0.5 text-sm">
                       {feature.title}
                     </h3>
-                    <p className="text-sm text-foreground/60 font-light">
+                    <p className="text-sm text-muted-foreground font-light">
                       {feature.description}
                     </p>
                   </div>
@@ -86,8 +86,8 @@ export const TechSection = () => {
             </div>
 
             {/* Info note */}
-            <div className="mt-6 p-5 rounded-xl bg-mint/5 border border-mint/20">
-              <p className="text-sm text-foreground/70 font-light">
+            <div className="mt-6 p-5 rounded-xl bg-card border border-secondary/30">
+              <p className="text-sm text-muted-foreground font-light">
                 Diseñado para espacios de VR domésticos y profesionales, nuestro sistema garantiza la mejor experiencia de seguimiento sin interferencias.
               </p>
             </div>
