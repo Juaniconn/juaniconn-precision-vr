@@ -8,12 +8,14 @@ const scrollToSection = (id: string) => {
 
 export const FinalCTA = () => {
   return (
-    <section className="section-padding bg-background relative overflow-hidden">
-      {/* Neon glow background */}
+    <section className="section-padding bg-primary text-primary-foreground relative overflow-hidden">
+      {/* Background pattern */}
+      <div className="absolute inset-0 opacity-10 grid-pattern" />
+      
+      {/* Warm accent glows */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-primary/20 rounded-full blur-[120px]" />
-        <div className="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-secondary/15 rounded-full blur-[120px]" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-secondary/10 rounded-full blur-[100px]" />
+        <div className="absolute top-0 left-1/4 w-[400px] h-[400px] bg-secondary/20 rounded-full blur-[120px]" />
+        <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-secondary/15 rounded-full blur-[120px]" />
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
@@ -21,8 +23,8 @@ export const FinalCTA = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Image */}
             <div className="relative animate-fade-in order-2 lg:order-1">
-              <div className="absolute -inset-4 bg-gradient-to-r from-primary via-secondary to-primary rounded-3xl opacity-30 blur-xl" />
-              <div className="relative rounded-2xl overflow-hidden">
+              <div className="absolute -inset-4 bg-secondary/30 rounded-3xl blur-xl" />
+              <div className="relative rounded-2xl overflow-hidden border-2 border-secondary/40">
                 <img 
                   src={trackerLifestyle} 
                   alt="Beekonz Tracker en mano - Bellas Artes México"
@@ -33,38 +35,33 @@ export const FinalCTA = () => {
             
             {/* Content */}
             <div className="text-center lg:text-left space-y-8 animate-fade-in order-1 lg:order-2">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/30">
-                <Sparkles className="w-4 h-4 text-primary" />
-                <span className="text-sm text-primary font-medium">Hecho para la comunidad hispana</span>
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/20 border border-secondary/40">
+                <Sparkles className="w-4 h-4 text-secondary" />
+                <span className="text-sm text-secondary font-medium">Hecho para la comunidad hispana</span>
               </div>
               
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-display tracking-wide leading-tight">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-display tracking-wide leading-tight text-primary-foreground">
                 LLEVA TU EXPERIENCIA EN VR{" "}
-                <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
+                <span className="text-secondary">
                   AL SIGUIENTE NIVEL
                 </span>
               </h2>
               
-              <p className="text-xl text-foreground/80 font-light leading-relaxed">
+              <p className="text-xl text-primary-foreground/80 font-light leading-relaxed">
                 Tracking preciso, ligero y accesible. Diseñado especialmente para bailarines, creadores y la comunidad VRChat hispana.
               </p>
               
-              {/* Neon button */}
-              <div className="relative inline-block group">
-                <div className="absolute -inset-1 bg-gradient-to-r from-primary via-secondary to-primary rounded-full opacity-70 group-hover:opacity-100 blur-sm transition-opacity duration-300 animate-rainbow-flow bg-[length:200%_100%]" />
-                <Button 
-                  size="lg" 
-                  className="relative bg-background hover:bg-card text-foreground font-semibold px-10 py-7 text-lg rounded-full border border-primary/50 group-hover:border-primary transition-all duration-300"
-                  onClick={() => scrollToSection('kits')}
-                >
-                  <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
-                    Comprar Ahora
-                  </span>
-                  <ArrowRight className="ml-3 h-5 w-5 text-primary group-hover:translate-x-1 transition-transform" />
-                </Button>
-              </div>
+              {/* CTA Button */}
+              <Button 
+                size="lg" 
+                className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold px-10 py-7 text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+                onClick={() => scrollToSection('kits')}
+              >
+                Comprar Ahora
+                <ArrowRight className="ml-3 h-5 w-5" />
+              </Button>
               
-              <p className="text-sm text-muted-foreground">
+              <p className="text-sm text-primary-foreground/70">
                 Envíos en 24 hrs México · 5–7 días Internacional
               </p>
             </div>

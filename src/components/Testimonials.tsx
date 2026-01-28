@@ -10,20 +10,19 @@ export const Testimonials = () => {
   
   return (
     <section id="testimonials" className="section-padding bg-background relative overflow-hidden">
-      {/* Background glow effects */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-mint/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-soft-pink/10 rounded-full blur-3xl" />
+      {/* Background gradient */}
+      <div className="absolute inset-0 bg-gradient-to-b from-muted/20 via-background to-background" />
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16 animate-fade-in">
-          <span className="text-sm font-semibold text-mint tracking-widest uppercase mb-4 block">Testimonios</span>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display tracking-wide">
-            LO QUE DICEN <span className="text-mint">NUESTROS USUARIOS</span>
+          <span className="text-sm font-semibold text-secondary tracking-widest uppercase mb-4 block">Testimonios</span>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display tracking-wide text-foreground">
+            LO QUE DICEN <span className="text-secondary">NUESTROS USUARIOS</span>
           </h2>
           {isPlaceholder && (
-            <div className="mt-8 max-w-2xl mx-auto bg-mint/10 rounded-lg p-6 border border-mint/30">
-              <p className="text-foreground/90">
-                Muy pronto añadiremos testimonios reales de nuestros usuarios, incluyendo videos cortos y experiencias dentro de VRChat. Queremos mostrar resultados reales con clientes reales para que puedas ver el rendimiento auténtico de los trackers Juaniconn.
+            <div className="mt-8 max-w-2xl mx-auto bg-secondary/10 rounded-lg p-6 border border-secondary/30">
+              <p className="text-muted-foreground">
+                Muy pronto añadiremos testimonios reales de nuestros usuarios, incluyendo videos cortos y experiencias dentro de VRChat. Queremos mostrar resultados reales con clientes reales para que puedas ver el rendimiento auténtico de los trackers Beekonz.
               </p>
             </div>
           )}
@@ -36,13 +35,9 @@ export const Testimonials = () => {
               className="relative group animate-fade-in" 
               style={{ animationDelay: `${index * 0.15}s` }}
             >
-              {/* Rainbow border */}
-              <div className="absolute -inset-[1px] bg-gradient-to-r from-mint via-soft-pink to-soft-blue rounded-2xl opacity-30 group-hover:opacity-60 blur-sm transition-opacity duration-500" />
-              <div className="absolute -inset-[1px] rainbow-border rounded-2xl opacity-20 group-hover:opacity-40 transition-opacity duration-500" />
-              
-              <div className="relative bg-card/80 backdrop-blur-sm rounded-2xl p-8 border border-border/50 h-full">
+              <div className="bg-card rounded-2xl p-8 border border-border hover:border-secondary/40 transition-all duration-300 h-full shadow-sm hover:shadow-lg">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="h-14 w-14 rounded-full bg-gradient-to-br from-mint to-soft-blue flex items-center justify-center text-background font-bold text-lg shadow-lg">
+                  <div className="h-14 w-14 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-lg">
                     {t.avatar}
                   </div>
                   <div>
@@ -53,11 +48,11 @@ export const Testimonials = () => {
                 
                 <div className="flex gap-1 mb-4">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-4 w-4 fill-pastel-yellow text-pastel-yellow" />
+                    <Star key={i} className="h-4 w-4 fill-secondary text-secondary" />
                   ))}
                 </div>
                 
-                <p className="text-foreground/90 font-light italic leading-relaxed">"{t.text}"</p>
+                <p className="text-muted-foreground font-light italic leading-relaxed">"{t.text}"</p>
               </div>
             </div>
           ))}

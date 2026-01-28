@@ -49,16 +49,16 @@ export const Kits = () => {
   return (
     <section id="kits" className="py-24 bg-background relative overflow-hidden">
       {/* Subtle background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-card/30 to-background" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-muted/20 to-background" />
       
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium tracking-wider uppercase mb-6">
+          <span className="inline-block px-4 py-2 rounded-full bg-secondary/20 text-primary text-sm font-medium tracking-wider uppercase mb-6">
             Nuestros Productos
           </span>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight mb-6">
-            BEEKONZ <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">TRACKERS</span>
+            BEEKONZ <span className="text-secondary">TRACKERS</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Elige el pack perfecto para tu experiencia VR
@@ -75,32 +75,32 @@ export const Kits = () => {
               {/* Featured Badge - positioned outside card flow */}
               {kit.featured && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-10 pointer-events-none">
-                  <span className="inline-flex items-center gap-1.5 px-4 py-1.5 bg-gradient-to-r from-primary via-accent to-secondary text-primary-foreground text-xs font-bold rounded-full shadow-lg shadow-primary/30">
+                  <span className="inline-flex items-center gap-1.5 px-4 py-1.5 bg-secondary text-secondary-foreground text-xs font-bold rounded-full shadow-lg">
                     <Star className="h-3 w-3 fill-current" />
                     Más Popular
                   </span>
                 </div>
               )}
 
-              {/* Card with animated neon border */}
+              {/* Card */}
               <div 
                 className={`
-                  relative h-full rounded-3xl p-[2px] overflow-hidden
+                  relative h-full rounded-3xl overflow-hidden border-2
                   ${kit.featured 
-                    ? 'bg-gradient-to-r from-primary via-secondary to-primary animate-rainbow-flow bg-[length:200%_200%]' 
-                    : 'bg-gradient-to-r from-primary/50 via-secondary/50 to-primary/50'
+                    ? 'border-secondary shadow-lg shadow-secondary/20' 
+                    : 'border-border hover:border-secondary/50'
                   }
-                  transition-all duration-500 group-hover:shadow-[0_0_40px_rgba(107,255,63,0.4)]
+                  transition-all duration-300 group-hover:shadow-xl
                 `}
               >
                 {/* Inner card content */}
-                <div className="relative h-full bg-card/95 backdrop-blur-xl rounded-[22px] p-8 flex flex-col">
+                <div className="relative h-full bg-card p-8 flex flex-col">
                   {/* Header */}
                   <div className="text-center mb-8 pt-2">
-                    <h3 className="text-2xl md:text-3xl font-display font-bold tracking-wide mb-2">
+                    <h3 className="text-2xl md:text-3xl font-display font-bold tracking-wide mb-2 text-foreground">
                       {kit.name}
                     </h3>
-                    <p className="text-primary font-semibold text-lg mb-3">
+                    <p className="text-secondary font-semibold text-lg mb-3">
                       {kit.subtitle}
                     </p>
                     <p className="text-muted-foreground text-sm">
@@ -113,10 +113,10 @@ export const Kits = () => {
                     {kit.items.map((item, i) => (
                       <div 
                         key={i} 
-                        className="flex items-center gap-3 p-3 rounded-xl bg-background/50 border border-border/30 transition-colors group-hover:border-primary/30"
+                        className="flex items-center gap-3 p-3 rounded-xl bg-muted/50 border border-border/50 transition-colors group-hover:border-secondary/30"
                       >
-                        <div className="flex-shrink-0 h-5 w-5 rounded-full bg-primary/20 flex items-center justify-center">
-                          <Check className="h-3 w-3 text-primary" />
+                        <div className="flex-shrink-0 h-5 w-5 rounded-full bg-secondary/20 flex items-center justify-center">
+                          <Check className="h-3 w-3 text-secondary" />
                         </div>
                         <span className="text-foreground/90 text-sm">{item}</span>
                       </div>
@@ -133,13 +133,13 @@ export const Kits = () => {
                       flex items-center justify-center gap-2
                       transition-all duration-300
                       ${kit.featured
-                        ? 'bg-gradient-to-r from-primary via-accent to-secondary text-primary-foreground hover:shadow-[0_0_30px_rgba(107,255,63,0.5)] hover:scale-[1.02]'
-                        : 'bg-background/80 border-2 border-primary/50 text-foreground hover:bg-primary/10 hover:border-primary hover:shadow-[0_0_20px_rgba(107,255,63,0.3)]'
+                        ? 'bg-secondary text-secondary-foreground hover:bg-secondary/90 hover:shadow-lg hover:shadow-secondary/30 hover:scale-[1.02]'
+                        : 'bg-primary text-primary-foreground hover:bg-primary/90'
                       }
                     `}
                   >
                     Comprar ahora
-                    <ExternalLink className="h-5 w-5 transition-transform group-hover:translate-x-0.5" />
+                    <ExternalLink className="h-5 w-5" />
                   </a>
                 </div>
               </div>

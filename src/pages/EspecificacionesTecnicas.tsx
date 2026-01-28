@@ -48,7 +48,7 @@ const EspecificacionesTecnicas = () => {
           href="https://github.com/DTQSYS/NRF52840-ICM45686-QMC6309" 
           target="_blank" 
           rel="noopener noreferrer"
-          className="text-primary hover:underline"
+          className="text-secondary hover:underline"
         >
           GitHub oficial →
         </a>
@@ -73,9 +73,9 @@ const EspecificacionesTecnicas = () => {
         <div className="container mx-auto max-w-6xl">
           {/* Hero */}
           <div className="text-center mb-16 animate-fade-in">
-            <span className="text-sm font-semibold text-primary tracking-widest uppercase mb-4 block">Tecnología</span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display mb-6">
-              ESPECIFICACIONES <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">TÉCNICAS</span>
+            <span className="text-sm font-semibold text-secondary tracking-widest uppercase mb-4 block">Tecnología</span>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display mb-6 text-foreground">
+              ESPECIFICACIONES <span className="text-secondary">TÉCNICAS</span>
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Conoce cada detalle de la tecnología Beekonz
@@ -87,16 +87,16 @@ const EspecificacionesTecnicas = () => {
             {specs.map((spec, idx) => (
               <div 
                 key={idx}
-                className="relative p-6 rounded-2xl bg-card border border-border/50 overflow-hidden animate-fade-in hover:border-primary/30 transition-all group"
+                className="relative p-6 rounded-2xl bg-card border border-border overflow-hidden animate-fade-in hover:border-secondary/50 transition-all group"
                 style={{ animationDelay: `${0.1 + idx * 0.05}s` }}
               >
-                <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-2xl group-hover:bg-primary/10 transition-colors" />
+                <div className="absolute top-0 right-0 w-32 h-32 bg-secondary/5 rounded-full blur-2xl group-hover:bg-secondary/10 transition-colors" />
                 <div className="relative">
                   <div className="flex items-center gap-3 mb-6">
-                    <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
-                      <spec.icon className="w-5 h-5 text-primary" />
+                    <div className="w-10 h-10 rounded-xl bg-secondary/20 flex items-center justify-center">
+                      <spec.icon className="w-5 h-5 text-secondary" />
                     </div>
-                    <h2 className="text-xl font-display">{spec.title}</h2>
+                    <h2 className="text-xl font-display text-foreground">{spec.title}</h2>
                   </div>
                   <ul className="space-y-2">
                     {spec.items.map((item, itemIdx) => (

@@ -13,16 +13,16 @@ export const FAQ = () => {
   ];
   
   return (
-    <section id="faq" className="section-padding bg-card relative overflow-hidden">
+    <section id="faq" className="section-padding bg-muted/30 relative overflow-hidden">
       {/* Background effects */}
       <div className="absolute top-1/2 left-0 w-72 h-72 bg-secondary/10 rounded-full blur-3xl -translate-y-1/2" />
-      <div className="absolute top-1/2 right-0 w-72 h-72 bg-primary/10 rounded-full blur-3xl -translate-y-1/2" />
+      <div className="absolute top-1/2 right-0 w-72 h-72 bg-primary/5 rounded-full blur-3xl -translate-y-1/2" />
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16 animate-fade-in">
-          <span className="text-sm font-semibold text-primary tracking-widest uppercase mb-4 block">Dudas</span>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display tracking-wide">
-            PREGUNTAS <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">FRECUENTES</span>
+          <span className="text-sm font-semibold text-secondary tracking-widest uppercase mb-4 block">Dudas</span>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display tracking-wide text-foreground">
+            PREGUNTAS <span className="text-secondary">FRECUENTES</span>
           </h2>
         </div>
         
@@ -34,12 +34,8 @@ export const FAQ = () => {
                 value={`item-${i}`} 
                 className="group relative overflow-hidden rounded-xl border-0"
               >
-                {/* Neon border effect */}
-                <div className="absolute -inset-[1px] bg-gradient-to-r from-primary/30 via-secondary/30 to-primary/30 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="absolute inset-0 bg-background rounded-xl" />
-                
-                <div className="relative bg-background/80 backdrop-blur-sm rounded-xl border border-border/50 data-[state=open]:border-primary/50 transition-all duration-300">
-                  <AccordionTrigger className="text-left font-semibold text-lg hover:text-primary hover:no-underline py-5 px-6 [&[data-state=open]]:text-primary">
+                <div className="relative bg-card rounded-xl border border-border hover:border-secondary/50 transition-all duration-300">
+                  <AccordionTrigger className="text-left font-semibold text-lg hover:text-secondary hover:no-underline py-5 px-6 [&[data-state=open]]:text-secondary text-foreground">
                     {faq.q}
                   </AccordionTrigger>
                   <AccordionContent className="text-muted-foreground pb-5 px-6 font-light leading-relaxed">
