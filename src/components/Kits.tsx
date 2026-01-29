@@ -14,7 +14,7 @@ export const Kits = () => {
         "Colores: Blanco, Negro, Rojo"
       ],
       featured: false,
-      link: "https://buy.stripe.com/bJe28s1bn0RD9kz4Vn7g40k"
+      link: "https://buy.stripe.com/eVq28sf2dbwhfIX3Rj7g40o"
     },
     {
       name: "ADVANCED PACK",
@@ -28,7 +28,7 @@ export const Kits = () => {
         "Colores: Blanco, Negro, Rojo"
       ],
       featured: true,
-      link: "https://buy.stripe.com/00w00kf2d0RDfIXcnP7g40j"
+      link: "https://buy.stripe.com/3cI9AUbQ10RDeETdrT7g40r"
     },
     {
       name: "PRO PACK",
@@ -42,22 +42,25 @@ export const Kits = () => {
         "Colores: Blanco, Negro, Rojo"
       ],
       featured: false,
-      link: "https://buy.stripe.com/5kQbJ22fr57T8gv73v7g40l"
+      link: "https://buy.stripe.com/28EfZi9HTcAlfIX73v7g40p"
     }
   ];
 
   return (
     <section id="kits" className="py-24 bg-background relative overflow-hidden">
-      {/* Subtle background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-muted/20 to-background" />
+      {/* Background gradient */}
+      <div className="absolute inset-0 bee-gradient-soft opacity-50" />
+      
+      {/* Grid pattern */}
+      <div className="absolute inset-0 grid-pattern opacity-20" />
       
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <span className="inline-block px-4 py-2 rounded-full bg-secondary/20 text-primary text-sm font-medium tracking-wider uppercase mb-6">
+          <span className="inline-block px-4 py-2 rounded-full bg-secondary/10 border border-secondary/30 text-secondary text-sm font-medium tracking-wider uppercase mb-6">
             Nuestros Productos
           </span>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight mb-6">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight mb-6 text-foreground">
             BEEKONZ <span className="text-secondary">TRACKERS</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -65,17 +68,17 @@ export const Kits = () => {
           </p>
         </div>
 
-        {/* Products Grid - Perfect 3 columns */}
+        {/* Products Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
           {kits.map((kit, index) => (
             <div
               key={index}
               className="relative group"
             >
-              {/* Featured Badge - positioned outside card flow */}
+              {/* Featured Badge */}
               {kit.featured && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-10 pointer-events-none">
-                  <span className="inline-flex items-center gap-1.5 px-4 py-1.5 bg-secondary text-secondary-foreground text-xs font-bold rounded-full shadow-lg">
+                  <span className="inline-flex items-center gap-1.5 px-4 py-1.5 bg-secondary text-secondary-foreground text-xs font-bold rounded-full glow-gold">
                     <Star className="h-3 w-3 fill-current" />
                     Más Popular
                   </span>
@@ -87,10 +90,10 @@ export const Kits = () => {
                 className={`
                   relative h-full rounded-3xl overflow-hidden border-2
                   ${kit.featured 
-                    ? 'border-secondary shadow-lg shadow-secondary/20' 
+                    ? 'border-secondary glow-gold card-featured' 
                     : 'border-border hover:border-secondary/50'
                   }
-                  transition-all duration-300 group-hover:shadow-xl
+                  transition-all duration-300 group-hover:glow-gold-subtle
                 `}
               >
                 {/* Inner card content */}
@@ -113,7 +116,7 @@ export const Kits = () => {
                     {kit.items.map((item, i) => (
                       <div 
                         key={i} 
-                        className="flex items-center gap-3 p-3 rounded-xl bg-muted/50 border border-border/50 transition-colors group-hover:border-secondary/30"
+                        className="flex items-center gap-3 p-3 rounded-xl bg-background/50 border border-border/50 transition-colors group-hover:border-secondary/20"
                       >
                         <div className="flex-shrink-0 h-5 w-5 rounded-full bg-secondary/20 flex items-center justify-center">
                           <Check className="h-3 w-3 text-secondary" />
@@ -133,8 +136,8 @@ export const Kits = () => {
                       flex items-center justify-center gap-2
                       transition-all duration-300
                       ${kit.featured
-                        ? 'bg-secondary text-secondary-foreground hover:bg-secondary/90 hover:shadow-lg hover:shadow-secondary/30 hover:scale-[1.02]'
-                        : 'bg-primary text-primary-foreground hover:bg-primary/90'
+                        ? 'bg-secondary text-secondary-foreground hover:bg-bee-gold-hover glow-gold hover:glow-gold-strong hover:scale-[1.02]'
+                        : 'bg-muted text-foreground hover:bg-secondary hover:text-secondary-foreground'
                       }
                     `}
                   >

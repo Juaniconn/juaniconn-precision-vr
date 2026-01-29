@@ -9,18 +9,27 @@ export const Shipping = () => {
   ];
   
   return (
-    <section id="shipping" className="section-padding bg-muted/30">
-      <div className="container mx-auto px-4">
+    <section id="shipping" className="section-padding bg-background relative overflow-hidden">
+      {/* Background */}
+      <div className="absolute inset-0 grid-pattern opacity-20" />
+      
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16 animate-fade-in">
-          <span className="text-sm font-semibold text-secondary tracking-widest uppercase mb-4 block">Logística</span>
+          <span className="inline-block px-4 py-2 rounded-full bg-secondary/10 border border-secondary/30 text-secondary text-sm font-medium tracking-widest uppercase mb-6">
+            Logística
+          </span>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-display tracking-wide text-foreground">
             ENVÍOS Y <span className="text-secondary">SOPORTE</span>
           </h2>
         </div>
         <div className="grid md:grid-cols-4 gap-6 max-w-5xl mx-auto">
           {features.map((f, i) => (
-            <div key={i} className="bg-card border border-border rounded-2xl p-6 text-center animate-fade-in hover:border-secondary/40 transition-all duration-300 hover:shadow-lg" style={{ animationDelay: `${i * 0.1}s` }}>
-              <div className="mb-4 inline-flex p-4 bg-secondary/20 rounded-full">
+            <div 
+              key={i} 
+              className="bg-card border border-border rounded-2xl p-6 text-center animate-fade-in hover:border-secondary/40 transition-all duration-300 hover:glow-gold-subtle" 
+              style={{ animationDelay: `${i * 0.1}s` }}
+            >
+              <div className="mb-4 inline-flex p-4 bg-secondary/20 rounded-xl">
                 <f.icon className="h-7 w-7 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold mb-2 text-foreground">{f.title}</h3>

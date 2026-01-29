@@ -9,18 +9,21 @@ export const Testimonials = () => {
   ];
   
   return (
-    <section id="testimonials" className="section-padding bg-background relative overflow-hidden">
+    <section id="testimonials" className="section-padding bg-card relative overflow-hidden">
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-muted/20 via-background to-background" />
+      <div className="absolute inset-0 bee-gradient-soft opacity-30" />
+      <div className="absolute inset-0 grid-pattern opacity-20" />
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16 animate-fade-in">
-          <span className="text-sm font-semibold text-secondary tracking-widest uppercase mb-4 block">Testimonios</span>
+          <span className="inline-block px-4 py-2 rounded-full bg-secondary/10 border border-secondary/30 text-secondary text-sm font-medium tracking-widest uppercase mb-6">
+            Testimonios
+          </span>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-display tracking-wide text-foreground">
             LO QUE DICEN <span className="text-secondary">NUESTROS USUARIOS</span>
           </h2>
           {isPlaceholder && (
-            <div className="mt-8 max-w-2xl mx-auto bg-secondary/10 rounded-lg p-6 border border-secondary/30">
+            <div className="mt-8 max-w-2xl mx-auto bg-muted/50 rounded-2xl p-6 border border-border">
               <p className="text-muted-foreground">
                 Muy pronto añadiremos testimonios reales de nuestros usuarios, incluyendo videos cortos y experiencias dentro de VRChat. Queremos mostrar resultados reales con clientes reales para que puedas ver el rendimiento auténtico de los trackers Beekonz.
               </p>
@@ -35,9 +38,9 @@ export const Testimonials = () => {
               className="relative group animate-fade-in" 
               style={{ animationDelay: `${index * 0.15}s` }}
             >
-              <div className="bg-card rounded-2xl p-8 border border-border hover:border-secondary/40 transition-all duration-300 h-full shadow-sm hover:shadow-lg">
+              <div className="bg-background rounded-2xl p-8 border border-border hover:border-secondary/40 transition-all duration-300 h-full hover:glow-gold-subtle">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="h-14 w-14 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-lg">
+                  <div className="h-14 w-14 rounded-full bg-secondary/20 text-secondary flex items-center justify-center font-bold text-lg">
                     {t.avatar}
                   </div>
                   <div>
