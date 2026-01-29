@@ -12,6 +12,7 @@ import PoliticaVenta from "./pages/PoliticaVenta";
 import Devoluciones from "./pages/Devoluciones";
 import FAQPage from "./pages/FAQPage";
 import EspecificacionesTecnicas from "./pages/EspecificacionesTecnicas";
+import TerminosCondiciones from "./pages/TerminosCondiciones";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -32,6 +33,7 @@ const App = () => (
           <Route path="/garantia-devoluciones" element={<Devoluciones />} />
           <Route path="/faq" element={<FAQPage />} />
           <Route path="/especificaciones-tecnicas" element={<EspecificacionesTecnicas />} />
+          <Route path="/terminos-condiciones" element={<TerminosCondiciones />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

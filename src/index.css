@@ -1,123 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Beekonz Design System - Premium Tech Brand
-   Primary Dark: #25010B (Deep burgundy)
-   Primary Light: #FBF4F4 (Cream background)
-   Accent Gold: #F3CC80 (CTAs and highlights)
-   Text Primary: #25010B | Text Secondary: #5a3a40
-*/
+/* =====================================================
+   BEEKONZ 2026 - DARK PREMIUM DESIGN SYSTEM
+   ===================================================== */
 
 @layer base {
   :root {
-    /* Background - Light cream */
-    --background: 0 22% 97%;
-    --background-dark: 0 20% 94%;
-    --foreground: 346 96% 8%;
-
-    /* Card backgrounds - White */
-    --card: 0 0% 100%;
-    --card-foreground: 346 96% 8%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 346 96% 8%;
-
-    /* Primary: Deep Burgundy #25010B */
-    --primary: 346 96% 8%;
-    --primary-foreground: 0 22% 97%;
+    /* ===== CORE BRAND COLORS ===== */
+    --primary-dark: 346 96% 8%;      /* #25010B - Deep Burgundy */
+    --primary-light: 0 33% 97%;      /* #FBF4F4 - Cream */
+    --accent-gold: 39 82% 73%;       /* #F3CC80 - Gold */
     
-    --primary-glow: 346 80% 15%;
-    --primary-dark: 346 96% 5%;
-
-    /* Secondary: Accent Gold #F3CC80 */
-    --secondary: 39 82% 73%;
+    /* ===== DARK MODE NEUTRALS ===== */
+    --bg-dark-soft: 345 50% 6%;      /* #1A070E */
+    --bg-dark-card: 345 46% 11%;     /* #2A0F18 */
+    --border-dark: 345 35% 17%;      /* #3A1C23 */
+    --divider-dark: 345 28% 23%;     /* #4A2A33 */
+    
+    /* ===== TEXT COLORS ===== */
+    --text-heading: 0 33% 97%;       /* #FBF4F4 */
+    --text-body: 345 12% 91%;        /* #E6DDE0 */
+    --text-muted: 345 8% 70%;        /* #B8AEB2 */
+    --text-on-gold: 346 96% 8%;      /* #25010B */
+    
+    /* ===== SEMANTIC TOKENS (Dark Mode Default) ===== */
+    --background: 345 50% 6%;        /* #1A070E - Main BG */
+    --foreground: 0 33% 97%;         /* #FBF4F4 - Text */
+    
+    --card: 345 46% 11%;             /* #2A0F18 */
+    --card-foreground: 0 33% 97%;
+    
+    --popover: 345 46% 11%;
+    --popover-foreground: 0 33% 97%;
+    
+    --primary: 346 96% 8%;           /* #25010B */
+    --primary-foreground: 0 33% 97%;
+    
+    --secondary: 39 82% 73%;         /* #F3CC80 - Gold */
     --secondary-foreground: 346 96% 8%;
-
-    /* Muted: Derived from primary */
-    --muted: 0 15% 92%;
-    --muted-foreground: 346 30% 35%;
-
-    /* Accent: Same as secondary gold */
+    
+    --muted: 345 35% 17%;
+    --muted-foreground: 345 8% 70%;
+    
     --accent: 39 82% 73%;
     --accent-foreground: 346 96% 8%;
-
-    /* Accent Orange for alerts (subtle) */
-    --accent-orange: 30 100% 55%;
-
+    
     --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 100%;
-
-    --border: 346 20% 88%;
-    --input: 346 20% 90%;
+    --destructive-foreground: 0 33% 97%;
+    
+    --border: 345 35% 17%;
+    --input: 345 35% 17%;
     --ring: 39 82% 73%;
-
-    --radius: 1rem;
     
-    /* Brand colors for direct use */
-    --brand-dark: 346 96% 8%;
-    --brand-light: 0 22% 97%;
-    --brand-gold: 39 82% 73%;
-    --brand-gold-hover: 39 75% 65%;
+    --radius: 0.75rem;
     
-    /* Legacy color mappings - redirect to new palette */
-    --neon-green: 39 82% 73%;
-    --neon-cyan: 346 96% 8%;
-    --neon-yellow: 39 82% 73%;
-    --neon-orange: 30 100% 55%;
+    /* ===== CHART COLORS ===== */
+    --chart-1: 39 82% 73%;
+    --chart-2: 346 96% 20%;
+    --chart-3: 345 50% 30%;
+    --chart-4: 39 60% 60%;
+    --chart-5: 345 28% 40%;
     
-    --mint: 39 82% 73%;
-    --lime: 39 75% 65%;
-    --yellow: 39 82% 73%;
-    --orange: 30 100% 55%;
-    --pink: 346 96% 8%;
-    --blue: 346 80% 15%;
-    --soft-blue: 346 60% 25%;
-    --soft-pink: 346 40% 40%;
-    
-    /* Gradients - Updated for warm palette */
-    --gradient-rainbow: linear-gradient(
-      90deg,
-      hsl(var(--secondary)),
-      hsl(var(--primary)),
-      hsl(var(--secondary))
-    );
-    --gradient-primary: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--primary)));
-    --gradient-hero: linear-gradient(180deg, hsl(0 22% 97%) 0%, hsl(0 20% 94%) 100%);
-    --gradient-spotlight: radial-gradient(circle at 50% 50%, hsl(var(--secondary) / 0.15) 0%, transparent 50%);
-    --gradient-dark: linear-gradient(180deg, hsl(var(--primary)) 0%, hsl(var(--primary-dark)) 100%);
-    --gradient-section: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--background-dark)) 100%);
-    
-    /* Shadows - Warm, premium feel */
-    --shadow-glow: 0 0 40px hsl(var(--secondary) / 0.3);
-    --shadow-glow-cyan: 0 0 40px hsl(var(--secondary) / 0.3);
-    --shadow-soft: 0 8px 32px hsl(var(--primary) / 0.08);
-    --shadow-card: 0 4px 24px hsl(var(--primary) / 0.06);
-    --shadow-rainbow: 0 0 30px hsl(var(--secondary) / 0.3);
-    --shadow-neon: 0 0 20px hsl(var(--secondary) / 0.4);
-    
-    /* Transitions */
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-bounce: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-
-    --sidebar-background: 0 22% 97%;
-    --sidebar-foreground: 346 96% 8%;
+    /* ===== SIDEBAR ===== */
+    --sidebar-background: 345 50% 6%;
+    --sidebar-foreground: 0 33% 97%;
     --sidebar-primary: 39 82% 73%;
     --sidebar-primary-foreground: 346 96% 8%;
-    --sidebar-accent: 0 15% 92%;
-    --sidebar-accent-foreground: 346 96% 8%;
-    --sidebar-border: 346 20% 88%;
+    --sidebar-accent: 345 46% 11%;
+    --sidebar-accent-foreground: 0 33% 97%;
+    --sidebar-border: 345 35% 17%;
     --sidebar-ring: 39 82% 73%;
-  }
-
-  .dark {
-    --background: 346 96% 8%;
-    --foreground: 0 22% 97%;
-    --card: 346 80% 12%;
-    --card-foreground: 0 22% 97%;
-    --muted: 346 40% 20%;
-    --muted-foreground: 346 20% 70%;
-    --border: 346 40% 20%;
+    
+    /* Brand direct access */
+    --brand-dark: 346 96% 8%;
+    --brand-light: 0 33% 97%;
+    --brand-gold: 39 82% 73%;
+    --brand-gold-hover: 39 70% 66%;
   }
 }
 
@@ -125,9 +87,16 @@
   * {
     @apply border-border;
   }
-
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
   body {
-    @apply bg-background text-foreground font-body antialiased;
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
   
   h1, h2, h3, h4, h5, h6 {
@@ -135,350 +104,316 @@
   }
 }
 
-@layer utilities {
-  .gradient-primary {
-    background: var(--gradient-primary);
-  }
-  
-  .gradient-hero {
-    background: var(--gradient-hero);
-  }
-  
-  .gradient-spotlight {
-    background: var(--gradient-spotlight);
-  }
-  
-  .gradient-dark {
-    background: var(--gradient-dark);
-  }
-  
-  .gradient-section {
-    background: var(--gradient-section);
-  }
-  
-  .gradient-rainbow {
-    background: var(--gradient-rainbow);
-    background-size: 200% 100%;
-  }
-  
-  .text-gradient {
-    background: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--primary)));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-  
-  .text-gradient-rainbow {
-    background: var(--gradient-rainbow);
-    background-size: 200% 100%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    animation: rainbow-flow 4s linear infinite;
-  }
-  
-  .glow-effect {
-    box-shadow: var(--shadow-glow);
-  }
-  
-  .glow-cyan {
-    box-shadow: var(--shadow-glow-cyan);
-  }
-  
-  .glow-neon {
-    box-shadow: var(--shadow-neon);
-  }
-  
-  .glow-rainbow {
-    box-shadow: var(--shadow-rainbow);
-  }
-  
-  .shadow-soft {
-    box-shadow: var(--shadow-soft);
-  }
-  
-  .shadow-card {
-    box-shadow: var(--shadow-card);
-  }
-  
-  .transition-smooth {
-    transition: var(--transition-smooth);
-  }
-  
-  .transition-bounce {
-    transition: var(--transition-bounce);
-  }
-  
-  /* Premium border with gold accent */
-  .rainbow-border {
-    position: relative;
-    background: hsl(var(--card));
-    border-radius: var(--radius);
-  }
-  
-  .rainbow-border::before {
-    content: '';
-    position: absolute;
-    inset: -2px;
-    border-radius: calc(var(--radius) + 2px);
-    background: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--primary)), hsl(var(--secondary)));
-    background-size: 300% 100%;
-    animation: rainbow-flow 4s linear infinite;
-    z-index: -1;
-  }
-  
-  .rainbow-border-glow::before {
-    filter: blur(8px);
-    opacity: 0.7;
-  }
-  
-  /* Button with gold border */
-  .btn-rainbow {
-    position: relative;
-    overflow: hidden;
-    background: hsl(var(--card));
-    border: none;
-  }
-  
-  .btn-rainbow::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    border-radius: inherit;
-    padding: 2px;
-    background: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--primary)), hsl(var(--secondary)));
-    background-size: 300% 100%;
-    animation: rainbow-flow 3s linear infinite;
-    -webkit-mask: 
-      linear-gradient(#fff 0 0) content-box, 
-      linear-gradient(#fff 0 0);
-    mask: 
-      linear-gradient(#fff 0 0) content-box, 
-      linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-  }
-  
-  .btn-rainbow-solid {
-    background: hsl(var(--secondary));
-    color: hsl(var(--primary));
-    font-weight: 600;
-  }
+/* =====================================================
+   TYPOGRAPHY
+   ===================================================== */
 
-  .btn-rainbow-solid:hover {
-    background: hsl(var(--brand-gold-hover));
+.font-display {
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.02em;
+}
+
+.font-body {
+  font-family: 'Inter', sans-serif;
+}
+
+/* =====================================================
+   GRADIENTS
+   ===================================================== */
+
+.bee-gradient {
+  background: linear-gradient(135deg, 
+    hsl(346, 96%, 8%) 0%, 
+    hsl(345, 35%, 17%) 45%, 
+    hsl(39, 82%, 73%) 100%
+  );
+}
+
+.bee-gradient-soft {
+  background: linear-gradient(180deg, 
+    hsl(345, 50%, 6%) 0%, 
+    hsl(346, 96%, 8%) 100%
+  );
+}
+
+.bee-gradient-radial {
+  background: radial-gradient(ellipse at center, 
+    hsl(345, 46%, 11%) 0%, 
+    hsl(345, 50%, 6%) 70%
+  );
+}
+
+.bee-gradient-hero {
+  background: linear-gradient(135deg, 
+    hsl(346, 96%, 8%) 0%, 
+    hsl(345, 35%, 17%) 45%, 
+    hsl(39, 82%, 73%, 0.3) 100%
+  );
+}
+
+.gold-gradient {
+  background: linear-gradient(135deg, 
+    hsl(39, 82%, 73%) 0%, 
+    hsl(39, 70%, 60%) 50%,
+    hsl(39, 82%, 73%) 100%
+  );
+}
+
+.text-gradient-gold {
+  background: linear-gradient(135deg, hsl(39, 82%, 73%), hsl(39, 70%, 60%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* =====================================================
+   GLOW EFFECTS
+   ===================================================== */
+
+.glow-gold {
+  box-shadow: 
+    0 0 20px hsl(39, 82%, 73%, 0.3),
+    0 0 40px hsl(39, 82%, 73%, 0.15);
+}
+
+.glow-gold-strong {
+  box-shadow: 
+    0 0 30px hsl(39, 82%, 73%, 0.4),
+    0 0 60px hsl(39, 82%, 73%, 0.2),
+    0 0 90px hsl(39, 82%, 73%, 0.1);
+}
+
+.glow-gold-subtle {
+  box-shadow: 0 0 15px hsl(39, 82%, 73%, 0.2);
+}
+
+.text-glow-gold {
+  text-shadow: 0 0 20px hsl(39, 82%, 73%, 0.5);
+}
+
+/* =====================================================
+   BUTTONS
+   ===================================================== */
+
+.btn-primary {
+  @apply bg-secondary text-secondary-foreground font-semibold;
+  @apply rounded-full px-8 py-4;
+  @apply transition-all duration-300;
+  @apply hover:scale-[1.02];
+  box-shadow: 0 4px 20px hsl(39, 82%, 73%, 0.3);
+}
+
+.btn-primary:hover {
+  background: hsl(39, 70%, 66%);
+  box-shadow: 0 6px 30px hsl(39, 82%, 73%, 0.4);
+}
+
+.btn-primary:active {
+  background: hsl(39, 65%, 58%);
+}
+
+.btn-secondary {
+  @apply bg-transparent text-secondary font-semibold;
+  @apply rounded-full px-8 py-4;
+  @apply border-2 border-secondary;
+  @apply transition-all duration-300;
+}
+
+.btn-secondary:hover {
+  @apply bg-secondary text-secondary-foreground;
+}
+
+/* =====================================================
+   CARDS
+   ===================================================== */
+
+.card-dark {
+  @apply bg-card border border-border rounded-2xl;
+  @apply transition-all duration-300;
+}
+
+.card-dark:hover {
+  border-color: hsl(39, 82%, 73%, 0.4);
+  box-shadow: 0 10px 40px hsl(39, 82%, 73%, 0.1);
+}
+
+.card-featured {
+  border-color: hsl(39, 82%, 73%, 0.6);
+  box-shadow: 0 0 30px hsl(39, 82%, 73%, 0.2);
+}
+
+/* =====================================================
+   GRID PATTERN
+   ===================================================== */
+
+.grid-pattern {
+  background-image: 
+    linear-gradient(to right, hsl(345, 35%, 17%, 0.3) 1px, transparent 1px),
+    linear-gradient(to bottom, hsl(345, 35%, 17%, 0.3) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* =====================================================
+   SECTION SPACING
+   ===================================================== */
+
+.section-padding {
+  @apply py-20 md:py-28 lg:py-32;
+}
+
+/* =====================================================
+   ANIMATIONS
+   ===================================================== */
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  
-  /* Subtle grid pattern */
-  .grid-pattern {
-    background-image: 
-      linear-gradient(hsl(var(--primary) / 0.03) 1px, transparent 1px),
-      linear-gradient(90deg, hsl(var(--primary) / 0.03) 1px, transparent 1px);
-    background-size: 60px 60px;
-  }
-  
-  /* Floating card effect */
-  .floating-card {
-    @apply bg-card border border-border rounded-2xl shadow-card transition-smooth;
-  }
-  
-  .floating-card:hover {
-    @apply border-secondary/40 -translate-y-1;
-    box-shadow: var(--shadow-glow);
-  }
-  
-  /* Premium card with gold accent */
-  .premium-card {
-    position: relative;
-    background: hsl(var(--card));
-    border-radius: 1.5rem;
-    overflow: hidden;
-    border: 1px solid hsl(var(--border));
-  }
-  
-  .premium-card::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    border-radius: inherit;
-    padding: 1px;
-    background: linear-gradient(135deg, hsl(var(--secondary) / 0.5), hsl(var(--primary) / 0.3), hsl(var(--secondary) / 0.5));
-    background-size: 300% 100%;
-    animation: rainbow-flow 5s linear infinite;
-    -webkit-mask: 
-      linear-gradient(#fff 0 0) content-box, 
-      linear-gradient(#fff 0 0);
-    mask: 
-      linear-gradient(#fff 0 0) content-box, 
-      linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-    opacity: 0.6;
-    transition: opacity 0.3s ease;
-  }
-  
-  .premium-card:hover::before {
+  to {
     opacity: 1;
-  }
-  
-  /* Section spacing */
-  .section-padding {
-    @apply py-24 lg:py-32;
-  }
-  
-  /* Text balance for headings */
-  .text-balance {
-    text-wrap: balance;
-  }
-  
-  /* Bokeh lights - warm tones */
-  .bokeh-light {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(40px);
-    opacity: 0.3;
-    animation: bokeh-float 8s ease-in-out infinite;
+    transform: translateY(0);
   }
 }
 
-/* Animations */
-@layer utilities {
-  @keyframes rainbow-flow {
-    0% {
-      background-position: 0% 50%;
-    }
-    100% {
-      background-position: 200% 50%;
-    }
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
   }
-  
-  @keyframes fade-in {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  50% {
+    transform: translateY(-15px);
   }
-  
-  @keyframes fade-in-up {
-    from {
-      opacity: 0;
-      transform: translateY(40px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px hsl(39, 82%, 73%, 0.3);
   }
-  
-  @keyframes slide-in-right {
-    from {
-      opacity: 0;
-      transform: translateX(40px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
+  50% {
+    box-shadow: 0 0 40px hsl(39, 82%, 73%, 0.5);
   }
-  
-  @keyframes pulse-glow {
-    0%, 100% {
-      box-shadow: 0 0 20px hsl(var(--secondary) / 0.2);
-    }
-    50% {
-      box-shadow: 0 0 50px hsl(var(--secondary) / 0.4);
-    }
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
   }
-  
-  @keyframes pulse-rainbow {
-    0%, 100% {
-      box-shadow: 0 0 20px hsl(var(--secondary) / 0.3);
-    }
-    50% {
-      box-shadow: 0 0 40px hsl(var(--secondary) / 0.5);
-    }
+  to {
+    transform: rotate(360deg);
   }
-  
-  @keyframes float {
-    0%, 100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-10px);
-    }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
   }
-  
-  @keyframes bokeh-float {
-    0%, 100% {
-      transform: translate(0, 0) scale(1);
-    }
-    33% {
-      transform: translate(20px, -20px) scale(1.1);
-    }
-    66% {
-      transform: translate(-10px, 10px) scale(0.9);
-    }
+  100% {
+    background-position: 200% 0;
   }
-  
-  @keyframes shimmer {
-    0% {
-      transform: translateX(-100%);
-    }
-    100% {
-      transform: translateX(100%);
-    }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.6s ease-out forwards;
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+
+.animate-shimmer {
+  animation: shimmer 3s ease-in-out infinite;
+  background-size: 200% 100%;
+}
+
+/* =====================================================
+   UTILITY CLASSES
+   ===================================================== */
+
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Premium border effect */
+.border-gold-gradient {
+  border: 2px solid transparent;
+  background: 
+    linear-gradient(hsl(345, 46%, 11%), hsl(345, 46%, 11%)) padding-box,
+    linear-gradient(135deg, hsl(39, 82%, 73%) 0%, hsl(346, 96%, 8%) 50%, hsl(39, 82%, 73%) 100%) border-box;
+}
+
+/* Product image container */
+.product-image-container {
+  position: relative;
+}
+
+.product-image-container::before {
+  content: '';
+  position: absolute;
+  inset: -30px;
+  background: radial-gradient(ellipse at center, hsl(39, 82%, 73%, 0.2) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Floating card */
+.floating-card {
+  @apply bg-card border border-border rounded-2xl transition-all duration-300;
+}
+
+.floating-card:hover {
+  @apply border-secondary/40;
+  box-shadow: 0 10px 40px hsl(39, 82%, 73%, 0.15);
+  transform: translateY(-4px);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(345, 50%, 6%);
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(345, 35%, 17%);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(39, 82%, 73%, 0.5);
+}
+
+/* Rainbow border effect */
+.rainbow-border {
+  position: relative;
+  background: hsl(var(--card));
+  border-radius: var(--radius);
+}
+
+.rainbow-border::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: calc(var(--radius) + 2px);
+  background: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--primary)), hsl(var(--secondary)));
+  background-size: 300% 100%;
+  animation: rainbow-flow 4s linear infinite;
+  z-index: -1;
+}
+
+@keyframes rainbow-flow {
+  0% {
+    background-position: 0% 50%;
   }
-  
-  @keyframes gold-pulse {
-    0%, 100% {
-      filter: brightness(1) drop-shadow(0 0 10px hsl(var(--secondary) / 0.3));
-    }
-    50% {
-      filter: brightness(1.1) drop-shadow(0 0 20px hsl(var(--secondary) / 0.5));
-    }
-  }
-  
-  .animate-fade-in {
-    animation: fade-in 0.6s ease-out forwards;
-    opacity: 0;
-  }
-  
-  .animate-fade-in-up {
-    animation: fade-in-up 0.8s ease-out forwards;
-    opacity: 0;
-  }
-  
-  .animate-slide-in-right {
-    animation: slide-in-right 0.6s ease-out forwards;
-    opacity: 0;
-  }
-  
-  .animate-pulse-glow {
-    animation: pulse-glow 2s ease-in-out infinite;
-  }
-  
-  .animate-pulse-rainbow {
-    animation: pulse-rainbow 3s ease-in-out infinite;
-  }
-  
-  .animate-float {
-    animation: float 6s ease-in-out infinite;
-  }
-  
-  .animate-rainbow {
-    animation: rainbow-flow 4s linear infinite;
-    background-size: 200% 100%;
-  }
-  
-  .animate-shimmer {
-    animation: shimmer 2s infinite;
-  }
-  
-  .animate-gold-pulse {
-    animation: gold-pulse 2s ease-in-out infinite;
+  100% {
+    background-position: 200% 50%;
   }
 }

@@ -4,7 +4,6 @@ import {
   Menu, 
   X, 
   ChevronRight,
-  Cpu,
   Package,
   HelpCircle,
   FileText,
@@ -15,6 +14,7 @@ import {
   Target,
   Zap
 } from "lucide-react";
+import logo from "@/assets/logo.svg";
 
 const DiscordIcon = ({ className }: { className?: string }) => (
   <svg className={className} viewBox="0 0 24 24" fill="currentColor">
@@ -64,10 +64,11 @@ export const Header = () => {
     return () => document.removeEventListener('click', handleClickOutside);
   }, []);
 
+  // Updated Stripe links
   const productItems = [
-    { name: "Starter Pack (6 Trackers)", href: "https://buy.stripe.com/bJe28s1bn0RD9kz4Vn7g40k", external: true },
-    { name: "Advanced Pack (8 Trackers)", href: "https://buy.stripe.com/00w00kf2d0RDfIXcnP7g40j", external: true },
-    { name: "Pro Pack (10 Trackers)", href: "https://buy.stripe.com/5kQbJ22fr57T8gv73v7g40l", external: true },
+    { name: "Starter Pack (6 Trackers)", href: "https://buy.stripe.com/eVq28sf2dbwhfIX3Rj7g40o", external: true },
+    { name: "Advanced Pack (8 Trackers)", href: "https://buy.stripe.com/3cI9AUbQ10RDeETdrT7g40r", external: true },
+    { name: "Pro Pack (10 Trackers)", href: "https://buy.stripe.com/28EfZi9HTcAlfIX73v7g40p", external: true },
     { name: "Crear mi Set", href: "https://discord.gg/ekr3ERWJQ6", external: true },
   ];
 
@@ -76,7 +77,7 @@ export const Header = () => {
     { name: "Nuestra Misión", href: "/mision", icon: Target },
     { name: "Garantía y Devoluciones", href: "/garantia-devoluciones", icon: Shield },
     { name: "Política de Privacidad", href: "/politica-privacidad", icon: FileText },
-    { name: "Términos y Condiciones", href: "/politica-venta", icon: Scale },
+    { name: "Términos y Condiciones", href: "/terminos-condiciones", icon: Scale },
   ];
 
   const resourceItems = [
@@ -101,13 +102,9 @@ export const Header = () => {
           {/* Logo */}
           <NavLink 
             to="/" 
-            className="flex items-center gap-2 px-3 py-2 rounded-full bg-primary/5 hover:bg-primary/10 transition-all duration-300 group"
+            className="flex items-center gap-2 px-3 py-2 rounded-full hover:bg-muted/50 transition-all duration-300 group"
           >
-            <div className="relative w-7 h-7 flex items-center justify-center">
-              <div className="absolute inset-0 bg-primary rounded-lg" />
-              <Cpu className="relative w-4 h-4 text-primary-foreground" />
-            </div>
-            <span className="text-foreground font-display text-base tracking-wider hidden sm:block">Beekonz</span>
+            <img src={logo} alt="Beekonz" className="h-6 w-auto" />
           </NavLink>
 
           {/* Menu Button - Desktop */}
@@ -131,7 +128,7 @@ export const Header = () => {
                 href={social.href}
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-9 h-9 flex items-center justify-center rounded-full bg-primary/5 border border-border hover:bg-secondary hover:border-secondary hover:text-secondary-foreground transition-all duration-300"
+                className="w-9 h-9 flex items-center justify-center rounded-full bg-muted/50 border border-border hover:bg-secondary hover:border-secondary hover:text-secondary-foreground transition-all duration-300"
                 title={social.name}
               >
                 <social.icon className="w-4 h-4" />
@@ -159,7 +156,7 @@ export const Header = () => {
             
             {/* Productos */}
             <div className="w-64 bg-card p-6 relative overflow-hidden border-r border-border">
-              <div className="absolute inset-0 bg-gradient-to-br from-secondary/5 to-transparent pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-br from-secondary/10 to-transparent pointer-events-none" />
               <div className="relative">
                 <div className="flex items-center gap-2 mb-6">
                   <Package className="w-5 h-5 text-secondary" />
@@ -186,11 +183,11 @@ export const Header = () => {
 
             {/* Quiénes Somos */}
             <div className="w-56 bg-card p-6 relative overflow-hidden border-r border-border">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-br from-muted/30 to-transparent pointer-events-none" />
               <div className="relative">
                 <div className="flex items-center gap-2 mb-6">
-                  <Users className="w-5 h-5 text-primary" />
-                  <h3 className="text-primary text-sm font-medium uppercase tracking-wider">Quiénes Somos</h3>
+                  <Users className="w-5 h-5 text-foreground" />
+                  <h3 className="text-foreground text-sm font-medium uppercase tracking-wider">Quiénes Somos</h3>
                 </div>
                 <ul className="space-y-3">
                   {aboutItems.map((item, idx) => (
@@ -200,7 +197,7 @@ export const Header = () => {
                         className="flex items-center gap-3 text-muted-foreground hover:text-foreground text-sm py-1 group transition-colors"
                         onClick={() => setIsMenuOpen(false)}
                       >
-                        <item.icon className="w-4 h-4 text-primary/60 group-hover:text-secondary transition-colors" />
+                        <item.icon className="w-4 h-4 text-muted-foreground group-hover:text-secondary transition-colors" />
                         <span>{item.name}</span>
                       </NavLink>
                     </li>
@@ -211,7 +208,7 @@ export const Header = () => {
 
             {/* Recursos */}
             <div className="w-56 bg-card p-6 relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-bl from-secondary/5 to-transparent pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-bl from-secondary/10 to-transparent pointer-events-none" />
               <div className="relative">
                 <div className="flex items-center gap-2 mb-6">
                   <Zap className="w-5 h-5 text-secondary" />
@@ -228,7 +225,7 @@ export const Header = () => {
                           className="flex items-center gap-3 text-muted-foreground hover:text-foreground text-sm py-1 group transition-colors"
                           onClick={() => setIsMenuOpen(false)}
                         >
-                          <item.icon className="w-4 h-4 text-secondary/60 group-hover:text-secondary transition-colors" />
+                          <item.icon className="w-4 h-4 text-muted-foreground group-hover:text-secondary transition-colors" />
                           <span>{item.name}</span>
                         </a>
                       ) : (
@@ -237,7 +234,7 @@ export const Header = () => {
                           className="flex items-center gap-3 text-muted-foreground hover:text-foreground text-sm py-1 group transition-colors"
                           onClick={() => setIsMenuOpen(false)}
                         >
-                          <item.icon className="w-4 h-4 text-secondary/60 group-hover:text-secondary transition-colors" />
+                          <item.icon className="w-4 h-4 text-muted-foreground group-hover:text-secondary transition-colors" />
                           <span>{item.name}</span>
                         </NavLink>
                       )}
@@ -280,7 +277,7 @@ export const Header = () => {
 
             {/* Quiénes Somos */}
             <div>
-              <h3 className="text-primary text-sm font-medium uppercase tracking-wider mb-4 flex items-center gap-2">
+              <h3 className="text-foreground text-sm font-medium uppercase tracking-wider mb-4 flex items-center gap-2">
                 <Users className="w-4 h-4" />
                 Quiénes Somos
               </h3>
@@ -292,7 +289,7 @@ export const Header = () => {
                       className="text-muted-foreground hover:text-foreground text-sm flex items-center gap-3"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
-                      <item.icon className="w-4 h-4 text-primary/60" />
+                      <item.icon className="w-4 h-4 text-muted-foreground" />
                       {item.name}
                     </NavLink>
                   </li>
@@ -317,7 +314,7 @@ export const Header = () => {
                         className="text-muted-foreground hover:text-foreground text-sm flex items-center gap-3"
                         onClick={() => setIsMobileMenuOpen(false)}
                       >
-                        <item.icon className="w-4 h-4 text-secondary/60" />
+                        <item.icon className="w-4 h-4 text-muted-foreground" />
                         {item.name}
                       </a>
                     ) : (
@@ -326,7 +323,7 @@ export const Header = () => {
                         className="text-muted-foreground hover:text-foreground text-sm flex items-center gap-3"
                         onClick={() => setIsMobileMenuOpen(false)}
                       >
-                        <item.icon className="w-4 h-4 text-secondary/60" />
+                        <item.icon className="w-4 h-4 text-muted-foreground" />
                         {item.name}
                       </NavLink>
                     )}
@@ -347,8 +344,7 @@ export const Header = () => {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 flex items-center justify-center rounded-full bg-primary text-primary-foreground hover:bg-secondary hover:text-secondary-foreground transition-all"
-                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="w-10 h-10 flex items-center justify-center rounded-full bg-muted text-muted-foreground hover:bg-secondary hover:text-secondary-foreground transition-all duration-300"
                   >
                     <social.icon className="w-5 h-5" />
                   </a>

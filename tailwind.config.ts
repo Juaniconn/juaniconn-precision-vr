@@ -2,7 +2,12 @@ import type { Config } from "tailwindcss";
 
 export default {
   darkMode: ["class"],
-  content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}"],
+  content: [
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   prefix: "",
   theme: {
     container: {
@@ -13,10 +18,6 @@ export default {
       },
     },
     extend: {
-      fontFamily: {
-        display: ['Bebas Neue', 'sans-serif'],
-        body: ['Lato', 'sans-serif'],
-      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -26,8 +27,6 @@ export default {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
-          glow: "hsl(var(--primary-glow))",
-          dark: "hsl(var(--primary-dark))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -44,7 +43,6 @@ export default {
         accent: {
           DEFAULT: "hsl(var(--accent))",
           foreground: "hsl(var(--accent-foreground))",
-          orange: "hsl(var(--accent-orange))",
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",
@@ -54,22 +52,6 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        // Brand colors for direct use
-        brand: {
-          dark: "hsl(var(--brand-dark))",
-          light: "hsl(var(--brand-light))",
-          gold: "hsl(var(--brand-gold))",
-          "gold-hover": "hsl(var(--brand-gold-hover))",
-        },
-        // Legacy color mappings - kept for compatibility
-        mint: "hsl(var(--mint))",
-        lime: "hsl(var(--lime))",
-        yellow: "hsl(var(--yellow))",
-        orange: "hsl(var(--orange))",
-        pink: "hsl(var(--pink))",
-        blue: "hsl(var(--blue))",
-        "soft-blue": "hsl(var(--soft-blue))",
-        "soft-pink": "hsl(var(--soft-pink))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -80,87 +62,69 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        chart: {
+          "1": "hsl(var(--chart-1))",
+          "2": "hsl(var(--chart-2))",
+          "3": "hsl(var(--chart-3))",
+          "4": "hsl(var(--chart-4))",
+          "5": "hsl(var(--chart-5))",
+        },
+        // Beekonz brand colors
+        bee: {
+          dark: "#25010B",
+          light: "#FBF4F4",
+          gold: "#F3CC80",
+          "gold-hover": "#E6B866",
+          "gold-active": "#D9A94E",
+          "bg-soft": "#1A070E",
+          "bg-card": "#2A0F18",
+          border: "#3A1C23",
+          divider: "#4A2A33",
+        },
+      },
+      fontFamily: {
+        display: ["Bebas Neue", "sans-serif"],
+        sans: ["Inter", "sans-serif"],
+        body: ["Inter", "sans-serif"],
       },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
-        xl: "calc(var(--radius) + 4px)",
-        "2xl": "calc(var(--radius) + 8px)",
-        "3xl": "calc(var(--radius) + 16px)",
       },
       keyframes: {
         "accordion-down": {
-          from: {
-            height: "0",
-          },
-          to: {
-            height: "var(--radix-accordion-content-height)",
-          },
+          from: { height: "0", opacity: "0" },
+          to: { height: "var(--radix-accordion-content-height)", opacity: "1" },
         },
         "accordion-up": {
-          from: {
-            height: "var(--radix-accordion-content-height)",
-          },
-          to: {
-            height: "0",
-          },
+          from: { height: "var(--radix-accordion-content-height)", opacity: "1" },
+          to: { height: "0", opacity: "0" },
         },
-        "rainbow-flow": {
-          "0%": {
-            backgroundPosition: "0% 50%",
-          },
-          "100%": {
-            backgroundPosition: "200% 50%",
-          },
+        "fade-in": {
+          "0%": { opacity: "0", transform: "translateY(20px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        float: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-15px)" },
         },
         "pulse-glow": {
-          "0%, 100%": {
-            boxShadow: "0 0 20px hsl(var(--secondary) / 0.2)",
-          },
-          "50%": {
-            boxShadow: "0 0 50px hsl(var(--secondary) / 0.4)",
-          },
+          "0%, 100%": { boxShadow: "0 0 20px hsl(39, 82%, 73%, 0.3)" },
+          "50%": { boxShadow: "0 0 40px hsl(39, 82%, 73%, 0.5)" },
         },
-        "float": {
-          "0%, 100%": {
-            transform: "translateY(0)",
-          },
-          "50%": {
-            transform: "translateY(-10px)",
-          },
-        },
-        "scale-in": {
-          "0%": {
-            transform: "scale(0.95)",
-            opacity: "0",
-          },
-          "100%": {
-            transform: "scale(1)",
-            opacity: "1",
-          },
-        },
-        "gold-pulse": {
-          "0%, 100%": {
-            filter: "brightness(1) drop-shadow(0 0 10px hsl(var(--secondary) / 0.3))",
-          },
-          "50%": {
-            filter: "brightness(1.1) drop-shadow(0 0 20px hsl(var(--secondary) / 0.5))",
-          },
+        "spin-slow": {
+          from: { transform: "rotate(0deg)" },
+          to: { transform: "rotate(360deg)" },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "rainbow-flow": "rainbow-flow 4s linear infinite",
+        "fade-in": "fade-in 0.6s ease-out forwards",
+        float: "float 4s ease-in-out infinite",
         "pulse-glow": "pulse-glow 2s ease-in-out infinite",
-        "float": "float 6s ease-in-out infinite",
-        "scale-in": "scale-in 0.3s ease-out",
-        "gold-pulse": "gold-pulse 2s ease-in-out infinite",
-      },
-      backgroundSize: {
-        "200%": "200% 100%",
-        "300%": "300% 100%",
+        "spin-slow": "spin-slow 20s linear infinite",
       },
     },
   },
