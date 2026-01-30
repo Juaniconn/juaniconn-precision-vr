@@ -1,4 +1,6 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { HelpCircle, MessageCircle } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export const FAQ = () => {
   const faqs = [
@@ -13,38 +15,69 @@ export const FAQ = () => {
   ];
   
   return (
-    <section id="faq" className="section-padding bg-muted/30 relative overflow-hidden">
-      {/* Background effects */}
-      <div className="absolute top-1/2 left-0 w-72 h-72 bg-secondary/10 rounded-full blur-3xl -translate-y-1/2" />
-      <div className="absolute top-1/2 right-0 w-72 h-72 bg-primary/5 rounded-full blur-3xl -translate-y-1/2" />
+    <section id="faq" className="section-padding bg-background relative overflow-hidden">
+      {/* Background */}
+      <div className="absolute inset-0 grid-pattern opacity-15" />
+      <div className="absolute top-1/2 left-0 w-[300px] h-[300px] -translate-y-1/2 bg-secondary/5 rounded-full blur-[100px]" />
+      <div className="absolute top-1/2 right-0 w-[300px] h-[300px] -translate-y-1/2 bg-primary/10 rounded-full blur-[100px]" />
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-16 animate-fade-in">
-          <span className="text-sm font-semibold text-secondary tracking-widest uppercase mb-4 block">Dudas</span>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display tracking-wide text-foreground">
-            PREGUNTAS <span className="text-secondary">FRECUENTES</span>
-          </h2>
-        </div>
-        
-        <div className="max-w-3xl mx-auto animate-fade-in" style={{ animationDelay: '0.1s' }}>
-          <Accordion type="single" collapsible className="space-y-4">
-            {faqs.map((faq, i) => (
-              <AccordionItem 
-                key={i} 
-                value={`item-${i}`} 
-                className="group relative overflow-hidden rounded-xl border-0"
+        <div className="max-w-4xl mx-auto">
+          {/* Header */}
+          <div className="text-center mb-16 animate-fade-in">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/10 border border-secondary/30 mb-6">
+              <HelpCircle className="w-4 h-4 text-secondary" />
+              <span className="text-sm font-medium text-secondary tracking-wider uppercase">Preguntas Frecuentes</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight text-foreground mb-6">
+              ¿Tienes <span className="text-secondary">Dudas?</span>
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Encuentra respuestas a las preguntas más comunes sobre nuestros trackers.
+            </p>
+          </div>
+          
+          {/* FAQ Accordion - Neotix clean style */}
+          <div className="animate-fade-in" style={{ animationDelay: '0.1s' }}>
+            <Accordion type="single" collapsible className="space-y-4">
+              {faqs.map((faq, i) => (
+                <AccordionItem 
+                  key={i} 
+                  value={`item-${i}`} 
+                  className="group"
+                >
+                  <div className="bg-card rounded-2xl border border-border hover:border-secondary/40 transition-all duration-300 overflow-hidden">
+                    <AccordionTrigger className="text-left font-semibold text-lg hover:text-secondary hover:no-underline py-6 px-6 [&[data-state=open]]:text-secondary text-foreground">
+                      {faq.q}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground pb-6 px-6 font-light leading-relaxed">
+                      {faq.a}
+                    </AccordionContent>
+                  </div>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
+
+          {/* CTA */}
+          <div className="mt-12 text-center animate-fade-in" style={{ animationDelay: '0.3s' }}>
+            <p className="text-muted-foreground mb-6">
+              ¿No encontraste lo que buscabas?
+            </p>
+            <a 
+              href="https://discord.gg/ekr3ERWJQ6"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button 
+                size="lg"
+                className="bg-secondary hover:bg-bee-gold-hover text-secondary-foreground font-semibold px-8 py-6 rounded-full glow-gold hover:glow-gold-strong transition-all duration-300 group"
               >
-                <div className="relative bg-card rounded-xl border border-border hover:border-secondary/50 transition-all duration-300">
-                  <AccordionTrigger className="text-left font-semibold text-lg hover:text-secondary hover:no-underline py-5 px-6 [&[data-state=open]]:text-secondary text-foreground">
-                    {faq.q}
-                  </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground pb-5 px-6 font-light leading-relaxed">
-                    {faq.a}
-                  </AccordionContent>
-                </div>
-              </AccordionItem>
-            ))}
-          </Accordion>
+                <MessageCircle className="mr-3 h-5 w-5" />
+                Pregúntanos en Discord
+              </Button>
+            </a>
+          </div>
         </div>
       </div>
     </section>

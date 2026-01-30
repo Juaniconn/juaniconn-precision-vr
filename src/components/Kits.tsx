@@ -1,15 +1,17 @@
-import { Check, ExternalLink, Star } from "lucide-react";
+import { Check, ExternalLink, Star, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export const Kits = () => {
   const kits = [
     {
       name: "STARTER PACK",
-      subtitle: "6 Trackers",
+      trackers: "6",
       description: "Perfecto para comenzar con Full Body Tracking.",
+      price: "Desde $XXX MXN",
       items: [
         "6 Trackers Beekonz ICM-45686",
         "1 Dongle Holyiot nRF52840",
-        "6 Straps elásticas",
+        "6 Straps elásticas premium",
         "Peso 10g · +50h batería",
         "Colores: Blanco, Negro, Rojo"
       ],
@@ -18,13 +20,14 @@ export const Kits = () => {
     },
     {
       name: "ADVANCED PACK",
-      subtitle: "8 Trackers",
+      trackers: "8",
       description: "Ideal para VRChat FBT completo.",
+      price: "Más Popular",
       items: [
         "8 Trackers Beekonz ICM-45686",
         "1 Dongle Holyiot nRF52840",
-        "8 Straps elásticas",
-        "Peso 10g · Latencia 25–35 dBi",
+        "8 Straps elásticas premium",
+        "Peso 10g · Latencia 25–35ms",
         "Colores: Blanco, Negro, Rojo"
       ],
       featured: true,
@@ -32,12 +35,13 @@ export const Kits = () => {
     },
     {
       name: "PRO PACK",
-      subtitle: "10 Trackers",
+      trackers: "10",
       description: "Para creadores, bailarines y setups avanzados.",
+      price: "Setup Profesional",
       items: [
         "10 Trackers Beekonz ICM-45686",
         "1 Dongle Holyiot nRF52840",
-        "10 Straps elásticas",
+        "10 Straps elásticas premium",
         "Peso 10g · Máxima precisión",
         "Colores: Blanco, Negro, Rojo"
       ],
@@ -47,40 +51,41 @@ export const Kits = () => {
   ];
 
   return (
-    <section id="kits" className="py-24 bg-background relative overflow-hidden">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bee-gradient-soft opacity-50" />
-      
-      {/* Grid pattern */}
-      <div className="absolute inset-0 grid-pattern opacity-20" />
+    <section id="kits" className="section-padding bg-card relative overflow-hidden">
+      {/* Background */}
+      <div className="absolute inset-0 grid-pattern opacity-15" />
+      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-secondary/5 rounded-full blur-[150px]" />
+      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-primary/10 rounded-full blur-[100px]" />
       
       <div className="container mx-auto px-4 relative z-10">
-        {/* Section Header */}
-        <div className="text-center mb-16">
-          <span className="inline-block px-4 py-2 rounded-full bg-secondary/10 border border-secondary/30 text-secondary text-sm font-medium tracking-wider uppercase mb-6">
-            Nuestros Productos
-          </span>
+        {/* Section Header - Neotix style */}
+        <div className="text-center mb-16 animate-fade-in">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/10 border border-secondary/30 mb-6">
+            <div className="w-2 h-2 rounded-full bg-secondary animate-pulse" />
+            <span className="text-sm font-medium text-secondary tracking-wider uppercase">Nuestros Paquetes</span>
+          </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight mb-6 text-foreground">
-            BEEKONZ <span className="text-secondary">TRACKERS</span>
+            Beekonz <span className="text-secondary">Trackers</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Elige el pack perfecto para tu experiencia VR
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto font-light">
+            Elige el pack perfecto para tu experiencia VR. Todos incluyen dongle NRF optimizado.
           </p>
         </div>
 
-        {/* Products Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
+        {/* Pricing Cards Grid - Neotix vertical pricing style */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {kits.map((kit, index) => (
             <div
               key={index}
-              className="relative group"
+              className="relative group animate-fade-in"
+              style={{ animationDelay: `${0.1 + index * 0.15}s` }}
             >
               {/* Featured Badge */}
               {kit.featured && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-10 pointer-events-none">
-                  <span className="inline-flex items-center gap-1.5 px-4 py-1.5 bg-secondary text-secondary-foreground text-xs font-bold rounded-full glow-gold">
-                    <Star className="h-3 w-3 fill-current" />
-                    Más Popular
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-20">
+                  <span className="inline-flex items-center gap-1.5 px-5 py-2 bg-secondary text-secondary-foreground text-sm font-bold rounded-full glow-gold shadow-lg">
+                    <Star className="h-4 w-4 fill-current" />
+                    Recomendado
                   </span>
                 </div>
               )}
@@ -88,38 +93,53 @@ export const Kits = () => {
               {/* Card */}
               <div 
                 className={`
-                  relative h-full rounded-3xl overflow-hidden border-2
+                  relative h-full rounded-3xl overflow-hidden border-2 transition-all duration-500
                   ${kit.featured 
-                    ? 'border-secondary glow-gold card-featured' 
-                    : 'border-border hover:border-secondary/50'
+                    ? 'border-secondary glow-gold bg-gradient-to-b from-card to-card/80 scale-[1.02] lg:scale-105' 
+                    : 'border-border bg-background hover:border-secondary/50 hover:shadow-lg'
                   }
-                  transition-all duration-300 group-hover:glow-gold-subtle
                 `}
               >
-                {/* Inner card content */}
-                <div className="relative h-full bg-card p-8 flex flex-col">
+                {/* Gradient overlay for featured */}
+                {kit.featured && (
+                  <div className="absolute inset-0 bg-gradient-to-br from-secondary/10 via-transparent to-secondary/5 pointer-events-none" />
+                )}
+                
+                <div className="relative p-8 lg:p-10 flex flex-col h-full">
                   {/* Header */}
                   <div className="text-center mb-8 pt-2">
-                    <h3 className="text-2xl md:text-3xl font-display font-bold tracking-wide mb-2 text-foreground">
+                    {/* Tracker count - Large display */}
+                    <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-secondary/10 border border-secondary/30 mb-4">
+                      <span className="text-4xl font-display font-bold text-secondary">{kit.trackers}</span>
+                    </div>
+                    
+                    <h3 className="text-2xl font-display font-bold tracking-wide mb-2 text-foreground">
                       {kit.name}
                     </h3>
-                    <p className="text-secondary font-semibold text-lg mb-3">
-                      {kit.subtitle}
+                    
+                    <p className="text-secondary font-semibold text-sm mb-3">
+                      {kit.trackers} Trackers
                     </p>
+                    
                     <p className="text-muted-foreground text-sm">
                       {kit.description}
                     </p>
                   </div>
 
+                  {/* Divider */}
+                  <div className="h-px bg-border mb-8" />
+
                   {/* Features List */}
-                  <div className="space-y-3 mb-8 flex-grow">
+                  <div className="space-y-4 mb-8 flex-grow">
                     {kit.items.map((item, i) => (
                       <div 
                         key={i} 
-                        className="flex items-center gap-3 p-3 rounded-xl bg-background/50 border border-border/50 transition-colors group-hover:border-secondary/20"
+                        className="flex items-start gap-3"
                       >
-                        <div className="flex-shrink-0 h-5 w-5 rounded-full bg-secondary/20 flex items-center justify-center">
-                          <Check className="h-3 w-3 text-secondary" />
+                        <div className="flex-shrink-0 mt-0.5">
+                          <div className="w-5 h-5 rounded-full bg-secondary/20 flex items-center justify-center">
+                            <Check className="h-3 w-3 text-secondary" />
+                          </div>
                         </div>
                         <span className="text-foreground/90 text-sm">{item}</span>
                       </div>
@@ -131,18 +151,21 @@ export const Kits = () => {
                     href={kit.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`
-                      relative w-full py-4 rounded-2xl font-bold text-lg
-                      flex items-center justify-center gap-2
-                      transition-all duration-300
-                      ${kit.featured
-                        ? 'bg-secondary text-secondary-foreground hover:bg-bee-gold-hover glow-gold hover:glow-gold-strong hover:scale-[1.02]'
-                        : 'bg-muted text-foreground hover:bg-secondary hover:text-secondary-foreground'
-                      }
-                    `}
+                    className="block"
                   >
-                    Comprar ahora
-                    <ExternalLink className="h-5 w-5" />
+                    <Button
+                      className={`
+                        w-full py-6 rounded-xl font-bold text-lg group/btn
+                        transition-all duration-300
+                        ${kit.featured
+                          ? 'bg-secondary text-secondary-foreground hover:bg-bee-gold-hover glow-gold hover:glow-gold-strong'
+                          : 'bg-muted text-foreground hover:bg-secondary hover:text-secondary-foreground'
+                        }
+                      `}
+                    >
+                      Comprar ahora
+                      <ArrowRight className="ml-2 h-5 w-5 group-hover/btn:translate-x-1 transition-transform" />
+                    </Button>
                   </a>
                 </div>
               </div>
@@ -151,10 +174,21 @@ export const Kits = () => {
         </div>
 
         {/* Bottom info */}
-        <div className="mt-16 text-center">
-          <p className="text-muted-foreground text-sm">
-            Todos los packs incluyen dongle NRF optimizado • Compatible con SlimeVR, VRChat y SteamVR
-          </p>
+        <div className="mt-16 text-center animate-fade-in" style={{ animationDelay: '0.5s' }}>
+          <div className="inline-flex flex-wrap items-center justify-center gap-4 md:gap-8 text-sm text-muted-foreground">
+            <span className="flex items-center gap-2">
+              <div className="w-2 h-2 bg-secondary rounded-full" />
+              Compatible SlimeVR
+            </span>
+            <span className="flex items-center gap-2">
+              <div className="w-2 h-2 bg-secondary rounded-full" />
+              VRChat & SteamVR
+            </span>
+            <span className="flex items-center gap-2">
+              <div className="w-2 h-2 bg-secondary rounded-full" />
+              Envío incluido
+            </span>
+          </div>
         </div>
       </div>
     </section>
