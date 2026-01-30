@@ -1,6 +1,8 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { HelpCircle, MessageCircle, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const FAQPage = () => {
   const faqs = [
@@ -23,57 +25,77 @@ const FAQPage = () => {
   return (
     <main className="min-h-screen bg-background">
       <Header />
-      <div className="pt-32 pb-20 px-4">
-        <div className="container mx-auto max-w-3xl">
-          {/* Hero */}
-          <div className="text-center mb-16 animate-fade-in">
-            <span className="text-sm font-semibold text-secondary tracking-widest uppercase mb-4 block">Ayuda</span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display mb-6 text-foreground">
-              PREGUNTAS <span className="text-secondary">FRECUENTES</span>
-            </h1>
-            <p className="text-lg text-muted-foreground">
-              Encuentra respuestas a las dudas más comunes
-            </p>
-          </div>
+      
+      <div className="pt-32 pb-20 relative overflow-hidden">
+        {/* Background */}
+        <div className="absolute inset-0 grid-pattern opacity-15" />
+        <div className="absolute top-1/2 left-0 w-[300px] h-[300px] -translate-y-1/2 bg-secondary/10 rounded-full blur-[100px]" />
+        <div className="absolute top-1/2 right-0 w-[300px] h-[300px] -translate-y-1/2 bg-primary/10 rounded-full blur-[100px]" />
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-3xl mx-auto">
+            {/* Hero - Neotix style */}
+            <div className="text-center mb-16 animate-fade-in">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/10 border border-secondary/30 mb-6">
+                <HelpCircle className="w-4 h-4 text-secondary" />
+                <span className="text-sm font-medium text-secondary tracking-wider uppercase">Ayuda</span>
+              </div>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 text-foreground">
+                Preguntas <span className="text-secondary">Frecuentes</span>
+              </h1>
+              <p className="text-lg text-muted-foreground">
+                Encuentra respuestas a las dudas más comunes sobre nuestros trackers.
+              </p>
+            </div>
 
-          {/* FAQ Accordion */}
-          <div className="animate-fade-in" style={{ animationDelay: '0.1s' }}>
-            <Accordion type="single" collapsible className="space-y-4">
-              {faqs.map((faq, i) => (
-                <AccordionItem 
-                  key={i} 
-                  value={`item-${i}`} 
-                  className="group relative overflow-hidden rounded-xl border-0"
+            {/* FAQ Accordion - Clean Neotix style */}
+            <div className="animate-fade-in" style={{ animationDelay: '0.1s' }}>
+              <Accordion type="single" collapsible className="space-y-4">
+                {faqs.map((faq, i) => (
+                  <AccordionItem 
+                    key={i} 
+                    value={`item-${i}`} 
+                    className="group"
+                  >
+                    <div className="bg-card rounded-2xl border border-border hover:border-secondary/40 transition-all duration-300 overflow-hidden">
+                      <AccordionTrigger className="text-left font-semibold text-lg hover:text-secondary hover:no-underline py-6 px-6 [&[data-state=open]]:text-secondary text-foreground">
+                        {faq.q}
+                      </AccordionTrigger>
+                      <AccordionContent className="text-muted-foreground pb-6 px-6 font-light leading-relaxed">
+                        {faq.a}
+                      </AccordionContent>
+                    </div>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </div>
+
+            {/* Contact CTA */}
+            <div className="mt-12 text-center animate-fade-in" style={{ animationDelay: '0.2s' }}>
+              <div className="p-8 rounded-3xl bg-card border border-border">
+                <p className="text-muted-foreground mb-6 text-lg">
+                  ¿No encontraste lo que buscabas?
+                </p>
+                <a 
+                  href="https://discord.gg/ekr3ERWJQ6" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
                 >
-                  <div className="relative bg-card rounded-xl border border-border hover:border-secondary/50 transition-all duration-300">
-                    <AccordionTrigger className="text-left font-semibold text-lg hover:text-secondary hover:no-underline py-5 px-6 [&[data-state=open]]:text-secondary text-foreground">
-                      {faq.q}
-                    </AccordionTrigger>
-                    <AccordionContent className="text-muted-foreground pb-5 px-6 font-light leading-relaxed">
-                      {faq.a}
-                    </AccordionContent>
-                  </div>
-                </AccordionItem>
-              ))}
-            </Accordion>
-          </div>
-
-          {/* Contact CTA */}
-          <div className="mt-12 text-center animate-fade-in" style={{ animationDelay: '0.2s' }}>
-            <p className="text-muted-foreground mb-4">
-              ¿No encontraste lo que buscabas?
-            </p>
-            <a 
-              href="https://discord.gg/ekr3ERWJQ6" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-secondary hover:bg-secondary/90 rounded-full text-secondary-foreground font-medium transition-all"
-            >
-              Pregúntanos en Discord
-            </a>
+                  <Button 
+                    size="lg"
+                    className="bg-secondary hover:bg-bee-gold-hover text-secondary-foreground px-8 py-6 font-semibold rounded-full glow-gold hover:glow-gold-strong transition-all duration-300 group"
+                  >
+                    <MessageCircle className="mr-3 h-5 w-5" />
+                    Pregúntanos en Discord
+                    <ArrowRight className="ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+      
       <Footer />
     </main>
   );
