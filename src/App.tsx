@@ -13,6 +13,7 @@ import Devoluciones from "./pages/Devoluciones";
 import FAQPage from "./pages/FAQPage";
 import EspecificacionesTecnicas from "./pages/EspecificacionesTecnicas";
 import TerminosCondiciones from "./pages/TerminosCondiciones";
+import SeguimientoPedidos from "./pages/SeguimientoPedidos";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -34,6 +35,7 @@ const App = () => (
           <Route path="/faq" element={<FAQPage />} />
           <Route path="/especificaciones-tecnicas" element={<EspecificacionesTecnicas />} />
           <Route path="/terminos-condiciones" element={<TerminosCondiciones />} />
+          <Route path="/seguimiento-pedidos" element={<SeguimientoPedidos />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
