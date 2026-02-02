@@ -88,6 +88,14 @@ export const Footer = () => {
               </li>
               <li>
                 <a 
+                  href="/#seguimiento-pedidos" 
+                  className="text-primary-foreground/70 hover:text-secondary transition-all duration-300 flex items-center gap-2 group"
+                >
+                  <span className="group-hover:translate-x-1 transition-transform duration-300">Seguimiento de Pedidos</span>
+                </a>
+              </li>
+              <li>
+                <a 
                   href="https://discord.gg/ekr3ERWJQ6" 
                   target="_blank" 
                   rel="noopener noreferrer"
