@@ -9,6 +9,7 @@ import { Testimonials } from "@/components/Testimonials";
 import { Shipping } from "@/components/Shipping";
 import { FAQ } from "@/components/FAQ";
 import { FinalCTA } from "@/components/FinalCTA";
+import { OrderTracking } from "@/components/OrderTracking";
 import { Footer } from "@/components/Footer";
 
 const Index = () => {
@@ -43,7 +44,10 @@ const Index = () => {
       {/* 9️⃣ FAQ SECTION - Accordion style */}
       <FAQ />
       
-      {/* 🔟 FINAL CTA SECTION - Conversion push */}
+      {/* 🔟 ORDER TRACKING SECTION - ClickUp embed */}
+      <OrderTracking />
+      
+      {/* 1️⃣1️⃣ FINAL CTA SECTION - Conversion push */}
       <FinalCTA />
       
       <Footer />
