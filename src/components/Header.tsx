@@ -83,7 +83,7 @@ export const Header = () => {
 
   const resourceItems = [
     { name: "FAQ", href: "/faq", icon: HelpCircle },
-    { name: "Seguimiento de Pedidos", href: "/#seguimiento-pedidos", icon: MapPin },
+    { name: "Seguimiento de Pedidos", href: "/seguimiento-pedidos", icon: MapPin },
     { name: "Actualizaciones de Firmware", href: "https://github.com/DTQSYS/NRF52840-ICM45686-QMC6309", icon: Download, external: true },
     { name: "Especificaciones Técnicas", href: "/especificaciones-tecnicas", icon: Zap },
   ];
