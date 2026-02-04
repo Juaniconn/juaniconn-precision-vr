@@ -4,10 +4,10 @@ import { Button } from "@/components/ui/button";
 export const Kits = () => {
   const kits = [
     {
-      name: "STARTER PACK",
+      name: "Starter Hive",
       trackers: "6",
       description: "Perfecto para comenzar con Full Body Tracking.",
-      price: "Desde $XXX MXN",
+      price: "$5,999 MXN",
       items: [
         "6 Trackers Beekonz ICM-45686",
         "1 Dongle Holyiot nRF52840",
@@ -19,10 +19,10 @@ export const Kits = () => {
       link: "https://buy.stripe.com/eVq28sf2dbwhfIX3Rj7g40o"
     },
     {
-      name: "ADVANCED PACK",
+      name: "Advanced Hive",
       trackers: "8",
       description: "Ideal para VRChat FBT completo.",
-      price: "Más Popular",
+      price: "$7,499 MXN",
       items: [
         "8 Trackers Beekonz ICM-45686",
         "1 Dongle Holyiot nRF52840",
@@ -34,10 +34,10 @@ export const Kits = () => {
       link: "https://buy.stripe.com/3cI9AUbQ10RDeETdrT7g40r"
     },
     {
-      name: "PRO PACK",
+      name: "Pro Hive",
       trackers: "10",
       description: "Para creadores, bailarines y setups avanzados.",
-      price: "Setup Profesional",
+      price: "$8,999 MXN",
       items: [
         "10 Trackers Beekonz ICM-45686",
         "1 Dongle Holyiot nRF52840",
@@ -117,7 +117,12 @@ export const Kits = () => {
                       {kit.name}
                     </h3>
                     
-                    <p className="text-secondary font-semibold text-sm mb-3">
+                    {/* Price - Highlighted in Accent Gold */}
+                    <p className="text-2xl font-bold text-secondary mb-3 glow-gold-subtle">
+                      {kit.price}
+                    </p>
+                    
+                    <p className="text-secondary/80 font-medium text-sm mb-2">
                       {kit.trackers} Trackers
                     </p>
                     

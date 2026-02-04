@@ -26,16 +26,27 @@ export const OrderTracking = () => {
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-12">
-          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-primary-foreground mb-4 tracking-wide">
-            SEGUIMIENTOS DE PEDIDOS
+          <h2 
+            className="font-display text-4xl md:text-5xl lg:text-6xl mb-4 tracking-wide"
+            style={{ color: '#FBF4F4' }}
+          >
+            Seguimiento de Pedidos
           </h2>
-          <div className="w-24 h-1 bg-secondary mx-auto mb-6 rounded-full" />
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-8">
+          <div 
+            className="w-24 h-1 mx-auto mb-6 rounded-full"
+            style={{ backgroundColor: '#F3CC80' }}
+          />
+          <p 
+            className="text-lg max-w-2xl mx-auto mb-8"
+            style={{ color: '#B8AEB2' }}
+          >
             Consulta el estado de tu pedido en tiempo real, desde fabricación hasta entrega.
           </p>
-          <p className="text-foreground/80 max-w-3xl mx-auto leading-relaxed">
-            En Beekonz creemos en la transparencia total. Aquí puedes visualizar el estado real de tu pedido, 
-            directamente desde nuestro sistema interno de seguimiento.
+          <p 
+            className="max-w-3xl mx-auto leading-relaxed"
+            style={{ color: '#E6DDE0' }}
+          >
+            En Beekonz creemos en la transparencia total. Aquí puedes visualizar el estado real de tu pedido directamente desde nuestro sistema interno de seguimiento.
           </p>
         </div>
 
@@ -71,9 +82,9 @@ export const OrderTracking = () => {
             border: '1px solid #3A1C23',
           }}
         >
-          <Info className="w-6 h-6 text-secondary flex-shrink-0 mt-0.5" />
-          <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
-            Si tu pedido no aparece, verifica tu número de orden o contáctanos directamente para ayudarte.
+          <Info className="w-6 h-6 flex-shrink-0 mt-0.5" style={{ color: '#F3CC80' }} />
+          <p className="text-sm md:text-base leading-relaxed" style={{ color: '#B8AEB2' }}>
+            Si tu pedido no aparece, contáctanos directamente para ayudarte.
           </p>
         </div>
 

@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, ChevronDown, Star, Zap, Battery, Feather, Wifi } from "lucide-react";
 import productBlack from "@/assets/product_black.png";
 import logo from "@/assets/logo.svg";
+import { HoneycombBackground } from "./HoneycombBackground";
 
 export const Hero = () => {
   const scrollToSection = (id: string) => {
@@ -20,8 +21,8 @@ export const Hero = () => {
       {/* Dark gradient background - Neotix style */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary via-background to-background" />
       
-      {/* Grid pattern overlay */}
-      <div className="absolute inset-0 grid-pattern opacity-20" />
+      {/* Animated Honeycomb Background - Beekonz packaging inspired */}
+      <HoneycombBackground />
       
       {/* Radial glow effects */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
