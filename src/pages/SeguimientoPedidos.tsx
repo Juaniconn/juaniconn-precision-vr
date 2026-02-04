@@ -35,7 +35,7 @@ const SeguimientoPedidos = () => {
               className="font-display text-4xl md:text-5xl lg:text-6xl tracking-wide mb-4"
               style={{ color: '#FBF4F4' }}
             >
-              SEGUIMIENTOS DE PEDIDOS
+              Seguimiento de Pedidos
             </h1>
             <div 
               className="w-24 h-1 mx-auto mb-6 rounded-full"
@@ -45,14 +45,13 @@ const SeguimientoPedidos = () => {
               className="text-lg max-w-2xl mx-auto mb-8"
               style={{ color: '#B8AEB2' }}
             >
-              Consulta el estado de tu pedido en tiempo real, desde fabricación hasta entrega.
+              Visualiza el progreso de tu pedido en tiempo real.
             </p>
             <p 
               className="max-w-3xl mx-auto leading-relaxed"
               style={{ color: '#E6DDE0' }}
             >
-              En Beekonz creemos en la transparencia total. Aquí puedes visualizar el estado real de tu pedido, 
-              directamente desde nuestro sistema interno de seguimiento.
+              Desde la fabricación hasta la entrega final, aquí puedes consultar el estado actualizado de tu pedido directamente desde nuestro panel interno.
             </p>
           </div>
 
