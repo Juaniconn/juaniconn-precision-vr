@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ChevronDown, Star, Zap, Battery, Feather, Wifi, Heart } from "lucide-react";
-import productBlack from "@/assets/product_black.png";
+import productRose from "@/assets/product_rose.png";
 import logo from "@/assets/logo.svg";
 import { ValentineBackground } from "./ValentineBackground";
 
@@ -17,7 +17,7 @@ export const Hero = () => {
   ];
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 pb-24">
       {/* Dark gradient background with Valentine wine accent */}
       <div 
         className="absolute inset-0"
@@ -146,11 +146,11 @@ export const Hero = () => {
             {/* Product image container */}
             <div className="relative">
               <img 
-                src={productBlack} 
-                alt="Beekonz Tracker - Full Body Tracking VR" 
-                className="relative w-full max-w-lg mx-auto animate-float drop-shadow-2xl"
+                src={productRose} 
+                alt="Beekonz Tracker Valentine Edition - Full Body Tracking VR" 
+                className="relative w-full max-w-md mx-auto animate-float"
                 style={{
-                  filter: 'drop-shadow(0 30px 80px rgba(255, 111, 145, 0.25)) drop-shadow(0 15px 40px rgba(243, 204, 128, 0.2))',
+                  filter: 'drop-shadow(0 25px 60px rgba(255, 111, 145, 0.35)) drop-shadow(0 10px 30px rgba(243, 204, 128, 0.25))',
                 }}
               />
               
@@ -210,30 +210,30 @@ export const Hero = () => {
         </div>
         
         {/* Bottom badges strip */}
-        <div className="mt-16 pt-8 border-t border-border/50">
-          <div className="flex flex-wrap items-center justify-center gap-4 md:gap-8">
+        <div className="mt-12 md:mt-16 pt-6 md:pt-8 border-t border-border/50 mb-16 md:mb-20">
+          <div className="flex flex-wrap items-center justify-center gap-3 md:gap-6">
             {badges.map((badge, index) => (
               <div 
                 key={index}
-                className="flex items-center gap-2 px-4 py-2 rounded-full bg-card/50 border border-border/50 backdrop-blur-sm animate-fade-in"
+                className="flex items-center gap-2 px-3 md:px-4 py-2 rounded-full bg-card/50 border border-border/50 backdrop-blur-sm animate-fade-in"
                 style={{ animationDelay: `${0.5 + index * 0.1}s` }}
               >
                 <badge.icon className="h-4 w-4 text-secondary" />
-                <span className="text-sm text-muted-foreground">{badge.label}</span>
+                <span className="text-xs md:text-sm text-muted-foreground">{badge.label}</span>
               </div>
             ))}
           </div>
         </div>
       </div>
       
-      {/* Scroll indicator with Valentine color */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+      {/* Scroll indicator with Valentine color - positioned with safe spacing */}
+      <div className="absolute bottom-4 md:bottom-6 left-1/2 -translate-x-1/2 animate-bounce z-20">
         <button 
           onClick={() => scrollToSection('solution')}
-          className="p-2 rounded-full border transition-colors"
+          className="p-2.5 rounded-full border transition-colors bg-card/30 backdrop-blur-sm hover:bg-card/50"
           style={{ borderColor: 'rgba(255, 111, 145, 0.4)' }}
         >
-          <ChevronDown className="h-6 w-6" style={{ color: '#FF9EBB' }} />
+          <ChevronDown className="h-5 w-5 md:h-6 md:w-6" style={{ color: '#FF9EBB' }} />
         </button>
       </div>
     </section>
