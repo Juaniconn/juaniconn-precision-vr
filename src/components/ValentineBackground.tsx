@@ -21,19 +21,25 @@ export const ValentineBackground = () => {
     resize();
     window.addEventListener('resize', resize);
 
-    // Floating hearts
-    const hearts: { x: number; y: number; size: number; speed: number; opacity: number; rotation: number }[] = [];
+    // Floating hearts - increased density
+    const hearts: { x: number; y: number; size: number; speed: number; opacity: number; rotation: number; drift: number; delay: number }[] = [];
     
     const initHearts = () => {
       hearts.length = 0;
-      for (let i = 0; i < 12; i++) {
+      // Responsive heart count based on screen width
+      const baseCount = Math.min(35, Math.floor(canvas.width / 50));
+      const heartCount = Math.max(20, baseCount);
+      
+      for (let i = 0; i < heartCount; i++) {
         hearts.push({
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
-          size: 8 + Math.random() * 16,
-          speed: 0.2 + Math.random() * 0.4,
-          opacity: 0.08 + Math.random() * 0.12,
-          rotation: Math.random() * Math.PI * 2
+          size: 6 + Math.random() * 14,
+          speed: 0.15 + Math.random() * 0.35,
+          opacity: 0.06 + Math.random() * 0.12,
+          rotation: Math.random() * Math.PI * 2,
+          drift: (Math.random() - 0.5) * 0.8, // Horizontal drift
+          delay: Math.random() * Math.PI * 2 // Animation phase offset
         });
       }
     };
@@ -185,18 +191,27 @@ export const ValentineBackground = () => {
         }
       }
 
-      // Draw floating hearts
+      // Draw floating hearts with varied animations
       hearts.forEach((heart) => {
+        // Smooth floating motion with individual timing
+        const timeOffset = time + heart.delay;
         heart.y -= heart.speed;
-        heart.x += Math.sin(time + heart.x * 0.01) * 0.3;
-        heart.rotation += 0.005;
+        heart.x += Math.sin(timeOffset * 0.8) * heart.drift + heart.drift * 0.1;
+        heart.rotation += 0.003 + Math.sin(timeOffset) * 0.002;
         
-        if (heart.y < -50) {
-          heart.y = canvas.height + 50;
+        // Subtle scale pulsing
+        const scalePulse = 1 + Math.sin(timeOffset * 1.2) * 0.1;
+        
+        // Reset when off screen
+        if (heart.y < -60) {
+          heart.y = canvas.height + 60;
           heart.x = Math.random() * canvas.width;
         }
+        // Wrap horizontally
+        if (heart.x < -30) heart.x = canvas.width + 30;
+        if (heart.x > canvas.width + 30) heart.x = -30;
         
-        drawHeart(heart.x, heart.y, heart.size, heart.rotation, heart.opacity);
+        drawHeart(heart.x, heart.y, heart.size * scalePulse, heart.rotation, heart.opacity);
       });
 
       animationId = requestAnimationFrame(animate);
