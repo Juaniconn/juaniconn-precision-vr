@@ -1,8 +1,8 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, ChevronDown, Star, Zap, Battery, Feather, Wifi } from "lucide-react";
+import { ArrowRight, ChevronDown, Star, Zap, Battery, Feather, Wifi, Heart } from "lucide-react";
 import productBlack from "@/assets/product_black.png";
 import logo from "@/assets/logo.svg";
-import { HoneycombBackground } from "./HoneycombBackground";
+import { ValentineBackground } from "./ValentineBackground";
 
 export const Hero = () => {
   const scrollToSection = (id: string) => {
@@ -18,53 +18,77 @@ export const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-      {/* Dark gradient background - Neotix style */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary via-background to-background" />
+      {/* Dark gradient background with Valentine wine accent */}
+      <div 
+        className="absolute inset-0"
+        style={{
+          background: 'linear-gradient(135deg, #25010B 0%, #3A1C23 40%, #8B1D3A 70%, #25010B 100%)',
+        }}
+      />
       
-      {/* Animated Honeycomb Background - Beekonz packaging inspired */}
-      <HoneycombBackground />
+      {/* Valentine Animated Background */}
+      <ValentineBackground />
       
-      {/* Radial glow effects */}
+      {/* Valentine radial glow effects */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div 
-          className="absolute w-[800px] h-[800px] right-[-10%] top-[0%] opacity-40 rounded-full blur-3xl"
+          className="absolute w-[900px] h-[900px] right-[-15%] top-[-10%] opacity-30 rounded-full blur-3xl"
           style={{
-            background: 'radial-gradient(circle, hsl(39, 82%, 73%, 0.3) 0%, transparent 60%)',
+            background: 'radial-gradient(circle, rgba(255, 111, 145, 0.4) 0%, rgba(139, 29, 58, 0.2) 40%, transparent 70%)',
           }}
         />
         <div 
-          className="absolute w-[400px] h-[400px] left-[5%] bottom-[10%] opacity-20 rounded-full blur-3xl"
+          className="absolute w-[600px] h-[600px] left-[0%] bottom-[0%] opacity-25 rounded-full blur-3xl"
           style={{
-            background: 'radial-gradient(circle, hsl(346, 96%, 20%) 0%, transparent 70%)',
+            background: 'radial-gradient(circle, rgba(255, 158, 187, 0.3) 0%, rgba(139, 29, 58, 0.15) 50%, transparent 70%)',
+          }}
+        />
+        {/* Gold accent glow */}
+        <div 
+          className="absolute w-[400px] h-[400px] right-[20%] bottom-[20%] opacity-20 rounded-full blur-3xl"
+          style={{
+            background: 'radial-gradient(circle, hsl(39, 82%, 73%, 0.4) 0%, transparent 60%)',
           }}
         />
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          {/* Left content - Text (Neotix structure) */}
+          {/* Left content - Text */}
           <div className="text-center lg:text-left space-y-8 animate-fade-in">
-            {/* Top badge - like Neotix "NO.1 IT SOLUTION" */}
-            <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-card/80 border border-secondary/30 backdrop-blur-sm">
-              <img src={logo} alt="Beekonz" className="h-5 w-auto" />
-              <span className="text-sm font-medium text-secondary tracking-wide">FULL BODY TRACKING VR</span>
+            {/* Valentine Special Badge */}
+            <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-card/80 border backdrop-blur-sm"
+              style={{ borderColor: 'rgba(255, 111, 145, 0.4)' }}
+            >
+              <Heart className="h-4 w-4 text-[#FF6F91] fill-[#FF6F91]/30" />
+              <span className="text-sm font-medium tracking-wide" style={{ color: '#FF9EBB' }}>
+                VALENTINE'S SPECIAL EDITION
+              </span>
+              <Heart className="h-4 w-4 text-[#FF6F91] fill-[#FF6F91]/30" />
             </div>
             
-            {/* Main title H1 - Large and bold like Neotix */}
+            {/* Main title H1 */}
             <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-display font-bold tracking-tight leading-[0.95]">
               <span className="text-foreground">Beekonz</span>
               <br />
               <span className="text-secondary">Trackers.</span>
             </h1>
             
-            {/* Subtitle - Clear value proposition */}
-            <p className="text-xl md:text-2xl text-muted-foreground font-light max-w-xl mx-auto lg:mx-0 leading-relaxed">
-              Full Body Tracking para VR – <span className="text-foreground font-medium">Precisión sin límites.</span>
-            </p>
+            {/* Subtitle with Valentine twist */}
+            <div className="space-y-3">
+              <p className="text-xl md:text-2xl text-muted-foreground font-light max-w-xl mx-auto lg:mx-0 leading-relaxed">
+                Full Body Tracking para VR — <span className="text-foreground font-medium">Precisión que conecta.</span>
+              </p>
+              <p className="text-lg md:text-xl font-light max-w-xl mx-auto lg:mx-0"
+                style={{ color: '#FF9EBB' }}
+              >
+                Este San Valentín, muévete sin límites.
+              </p>
+            </div>
             
-            {/* CTA Buttons - Neotix style with clear hierarchy */}
+            {/* CTA Buttons */}
             <div className="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-              {/* Primary CTA */}
+              {/* Primary CTA with subtle heart */}
               <a 
                 href="https://buy.stripe.com/3cI9AUbQ10RDeETdrT7g40r"
                 target="_blank"
@@ -74,23 +98,28 @@ export const Hero = () => {
                   size="lg" 
                   className="bg-secondary hover:bg-bee-gold-hover text-secondary-foreground font-semibold px-10 py-7 text-lg rounded-full glow-gold hover:glow-gold-strong transition-all duration-300 hover:scale-[1.02] group"
                 >
+                  <Heart className="mr-2 h-5 w-5 fill-current opacity-80" />
                   Comprar Ahora
                   <ArrowRight className="ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </a>
               
-              {/* Secondary CTA */}
+              {/* Secondary CTA with Valentine accent */}
               <Button 
                 size="lg" 
                 variant="outline"
-                className="border-2 border-secondary/60 text-secondary hover:bg-secondary hover:text-secondary-foreground font-semibold px-10 py-7 text-lg rounded-full transition-all duration-300"
+                className="font-semibold px-10 py-7 text-lg rounded-full transition-all duration-300"
+                style={{
+                  borderColor: 'rgba(255, 111, 145, 0.5)',
+                  color: '#FF9EBB',
+                }}
                 onClick={() => scrollToSection('kits')}
               >
                 Ver Paquetes
               </Button>
             </div>
             
-            {/* Rating badge - Neotix inspired */}
+            {/* Rating badge */}
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-6 pt-4">
               <div className="flex items-center gap-2 bg-card/60 backdrop-blur-sm rounded-full px-4 py-2 border border-border">
                 <div className="flex">
@@ -104,10 +133,15 @@ export const Hero = () => {
             </div>
           </div>
           
-          {/* Right content - Product image with floating cards */}
+          {/* Right content - Product image with Valentine glow */}
           <div className="relative animate-fade-in" style={{ animationDelay: '0.3s' }}>
-            {/* Outer glow */}
-            <div className="absolute -inset-16 bg-gradient-to-r from-secondary/20 via-transparent to-secondary/10 rounded-full blur-3xl" />
+            {/* Valentine + Gold mixed glow */}
+            <div 
+              className="absolute -inset-20 rounded-full blur-3xl"
+              style={{
+                background: 'radial-gradient(circle, rgba(255, 111, 145, 0.25) 0%, rgba(243, 204, 128, 0.15) 50%, transparent 70%)',
+              }}
+            />
             
             {/* Product image container */}
             <div className="relative">
@@ -116,14 +150,19 @@ export const Hero = () => {
                 alt="Beekonz Tracker - Full Body Tracking VR" 
                 className="relative w-full max-w-lg mx-auto animate-float drop-shadow-2xl"
                 style={{
-                  filter: 'drop-shadow(0 30px 80px hsl(39, 82%, 73%, 0.35))',
+                  filter: 'drop-shadow(0 30px 80px rgba(255, 111, 145, 0.25)) drop-shadow(0 15px 40px rgba(243, 204, 128, 0.2))',
                 }}
               />
               
-              {/* Floating spec cards - Neotix style badges */}
-              <div className="absolute -bottom-4 -left-4 bg-card/95 backdrop-blur-xl rounded-2xl px-5 py-4 border border-secondary/40 glow-gold-subtle shadow-xl">
+              {/* Floating spec cards with Valentine pink borders */}
+              <div 
+                className="absolute -bottom-4 -left-4 bg-card/95 backdrop-blur-xl rounded-2xl px-5 py-4 shadow-xl"
+                style={{ border: '1px solid rgba(255, 111, 145, 0.3)' }}
+              >
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-secondary/20 flex items-center justify-center">
+                  <div className="w-10 h-10 rounded-xl flex items-center justify-center"
+                    style={{ background: 'rgba(255, 111, 145, 0.15)' }}
+                  >
                     <Battery className="w-5 h-5 text-secondary" />
                   </div>
                   <div>
@@ -133,10 +172,15 @@ export const Hero = () => {
                 </div>
               </div>
               
-              <div className="absolute -top-4 -right-4 bg-card/95 backdrop-blur-xl rounded-2xl px-5 py-4 border border-secondary/40 glow-gold-subtle shadow-xl">
+              <div 
+                className="absolute -top-4 -right-4 bg-card/95 backdrop-blur-xl rounded-2xl px-5 py-4 shadow-xl"
+                style={{ border: '1px solid rgba(255, 111, 145, 0.3)' }}
+              >
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-secondary/20 flex items-center justify-center">
-                    <Feather className="w-5 h-5 text-secondary" />
+                  <div className="w-10 h-10 rounded-xl flex items-center justify-center"
+                    style={{ background: 'rgba(255, 111, 145, 0.15)' }}
+                  >
+                    <Feather className="w-5 h-5" style={{ color: '#FF9EBB' }} />
                   </div>
                   <div>
                     <div className="text-xs text-muted-foreground">Peso</div>
@@ -145,9 +189,14 @@ export const Hero = () => {
                 </div>
               </div>
               
-              <div className="absolute top-1/2 -right-8 transform -translate-y-1/2 bg-card/95 backdrop-blur-xl rounded-2xl px-4 py-3 border border-secondary/40 glow-gold-subtle shadow-xl hidden xl:block">
+              <div 
+                className="absolute top-1/2 -right-8 transform -translate-y-1/2 bg-card/95 backdrop-blur-xl rounded-2xl px-4 py-3 shadow-xl hidden xl:block"
+                style={{ border: '1px solid rgba(255, 111, 145, 0.3)' }}
+              >
                 <div className="flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-lg bg-secondary/20 flex items-center justify-center">
+                  <div className="w-9 h-9 rounded-lg flex items-center justify-center"
+                    style={{ background: 'rgba(255, 111, 145, 0.15)' }}
+                  >
                     <Zap className="w-4 h-4 text-secondary" />
                   </div>
                   <div>
@@ -160,7 +209,7 @@ export const Hero = () => {
           </div>
         </div>
         
-        {/* Bottom badges strip - Neotix inspired */}
+        {/* Bottom badges strip */}
         <div className="mt-16 pt-8 border-t border-border/50">
           <div className="flex flex-wrap items-center justify-center gap-4 md:gap-8">
             {badges.map((badge, index) => (
@@ -177,13 +226,14 @@ export const Hero = () => {
         </div>
       </div>
       
-      {/* Scroll indicator */}
+      {/* Scroll indicator with Valentine color */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
         <button 
           onClick={() => scrollToSection('solution')}
-          className="p-2 rounded-full border border-border hover:border-secondary transition-colors"
+          className="p-2 rounded-full border transition-colors"
+          style={{ borderColor: 'rgba(255, 111, 145, 0.4)' }}
         >
-          <ChevronDown className="h-6 w-6 text-muted-foreground" />
+          <ChevronDown className="h-6 w-6" style={{ color: '#FF9EBB' }} />
         </button>
       </div>
     </section>
