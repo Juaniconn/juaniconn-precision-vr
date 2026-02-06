@@ -210,7 +210,7 @@ export const Hero = () => {
         </div>
         
         {/* Bottom badges strip */}
-        <div className="mt-12 md:mt-16 pt-6 md:pt-8 border-t border-border/50 mb-16 md:mb-20">
+        <div className="mt-12 md:mt-16 pt-6 md:pt-8 border-t border-border/50 mb-6 md:mb-8">
           <div className="flex flex-wrap items-center justify-center gap-3 md:gap-6">
             {badges.map((badge, index) => (
               <div 
