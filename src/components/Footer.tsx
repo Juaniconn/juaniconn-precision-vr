@@ -1,6 +1,6 @@
 import { NavLink } from "./NavLink";
 import { ExternalLink } from "lucide-react";
-import logo from "@/assets/logo.svg";
+import logo from "@/assets/beekonz_logo_light.png";
 
 const DiscordIcon = ({ className }: { className?: string }) => (
   <svg className={className} viewBox="0 0 24 24" fill="currentColor">
@@ -47,8 +47,8 @@ export const Footer = () => {
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div className="space-y-4">
-            <div className="flex items-center gap-2">
-              <img src={logo} alt="Beekonz" className="h-8 w-auto" />
+            <div className="flex items-center gap-2 bg-primary-foreground rounded-lg px-3 py-2 w-fit">
+              <img src={logo} alt="Beekonz" className="h-7 w-auto" />
             </div>
             <p className="text-primary-foreground/80 text-sm leading-relaxed">
               Precisión que se siente. Libertad que se vive.
