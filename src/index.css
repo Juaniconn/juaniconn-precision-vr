@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 /* =====================================================
-   BEEKONZ 2026 - DARK PREMIUM DESIGN SYSTEM
+   BEEKONZ 2026 - LIGHT PREMIUM DESIGN SYSTEM
    ===================================================== */
 
 @layer base {
@@ -15,71 +15,71 @@
     --primary-light: 0 33% 97%;      /* #FBF4F4 - Cream */
     --accent-gold: 39 82% 73%;       /* #F3CC80 - Gold */
     
-    /* ===== DARK MODE NEUTRALS ===== */
-    --bg-dark-soft: 345 50% 6%;      /* #1A070E */
-    --bg-dark-card: 345 46% 11%;     /* #2A0F18 */
-    --border-dark: 345 35% 17%;      /* #3A1C23 */
-    --divider-dark: 345 28% 23%;     /* #4A2A33 */
+    /* ===== LIGHT MODE NEUTRALS ===== */
+    --bg-light-soft: 24 43% 98%;     /* #FDF9F7 */
+    --bg-light-card: 0 0% 100%;      /* #FFFFFF */
+    --border-light: 20 20% 89%;      /* #E8DEDA */
+    --muted-light: 345 6% 45%;       /* #7A6A6F */
     
     /* ===== TEXT COLORS ===== */
-    --text-heading: 0 33% 97%;       /* #FBF4F4 */
-    --text-body: 345 12% 91%;        /* #E6DDE0 */
-    --text-muted: 345 8% 70%;        /* #B8AEB2 */
+    --text-heading: 346 96% 8%;      /* #25010B */
+    --text-body: 346 40% 15%;        
+    --text-muted: 345 6% 45%;        /* #7A6A6F */
     --text-on-gold: 346 96% 8%;      /* #25010B */
     
-    /* ===== SEMANTIC TOKENS (Dark Mode Default) ===== */
-    --background: 345 50% 6%;        /* #1A070E - Main BG */
-    --foreground: 0 33% 97%;         /* #FBF4F4 - Text */
+    /* ===== SEMANTIC TOKENS (Light Mode) ===== */
+    --background: 24 43% 98%;        /* #FDF9F7 */
+    --foreground: 346 96% 8%;        /* #25010B */
     
-    --card: 345 46% 11%;             /* #2A0F18 */
-    --card-foreground: 0 33% 97%;
+    --card: 0 0% 100%;               /* #FFFFFF */
+    --card-foreground: 346 96% 8%;
     
-    --popover: 345 46% 11%;
-    --popover-foreground: 0 33% 97%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 346 96% 8%;
     
     --primary: 346 96% 8%;           /* #25010B */
     --primary-foreground: 0 33% 97%;
     
-    --secondary: 39 82% 73%;         /* #F3CC80 - Gold */
+    --secondary: 39 82% 63%;         /* Gold slightly deeper for light BG contrast */
     --secondary-foreground: 346 96% 8%;
     
-    --muted: 345 35% 17%;
-    --muted-foreground: 345 8% 70%;
+    --muted: 20 20% 94%;
+    --muted-foreground: 345 6% 45%;
     
-    --accent: 39 82% 73%;
+    --accent: 39 82% 63%;
     --accent-foreground: 346 96% 8%;
     
-    --destructive: 0 84% 60%;
+    --destructive: 0 84% 55%;
     --destructive-foreground: 0 33% 97%;
     
-    --border: 345 35% 17%;
-    --input: 345 35% 17%;
-    --ring: 39 82% 73%;
+    --border: 20 20% 89%;            /* #E8DEDA */
+    --input: 20 20% 89%;
+    --ring: 39 82% 63%;
     
-    --radius: 0.75rem;
+    --radius: 1rem;
     
     /* ===== CHART COLORS ===== */
-    --chart-1: 39 82% 73%;
+    --chart-1: 39 82% 63%;
     --chart-2: 346 96% 20%;
     --chart-3: 345 50% 30%;
-    --chart-4: 39 60% 60%;
+    --chart-4: 39 60% 50%;
     --chart-5: 345 28% 40%;
     
     /* ===== SIDEBAR ===== */
-    --sidebar-background: 345 50% 6%;
-    --sidebar-foreground: 0 33% 97%;
-    --sidebar-primary: 39 82% 73%;
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 346 96% 8%;
+    --sidebar-primary: 39 82% 63%;
     --sidebar-primary-foreground: 346 96% 8%;
-    --sidebar-accent: 345 46% 11%;
-    --sidebar-accent-foreground: 0 33% 97%;
-    --sidebar-border: 345 35% 17%;
-    --sidebar-ring: 39 82% 73%;
+    --sidebar-accent: 24 43% 98%;
+    --sidebar-accent-foreground: 346 96% 8%;
+    --sidebar-border: 20 20% 89%;
+    --sidebar-ring: 39 82% 63%;
     
     /* Brand direct access */
     --brand-dark: 346 96% 8%;
     --brand-light: 0 33% 97%;
-    --brand-gold: 39 82% 73%;
-    --brand-gold-hover: 39 70% 66%;
+    --brand-gold: 39 82% 63%;
+    --brand-gold-hover: 39 70% 54%;
   }
 }
 
@@ -379,16 +379,16 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: hsl(345, 50%, 6%);
+  background: hsl(var(--background));
 }
 
 ::-webkit-scrollbar-thumb {
-  background: hsl(345, 35%, 17%);
+  background: hsl(var(--border));
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: hsl(39, 82%, 73%, 0.5);
+  background: hsl(var(--secondary));
 }
 
 /* Rainbow border effect */

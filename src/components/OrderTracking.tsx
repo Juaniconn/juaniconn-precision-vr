@@ -8,82 +8,50 @@ const DiscordIcon = ({ className }: { className?: string }) => (
 
 export const OrderTracking = () => {
   return (
-    <section 
+    <section
       id="seguimiento-pedidos"
-      className="py-20 md:py-28 relative overflow-hidden"
-      style={{
-        background: 'linear-gradient(180deg, #1A070E 0%, #25010B 100%)'
-      }}
+      className="py-20 md:py-28 relative overflow-hidden bg-background"
     >
       {/* Background pattern */}
-      <div className="absolute inset-0 opacity-5">
+      <div className="absolute inset-0 opacity-[0.06]">
         <div className="absolute inset-0" style={{
           backgroundImage: `radial-gradient(circle at 2px 2px, hsl(var(--secondary)) 1px, transparent 0)`,
           backgroundSize: '40px 40px'
         }} />
       </div>
-      
+
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-12">
-          <h2 
-            className="font-display text-4xl md:text-5xl lg:text-6xl mb-4 tracking-wide"
-            style={{ color: '#FBF4F4' }}
-          >
+          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl mb-4 tracking-wide text-foreground">
             Seguimiento de Pedidos
           </h2>
-          <div 
-            className="w-24 h-1 mx-auto mb-6 rounded-full"
-            style={{ backgroundColor: '#F3CC80' }}
-          />
-          <p 
-            className="text-lg max-w-2xl mx-auto mb-8"
-            style={{ color: '#B8AEB2' }}
-          >
+          <div className="w-24 h-1 mx-auto mb-6 rounded-full bg-secondary" />
+          <p className="text-lg max-w-2xl mx-auto mb-8 text-muted-foreground">
             Consulta el estado de tu pedido en tiempo real, desde fabricación hasta entrega.
           </p>
-          <p 
-            className="max-w-3xl mx-auto leading-relaxed"
-            style={{ color: '#E6DDE0' }}
-          >
+          <p className="max-w-3xl mx-auto leading-relaxed text-foreground/80">
             En Beekonz creemos en la transparencia total. Aquí puedes visualizar el estado real de tu pedido directamente desde nuestro sistema interno de seguimiento.
           </p>
         </div>
 
         {/* ClickUp Embed */}
         <div className="max-w-5xl mx-auto mb-10">
-          <div 
-            className="rounded-2xl overflow-hidden"
-            style={{
-              background: '#2A0F18',
-              border: '1px solid #3A1C23',
-              padding: '4px'
-            }}
-          >
-            <iframe 
-              className="clickup-embed w-full rounded-xl"
+          <div className="rounded-2xl overflow-hidden bg-card border border-border p-1 shadow-lg">
+            <iframe
+              className="clickup-embed w-full rounded-xl border border-border"
               src="https://sharing.clickup.com/9017841418/b/h/8cr2nra-517/7ae5e7a78615cff"
               height="700"
-              style={{
-                background: 'transparent',
-                border: '1px solid #3A1C23',
-                borderRadius: '12px',
-              }}
+              style={{ background: 'transparent' }}
               title="Seguimiento de Pedidos Beekonz"
             />
           </div>
         </div>
 
         {/* Info Notice */}
-        <div 
-          className="max-w-3xl mx-auto mb-10 p-5 rounded-xl flex items-start gap-4"
-          style={{
-            background: '#2A0F18',
-            border: '1px solid #3A1C23',
-          }}
-        >
-          <Info className="w-6 h-6 flex-shrink-0 mt-0.5" style={{ color: '#F3CC80' }} />
-          <p className="text-sm md:text-base leading-relaxed" style={{ color: '#B8AEB2' }}>
+        <div className="max-w-3xl mx-auto mb-10 p-5 rounded-xl flex items-start gap-4 bg-card border border-border shadow-sm">
+          <Info className="w-6 h-6 flex-shrink-0 mt-0.5 text-secondary" />
+          <p className="text-sm md:text-base leading-relaxed text-muted-foreground">
             Si tu pedido no aparece, contáctanos directamente para ayudarte.
           </p>
         </div>
@@ -94,7 +62,7 @@ export const OrderTracking = () => {
             href="https://discord.gg/ekr3ERWJQ6"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 px-8 py-4 bg-secondary text-secondary-foreground font-semibold rounded-full hover:bg-secondary/90 transition-all duration-300 shadow-lg hover:shadow-secondary/30 hover:shadow-xl group"
+            className="inline-flex items-center gap-3 px-8 py-4 bg-secondary text-secondary-foreground font-semibold rounded-full hover:bg-secondary/90 transition-all duration-300 shadow-lg hover:shadow-xl group"
           >
             <DiscordIcon className="w-5 h-5" />
             <span>¿Tienes dudas sobre tu pedido?</span>
