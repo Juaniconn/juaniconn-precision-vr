@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
+import { FaceTracking } from "@/components/FaceTracking";
 import { SolutionSection } from "@/components/SolutionSection";
 import { Kits } from "@/components/Kits";
 import { CustomSet } from "@/components/CustomSet";
@@ -16,40 +17,43 @@ const Index = () => {
   return (
     <main className="min-h-screen bg-background">
       <Header />
-      
-      {/* 1️⃣ HERO SECTION - Neotix-style wide hero */}
+
+      {/* 1️⃣ HERO - Beekonz Face Tracking launch */}
       <Hero />
-      
-      {/* 2️⃣ THE BEEKONZ SOLUTION - Feature cards */}
+
+      {/* 2️⃣ FACE TRACKING PRODUCT - New dedicated section */}
+      <FaceTracking />
+
+      {/* 3️⃣ THE BEEKONZ SOLUTION - Feature cards */}
       <SolutionSection />
-      
-      {/* 3️⃣ BEEKONZ PACKAGES - Pricing cards */}
+
+      {/* 4️⃣ BEEKONZ PACKAGES - Pricing cards */}
       <Kits />
-      
-      {/* 4️⃣ CUSTOM SET SECTION - Two-column layout */}
+
+      {/* 5️⃣ CUSTOM SET SECTION - Two-column layout */}
       <CustomSet />
-      
-      {/* 5️⃣ TECHNOLOGY & CONNECTIVITY - Large image + tech benefits */}
+
+      {/* 6️⃣ TECHNOLOGY & CONNECTIVITY */}
       <TechSection />
-      
-      {/* 6️⃣ EXPERIENCE & TRACK RECORD - Metrics/counters */}
+
+      {/* 7️⃣ EXPERIENCE & TRACK RECORD */}
       <ExperienceSection />
-      
-      {/* 7️⃣ TESTIMONIALS - User reviews cards */}
+
+      {/* 8️⃣ TESTIMONIALS */}
       <Testimonials />
-      
-      {/* 8️⃣ SHIPPING & SUPPORT - Grid info blocks */}
+
+      {/* 9️⃣ SHIPPING & SUPPORT */}
       <Shipping />
-      
-      {/* 9️⃣ FAQ SECTION - Accordion style */}
+
+      {/* 🔟 FAQ */}
       <FAQ />
-      
-      {/* 🔟 ORDER TRACKING SECTION - ClickUp embed */}
+
+      {/* 1️⃣1️⃣ ORDER TRACKING */}
       <OrderTracking />
-      
-      {/* 1️⃣1️⃣ FINAL CTA SECTION - Conversion push */}
+
+      {/* 1️⃣2️⃣ FINAL CTA */}
       <FinalCTA />
-      
+
       <Footer />
     </main>
   );
