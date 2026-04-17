@@ -4,9 +4,9 @@ export const Shipping = () => {
   const features = [
     { 
       icon: Truck, 
-      title: "Envíos México", 
-      description: "1–2 días hábiles",
-      detail: "Envío express a todo el país"
+      title: "Envíos a todo el mundo", 
+      description: "Rápido y rastreable",
+      detail: "Entregas internacionales seguras"
     },
     { 
       icon: Globe, 

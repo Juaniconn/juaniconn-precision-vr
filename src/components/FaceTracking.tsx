@@ -157,29 +157,24 @@ export const FaceTracking = () => {
 
             {/* Micro trust line */}
             <p className="text-center text-sm text-muted-foreground">
-              Pago seguro · Envíos a todo México
+              Pago seguro · Envíos a todo el mundo
             </p>
-          </div>
-        </div>
 
-        {/* Features grid 2x3 */}
-        <div className="mb-20">
-          <h3 className="font-display text-3xl md:text-4xl text-foreground text-center mb-10 tracking-wide">
-            Características
-          </h3>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto">
-            {features.map((f, i) => (
-              <div
-                key={i}
-                className="group bg-card rounded-2xl p-6 border border-border hover:border-secondary/50 hover:shadow-lg transition-all duration-300"
-              >
-                <div className="w-12 h-12 rounded-xl bg-secondary/15 flex items-center justify-center mb-4 group-hover:bg-secondary/25 transition-colors">
-                  <f.icon className="w-6 h-6 text-secondary" />
+            {/* Features grid 2x3 — relocated under the product card */}
+            <div className="grid grid-cols-2 gap-3 pt-2">
+              {features.map((f, i) => (
+                <div
+                  key={i}
+                  className="group bg-card rounded-2xl p-4 border border-border hover:border-secondary/50 hover:shadow-md transition-all duration-300"
+                >
+                  <div className="w-9 h-9 rounded-lg bg-secondary/15 flex items-center justify-center mb-2 group-hover:bg-secondary/25 transition-colors">
+                    <f.icon className="w-4 h-4 text-secondary" />
+                  </div>
+                  <h4 className="text-sm font-bold text-foreground leading-tight mb-0.5">{f.title}</h4>
+                  <p className="text-xs text-muted-foreground leading-snug">{f.desc}</p>
                 </div>
-                <h4 className="text-lg font-bold text-foreground mb-1.5">{f.title}</h4>
-                <p className="text-sm text-muted-foreground leading-relaxed">{f.desc}</p>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
 
