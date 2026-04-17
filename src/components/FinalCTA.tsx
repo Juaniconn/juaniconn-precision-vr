@@ -88,7 +88,7 @@ export const FinalCTA = () => {
               <div className="flex flex-wrap items-center justify-center lg:justify-start gap-6 text-sm text-muted-foreground">
                 <span className="flex items-center gap-2">
                   <div className="w-2 h-2 bg-secondary rounded-full animate-pulse" />
-                  Envíos 24h México
+                  Envíos a todo el mundo
                 </span>
                 <span className="flex items-center gap-2">
                   <div className="w-2 h-2 bg-secondary rounded-full animate-pulse" />
