@@ -106,7 +106,7 @@ export const Header = () => {
             to="/" 
             className="flex items-center gap-2 px-3 py-2 rounded-full hover:bg-muted/50 transition-all duration-300 group"
           >
-            <img src={logo} alt="Beekonz" className="h-6 w-auto" />
+            <div className="bg-white rounded-full px-3 py-1"><img src={logo} alt="Beekonz" className="h-5 w-auto" /></div>
 
           </NavLink>
 
