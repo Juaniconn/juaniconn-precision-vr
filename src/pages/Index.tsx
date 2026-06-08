@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
+import { Features } from "@/components/Features";
 import { FaceTracking } from "@/components/FaceTracking";
 import { SolutionSection } from "@/components/SolutionSection";
 import { Kits } from "@/components/Kits";
@@ -21,7 +22,10 @@ const Index = () => {
       {/* 1️⃣ HERO - Beekonz Face Tracking launch */}
       <Hero />
 
-      {/* 2️⃣ FACE TRACKING PRODUCT - New dedicated section */}
+      {/* 2️⃣ FEATURES - Spec grid */}
+      <Features />
+
+      {/* 3️⃣ FACE TRACKING PRODUCT */}
       <FaceTracking />
 
       {/* 3️⃣ THE BEEKONZ SOLUTION - Feature cards */}
