@@ -37,11 +37,12 @@ export const Footer = () => {
   ];
 
   return (
-    <footer className="relative py-16 bg-primary text-primary-foreground overflow-hidden">
+    <footer className="relative py-16 bg-card text-foreground overflow-hidden border-t border-border">
       {/* Background pattern */}
-      <div className="absolute inset-0 opacity-10">
+      <div className="absolute inset-0 opacity-30">
         <div className="absolute inset-0 grid-pattern" />
       </div>
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-primary/10 rounded-full blur-[150px] pointer-events-none" />
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid md:grid-cols-4 gap-12 mb-12">
