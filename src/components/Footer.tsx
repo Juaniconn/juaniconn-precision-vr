@@ -48,13 +48,13 @@ export const Footer = () => {
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div className="space-y-4">
-            <div className="flex items-center gap-2 bg-primary-foreground rounded-lg px-3 py-2 w-fit">
+            <div className="flex items-center gap-2 bg-white rounded-lg px-3 py-2 w-fit">
               <img src={logo} alt="Beekonz" className="h-7 w-auto" />
             </div>
-            <p className="text-primary-foreground/80 text-sm leading-relaxed">
+            <p className="text-muted-foreground text-sm leading-relaxed">
               Precisión que se siente. Libertad que se vive.
             </p>
-            <p className="text-xs text-primary-foreground/60">
+            <p className="text-xs text-muted-foreground">
               Full Body Tracking de Alta Precisión para la comunidad hispana.
             </p>
             
@@ -66,7 +66,7 @@ export const Footer = () => {
                   href={social.href}
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="w-10 h-10 flex items-center justify-center rounded-full bg-primary-foreground/10 text-primary-foreground hover:bg-secondary hover:text-secondary-foreground transition-all duration-300"
+                  className="w-10 h-10 flex items-center justify-center rounded-full bg-muted text-foreground hover:bg-secondary hover:text-secondary-foreground transition-all duration-300"
                   title={social.name}
                 >
                   <social.icon className="w-5 h-5" />
@@ -77,12 +77,12 @@ export const Footer = () => {
 
           {/* Ayuda */}
           <div>
-            <h4 className="font-display font-semibold text-primary-foreground mb-6 text-lg">Ayuda</h4>
+            <h4 className="font-display font-semibold text-foreground mb-6 text-lg">Ayuda</h4>
             <ul className="space-y-3 text-sm">
               <li>
                 <NavLink 
                   to="/contacto" 
-                  className="text-primary-foreground/70 hover:text-secondary transition-all duration-300 flex items-center gap-2 group"
+                  className="text-muted-foreground hover:text-secondary transition-all duration-300 flex items-center gap-2 group"
                 >
                   <span className="group-hover:translate-x-1 transition-transform duration-300">Contacto</span>
                 </NavLink>
@@ -90,7 +90,7 @@ export const Footer = () => {
               <li>
                 <NavLink 
                   to="/seguimiento-pedidos" 
-                  className="text-primary-foreground/70 hover:text-secondary transition-all duration-300 flex items-center gap-2 group"
+                  className="text-muted-foreground hover:text-secondary transition-all duration-300 flex items-center gap-2 group"
                 >
                   <span className="group-hover:translate-x-1 transition-transform duration-300">Seguimiento de Pedidos</span>
                 </NavLink>
@@ -100,7 +100,7 @@ export const Footer = () => {
                   href="https://discord.gg/ekr3ERWJQ6" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-primary-foreground/70 hover:text-secondary transition-all duration-300 flex items-center gap-2 group"
+                  className="text-muted-foreground hover:text-secondary transition-all duration-300 flex items-center gap-2 group"
                 >
                   <DiscordIcon className="h-4 w-4" />
                   <span className="group-hover:translate-x-1 transition-transform duration-300">Discord</span>
@@ -110,7 +110,7 @@ export const Footer = () => {
               <li>
                 <NavLink 
                   to="/especificaciones-tecnicas" 
-                  className="text-primary-foreground/70 hover:text-secondary transition-all duration-300 flex items-center gap-2 group"
+                  className="text-muted-foreground hover:text-secondary transition-all duration-300 flex items-center gap-2 group"
                 >
                   <span className="group-hover:translate-x-1 transition-transform duration-300">Especificaciones</span>
                 </NavLink>
@@ -120,12 +120,12 @@ export const Footer = () => {
 
           {/* Políticas */}
           <div>
-            <h4 className="font-display font-semibold text-primary-foreground mb-6 text-lg">Políticas</h4>
+            <h4 className="font-display font-semibold text-foreground mb-6 text-lg">Políticas</h4>
             <ul className="space-y-3 text-sm">
               <li>
                 <NavLink 
                   to="/politica-privacidad" 
-                  className="text-primary-foreground/70 hover:text-secondary transition-all duration-300 flex items-center gap-2 group"
+                  className="text-muted-foreground hover:text-secondary transition-all duration-300 flex items-center gap-2 group"
                 >
                   <span className="group-hover:translate-x-1 transition-transform duration-300">Privacidad</span>
                 </NavLink>
@@ -133,7 +133,7 @@ export const Footer = () => {
               <li>
                 <NavLink 
                   to="/politica-venta" 
-                  className="text-primary-foreground/70 hover:text-secondary transition-all duration-300 flex items-center gap-2 group"
+                  className="text-muted-foreground hover:text-secondary transition-all duration-300 flex items-center gap-2 group"
                 >
                   <span className="group-hover:translate-x-1 transition-transform duration-300">Política de Venta</span>
                 </NavLink>
@@ -141,7 +141,7 @@ export const Footer = () => {
               <li>
                 <NavLink 
                   to="/garantia-devoluciones" 
-                  className="text-primary-foreground/70 hover:text-secondary transition-all duration-300 flex items-center gap-2 group"
+                  className="text-muted-foreground hover:text-secondary transition-all duration-300 flex items-center gap-2 group"
                 >
                   <span className="group-hover:translate-x-1 transition-transform duration-300">Garantía y Devoluciones</span>
                 </NavLink>
@@ -149,7 +149,7 @@ export const Footer = () => {
               <li>
                 <NavLink 
                   to="/terminos-condiciones" 
-                  className="text-primary-foreground/70 hover:text-secondary transition-all duration-300 flex items-center gap-2 group"
+                  className="text-muted-foreground hover:text-secondary transition-all duration-300 flex items-center gap-2 group"
                 >
                   <span className="group-hover:translate-x-1 transition-transform duration-300">Términos y Condiciones</span>
                 </NavLink>
@@ -159,14 +159,14 @@ export const Footer = () => {
 
           {/* Productos - Updated Stripe links */}
           <div>
-            <h4 className="font-display font-semibold text-primary-foreground mb-6 text-lg">Productos</h4>
+            <h4 className="font-display font-semibold text-foreground mb-6 text-lg">Productos</h4>
             <ul className="space-y-3 text-sm">
               <li>
                 <a 
                   href="https://buy.stripe.com/eVq28sf2dbwhfIX3Rj7g40o" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-primary-foreground/70 hover:text-secondary transition-all duration-300 flex items-center gap-2 group"
+                  className="text-muted-foreground hover:text-secondary transition-all duration-300 flex items-center gap-2 group"
                 >
                   <span className="group-hover:translate-x-1 transition-transform duration-300">Starter Pack (6)</span>
                   <ExternalLink className="h-3 w-3 opacity-50" />
@@ -177,7 +177,7 @@ export const Footer = () => {
                   href="https://buy.stripe.com/3cI9AUbQ10RDeETdrT7g40r" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-primary-foreground/70 hover:text-secondary transition-all duration-300 flex items-center gap-2 group"
+                  className="text-muted-foreground hover:text-secondary transition-all duration-300 flex items-center gap-2 group"
                 >
                   <span className="group-hover:translate-x-1 transition-transform duration-300">Advanced Pack (8)</span>
                   <ExternalLink className="h-3 w-3 opacity-50" />
@@ -188,7 +188,7 @@ export const Footer = () => {
                   href="https://buy.stripe.com/28EfZi9HTcAlfIX73v7g40p" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-primary-foreground/70 hover:text-secondary transition-all duration-300 flex items-center gap-2 group"
+                  className="text-muted-foreground hover:text-secondary transition-all duration-300 flex items-center gap-2 group"
                 >
                   <span className="group-hover:translate-x-1 transition-transform duration-300">Pro Pack (10)</span>
                   <ExternalLink className="h-3 w-3 opacity-50" />
@@ -199,12 +199,12 @@ export const Footer = () => {
         </div>
 
         {/* Bottom bar */}
-        <div className="pt-8 border-t border-primary-foreground/20">
+        <div className="pt-8 border-t border-border">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-sm text-primary-foreground/70">
+            <p className="text-sm text-muted-foreground">
               © {currentYear} Beekonz Trackers. Todos los derechos reservados.
             </p>
-            <p className="text-xs text-primary-foreground/50">
+            <p className="text-xs text-muted-foreground/70">
               Hecho con <span className="text-secondary">❤</span> para la comunidad VR hispana
             </p>
           </div>
