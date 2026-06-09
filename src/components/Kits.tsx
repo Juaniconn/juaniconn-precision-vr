@@ -76,10 +76,14 @@ export const Kits = () => {
         {/* Pricing Cards Grid - Neotix vertical pricing style */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {kits.map((kit, index) => (
-            <div
+            <motion.div
               key={index}
-              className="relative group animate-fade-in"
-              style={{ animationDelay: `${0.1 + index * 0.15}s` }}
+              className="relative group"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.6, delay: index * 0.15, ease: "easeOut" }}
+              whileHover={{ y: -8 }}
             >
               {/* Featured Badge */}
               {kit.featured && (
