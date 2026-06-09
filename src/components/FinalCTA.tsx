@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles, Star } from "lucide-react";
+import { motion } from "framer-motion";
 import productBlackClose from "@/assets/product_blackclose.png";
 
 export const FinalCTA = () => {
@@ -18,7 +19,13 @@ export const FinalCTA = () => {
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             {/* Image */}
-            <div className="relative animate-fade-in order-2 lg:order-1">
+            <motion.div
+              className="relative order-2 lg:order-1"
+              initial={{ opacity: 0, x: -40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.7, ease: "easeOut" }}
+            >
               {/* Decorative elements */}
               <div className="absolute -inset-8 bg-secondary/10 rounded-3xl blur-3xl" />
               <div className="absolute -inset-4 rounded-3xl border border-secondary/20" />
@@ -45,10 +52,16 @@ export const FinalCTA = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
             
             {/* Content */}
-            <div className="text-center lg:text-left space-y-8 animate-fade-in order-1 lg:order-2" style={{ animationDelay: '0.2s' }}>
+            <motion.div
+              className="text-center lg:text-left space-y-8 order-1 lg:order-2"
+              initial={{ opacity: 0, x: 40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
+            >
               {/* Badge */}
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/10 border border-secondary/30">
                 <Sparkles className="w-4 h-4 text-secondary" />
@@ -95,7 +108,7 @@ export const FinalCTA = () => {
                   5–7 días Internacional
                 </span>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
