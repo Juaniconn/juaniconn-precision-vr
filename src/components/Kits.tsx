@@ -1,5 +1,6 @@
 import { Check, ExternalLink, Star, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
 
 export const Kits = () => {
   const kits = [
