@@ -179,7 +179,7 @@ export const Kits = () => {
                   </a>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
 
