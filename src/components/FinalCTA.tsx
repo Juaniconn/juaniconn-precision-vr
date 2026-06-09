@@ -108,7 +108,7 @@ export const FinalCTA = () => {
                   5–7 días Internacional
                 </span>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
