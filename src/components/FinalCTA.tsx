@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles, Star } from "lucide-react";
+import { motion } from "framer-motion";
 import productBlackClose from "@/assets/product_blackclose.png";
 
 export const FinalCTA = () => {
