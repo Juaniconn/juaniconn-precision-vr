@@ -19,7 +19,13 @@ export const FinalCTA = () => {
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             {/* Image */}
-            <div className="relative animate-fade-in order-2 lg:order-1">
+            <motion.div
+              className="relative order-2 lg:order-1"
+              initial={{ opacity: 0, x: -40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.7, ease: "easeOut" }}
+            >
               {/* Decorative elements */}
               <div className="absolute -inset-8 bg-secondary/10 rounded-3xl blur-3xl" />
               <div className="absolute -inset-4 rounded-3xl border border-secondary/20" />
