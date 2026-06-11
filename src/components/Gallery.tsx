@@ -7,12 +7,12 @@ import purple from "@/assets/product-purple-bee.jpg.asset.json";
 import jester from "@/assets/product-jester.jpg.asset.json";
 
 const photos = [
-  { src: green.url, label: "Kit verde · Bee edition", span: "md:col-span-2 md:row-span-2" },
-  { src: blackBee.url, label: "Kit completo · Negro", span: "" },
-  { src: pastel.url, label: "Edición pastel · Verde + Morado", span: "" },
-  { src: yellow.url, label: "Kit amarillo + Hub USB 3.0", span: "md:col-span-2" },
-  { src: purple.url, label: "Edición Yoda · Púrpura", span: "" },
-  { src: jester.url, label: "Edición Jester · Naranja + Azul", span: "" },
+  { src: blackBee.url, label: "Edición Bee · Negro con detalles dorados", span: "md:col-span-2 md:row-span-2" },
+  { src: green.url, label: "Tracker individual · Verde menta", span: "" },
+  { src: yellow.url, label: "Kit amarillo con Hub USB 3.0", span: "" },
+  { src: jester.url, label: "Edición Jester · Naranja + Azul", span: "md:col-span-2" },
+  { src: purple.url, label: "Edición Bee · Púrpura", span: "" },
+  { src: pastel.url, label: "Edición Pastel · Verde + Morado", span: "" },
 ];
 
 export const Gallery = () => {
