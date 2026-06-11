@@ -13,7 +13,7 @@ const SeguimientoPedidos = () => {
     <main 
       className="min-h-screen"
       style={{
-        background: 'linear-gradient(180deg, #1A070E 0%, #25010B 100%)'
+        background: 'hsl(var(--background))'
       }}
     >
       <Header />
@@ -23,7 +23,7 @@ const SeguimientoPedidos = () => {
         {/* Background pattern */}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute inset-0" style={{
-            backgroundImage: `radial-gradient(circle at 2px 2px, #F3CC80 1px, transparent 0)`,
+            backgroundImage: `radial-gradient(circle at 2px 2px, hsl(var(--primary)) 1px, transparent 0)`,
             backgroundSize: '40px 40px'
           }} />
         </div>
@@ -33,23 +33,23 @@ const SeguimientoPedidos = () => {
           <div className="text-center mb-16">
             <h1 
               className="font-display text-4xl md:text-5xl lg:text-6xl tracking-wide mb-4"
-              style={{ color: '#FBF4F4' }}
+              style={{ color: 'hsl(var(--foreground))' }}
             >
               Seguimiento de Pedidos
             </h1>
             <div 
               className="w-24 h-1 mx-auto mb-6 rounded-full"
-              style={{ backgroundColor: '#F3CC80' }}
+              style={{ backgroundColor: 'hsl(var(--primary))' }}
             />
             <p 
               className="text-lg max-w-2xl mx-auto mb-8"
-              style={{ color: '#B8AEB2' }}
+              style={{ color: 'hsl(var(--muted-foreground))' }}
             >
               Visualiza el progreso de tu pedido en tiempo real.
             </p>
             <p 
               className="max-w-3xl mx-auto leading-relaxed"
-              style={{ color: '#E6DDE0' }}
+              style={{ color: 'hsl(var(--foreground) / 0.9)' }}
             >
               Desde la fabricación hasta la entrega final, aquí puedes consultar el estado actualizado de tu pedido directamente desde nuestro panel interno.
             </p>
@@ -60,8 +60,8 @@ const SeguimientoPedidos = () => {
             <div 
               className="rounded-2xl overflow-hidden p-1"
               style={{
-                background: '#2A0F18',
-                border: '1px solid #3A1C23',
+                background: 'hsl(var(--card))',
+                border: '1px solid hsl(var(--border))',
               }}
             >
               <iframe 
@@ -70,7 +70,7 @@ const SeguimientoPedidos = () => {
                 height="700"
                 style={{
                   background: 'transparent',
-                  border: '1px solid #3A1C23',
+                  border: '1px solid hsl(var(--border))',
                   borderRadius: '12px',
                 }}
                 title="Seguimiento de Pedidos Beekonz"
@@ -82,17 +82,17 @@ const SeguimientoPedidos = () => {
           <div 
             className="max-w-3xl mx-auto mb-12 p-5 rounded-xl flex items-start gap-4"
             style={{
-              background: '#2A0F18',
-              border: '1px solid #3A1C23',
+              background: 'hsl(var(--card))',
+              border: '1px solid hsl(var(--border))',
             }}
           >
             <Info 
               className="w-6 h-6 flex-shrink-0 mt-0.5"
-              style={{ color: '#F3CC80' }}
+              style={{ color: 'hsl(var(--primary))' }}
             />
             <p 
               className="text-sm md:text-base leading-relaxed"
-              style={{ color: '#B8AEB2' }}
+              style={{ color: 'hsl(var(--muted-foreground))' }}
             >
               Si tu pedido no aparece, verifica tu número de orden o contáctanos directamente para ayudarte.
             </p>
@@ -106,11 +106,11 @@ const SeguimientoPedidos = () => {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 px-8 py-4 font-semibold rounded-full transition-all duration-300 shadow-lg hover:shadow-xl group"
               style={{
-                backgroundColor: '#F3CC80',
-                color: '#25010B',
+                backgroundColor: 'hsl(var(--primary))',
+                color: 'hsl(var(--primary-foreground))',
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.boxShadow = '0 0 30px rgba(243, 204, 128, 0.4)';
+                e.currentTarget.style.boxShadow = '0 0 30px hsl(34 100% 50% / 0.5)';
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.boxShadow = '';

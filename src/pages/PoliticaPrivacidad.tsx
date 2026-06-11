@@ -13,7 +13,7 @@ const PoliticaPrivacidad = () => {
     <main 
       className="min-h-screen"
       style={{
-        background: 'linear-gradient(180deg, #1A070E 0%, #25010B 100%)'
+        background: 'hsl(var(--background))'
       }}
     >
       <Header />
@@ -21,7 +21,7 @@ const PoliticaPrivacidad = () => {
         {/* Background pattern */}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute inset-0" style={{
-            backgroundImage: `radial-gradient(circle at 2px 2px, #F3CC80 1px, transparent 0)`,
+            backgroundImage: `radial-gradient(circle at 2px 2px, hsl(var(--primary)) 1px, transparent 0)`,
             backgroundSize: '40px 40px'
           }} />
         </div>
@@ -31,19 +31,19 @@ const PoliticaPrivacidad = () => {
           <div className="text-center mb-16 animate-fade-in">
             <span 
               className="text-sm font-semibold tracking-widest uppercase mb-4 block"
-              style={{ color: '#F3CC80' }}
+              style={{ color: 'hsl(var(--primary))' }}
             >
               Legal
             </span>
             <h1 
               className="text-4xl md:text-5xl lg:text-6xl font-display mb-4"
-              style={{ color: '#FBF4F4' }}
+              style={{ color: 'hsl(var(--foreground))' }}
             >
-              POLÍTICA DE <span style={{ color: '#F3CC80' }}>PRIVACIDAD</span>
+              POLÍTICA DE <span style={{ color: 'hsl(var(--primary))' }}>PRIVACIDAD</span>
             </h1>
             <div 
               className="w-24 h-1 mx-auto rounded-full"
-              style={{ backgroundColor: '#F3CC80' }}
+              style={{ backgroundColor: 'hsl(var(--primary))' }}
             />
           </div>
 
@@ -53,8 +53,8 @@ const PoliticaPrivacidad = () => {
             <div 
               className="relative p-8 rounded-2xl overflow-hidden"
               style={{
-                background: '#2A0F18',
-                border: '1px solid #3A1C23',
+                background: 'hsl(var(--card))',
+                border: '1px solid hsl(var(--border))',
               }}
             >
               <div className="absolute top-0 right-0 w-64 h-64 bg-secondary/10 rounded-full blur-3xl" />
@@ -62,13 +62,13 @@ const PoliticaPrivacidad = () => {
                 <div className="flex items-center gap-3 mb-6">
                   <div 
                     className="w-12 h-12 rounded-xl flex items-center justify-center"
-                    style={{ backgroundColor: 'rgba(243, 204, 128, 0.15)' }}
+                    style={{ backgroundColor: 'hsl(var(--primary) / 0.15)' }}
                   >
-                    <Shield className="w-6 h-6" style={{ color: '#F3CC80' }} />
+                    <Shield className="w-6 h-6" style={{ color: 'hsl(var(--primary))' }} />
                   </div>
-                  <h2 className="text-2xl font-display" style={{ color: '#FBF4F4' }}>Protección de Datos</h2>
+                  <h2 className="text-2xl font-display" style={{ color: 'hsl(var(--foreground))' }}>Protección de Datos</h2>
                 </div>
-                <p className="leading-relaxed" style={{ color: '#E6DDE0' }}>
+                <p className="leading-relaxed" style={{ color: 'hsl(var(--foreground) / 0.9)' }}>
                   Protegemos tu información con seriedad. Solo recolectamos datos esenciales para procesar compras y ofrecer soporte.
                 </p>
               </div>
@@ -78,8 +78,8 @@ const PoliticaPrivacidad = () => {
             <div 
               className="relative p-8 rounded-2xl overflow-hidden"
               style={{
-                background: '#2A0F18',
-                border: '1px solid #3A1C23',
+                background: 'hsl(var(--card))',
+                border: '1px solid hsl(var(--border))',
               }}
             >
               <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl" />
@@ -87,31 +87,31 @@ const PoliticaPrivacidad = () => {
                 <div className="flex items-center gap-3 mb-6">
                   <div 
                     className="w-12 h-12 rounded-xl flex items-center justify-center"
-                    style={{ backgroundColor: 'rgba(243, 204, 128, 0.15)' }}
+                    style={{ backgroundColor: 'hsl(var(--primary) / 0.15)' }}
                   >
-                    <Database className="w-6 h-6" style={{ color: '#F3CC80' }} />
+                    <Database className="w-6 h-6" style={{ color: 'hsl(var(--primary))' }} />
                   </div>
-                  <h2 className="text-2xl font-display" style={{ color: '#FBF4F4' }}>Uso de Información</h2>
+                  <h2 className="text-2xl font-display" style={{ color: 'hsl(var(--foreground))' }}>Uso de Información</h2>
                 </div>
-                <div className="space-y-4" style={{ color: '#E6DDE0' }}>
+                <div className="space-y-4" style={{ color: 'hsl(var(--foreground) / 0.9)' }}>
                   <p className="leading-relaxed">
                     Nunca vendemos ni compartimos tu información con terceros. Tus datos se utilizan exclusivamente para:
                   </p>
                   <ul className="list-none space-y-3 ml-2">
                     <li className="flex items-center gap-3">
-                      <div className="w-2 h-2 rounded-full" style={{ backgroundColor: '#F3CC80' }} />
+                      <div className="w-2 h-2 rounded-full" style={{ backgroundColor: 'hsl(var(--primary))' }} />
                       Procesar y enviar pedidos
                     </li>
                     <li className="flex items-center gap-3">
-                      <div className="w-2 h-2 rounded-full" style={{ backgroundColor: '#F3CC80' }} />
+                      <div className="w-2 h-2 rounded-full" style={{ backgroundColor: 'hsl(var(--primary))' }} />
                       Comunicación post-compra
                     </li>
                     <li className="flex items-center gap-3">
-                      <div className="w-2 h-2 rounded-full" style={{ backgroundColor: '#F3CC80' }} />
+                      <div className="w-2 h-2 rounded-full" style={{ backgroundColor: 'hsl(var(--primary))' }} />
                       Soporte técnico
                     </li>
                     <li className="flex items-center gap-3">
-                      <div className="w-2 h-2 rounded-full" style={{ backgroundColor: '#F3CC80' }} />
+                      <div className="w-2 h-2 rounded-full" style={{ backgroundColor: 'hsl(var(--primary))' }} />
                       Mejora de productos y servicios
                     </li>
                   </ul>
@@ -123,8 +123,8 @@ const PoliticaPrivacidad = () => {
             <div 
               className="relative p-8 rounded-2xl overflow-hidden"
               style={{
-                background: '#2A0F18',
-                border: '1px solid #3A1C23',
+                background: 'hsl(var(--card))',
+                border: '1px solid hsl(var(--border))',
               }}
             >
               <div className="absolute top-0 left-1/2 w-64 h-64 bg-secondary/10 rounded-full blur-3xl" />
@@ -132,20 +132,20 @@ const PoliticaPrivacidad = () => {
                 <div className="flex items-center gap-3 mb-6">
                   <div 
                     className="w-12 h-12 rounded-xl flex items-center justify-center"
-                    style={{ backgroundColor: 'rgba(243, 204, 128, 0.15)' }}
+                    style={{ backgroundColor: 'hsl(var(--primary) / 0.15)' }}
                   >
-                    <Lock className="w-6 h-6" style={{ color: '#F3CC80' }} />
+                    <Lock className="w-6 h-6" style={{ color: 'hsl(var(--primary))' }} />
                   </div>
-                  <h2 className="text-2xl font-display" style={{ color: '#FBF4F4' }}>Tus Derechos</h2>
+                  <h2 className="text-2xl font-display" style={{ color: 'hsl(var(--foreground))' }}>Tus Derechos</h2>
                 </div>
-                <p className="leading-relaxed" style={{ color: '#E6DDE0' }}>
+                <p className="leading-relaxed" style={{ color: 'hsl(var(--foreground) / 0.9)' }}>
                   Puedes solicitar la eliminación total de tus datos en cualquier momento contactándonos a través de nuestro{" "}
                   <a 
                     href="https://discord.gg/ekr3ERWJQ6" 
                     target="_blank" 
                     rel="noopener noreferrer" 
                     className="font-medium hover:underline"
-                    style={{ color: '#F3CC80' }}
+                    style={{ color: 'hsl(var(--primary))' }}
                   >
                     Discord oficial
                   </a>.
@@ -161,11 +161,11 @@ const PoliticaPrivacidad = () => {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 px-8 py-4 font-semibold rounded-full transition-all duration-300 shadow-lg hover:shadow-xl group"
                 style={{
-                  backgroundColor: '#F3CC80',
-                  color: '#25010B',
+                  backgroundColor: 'hsl(var(--primary))',
+                  color: 'hsl(var(--primary-foreground))',
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.boxShadow = '0 0 30px rgba(243, 204, 128, 0.4)';
+                  e.currentTarget.style.boxShadow = '0 0 30px hsl(34 100% 50% / 0.5)';
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.boxShadow = '';
