@@ -13,7 +13,7 @@ export const Kits = () => {
         "6 Trackers Beekonz LSM6DSV",
         "1 Dongle Holyiot nRF52840",
         "6 Straps elásticas premium",
-        "Peso 10g · +50h batería",
+        "Peso 10g · 35–45h batería",
         "Colores: Blanco, Negro, Rojo"
       ],
       featured: false,

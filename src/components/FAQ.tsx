@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 export const FAQ = () => {
   const faqs = [
     { q: "¿Es compatible con SlimeVR?", a: "Sí, completamente compatible. Nuestros trackers utilizan el protocolo nativo de SlimeVR." },
-    { q: "¿Cuánto dura la batería?", a: "Más de 50 horas por carga completa. Puedes jugar varios días sin necesidad de recargar." },
+    { q: "¿Cuánto dura la batería?", a: "Entre 35 y 45 horas por carga completa. Puedes jugar varios días sin necesidad de recargar." },
     { q: "¿Cuánto pesa cada tracker?", a: "Solo 10 gramos. Ultra ligeros para máxima comodidad en sesiones largas." },
     { q: "¿Qué incluye cada paquete?", a: "Trackers, straps elásticos premium, dongle NRF52840, cable USB-C y guía digital." },
     { q: "¿Tienen soporte técnico?", a: "Sí, soporte 24/7 vía Discord. Respondemos en español siempre." },

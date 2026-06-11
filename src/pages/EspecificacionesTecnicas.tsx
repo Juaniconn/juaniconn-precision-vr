@@ -12,7 +12,7 @@ const EspecificacionesTecnicas = () => {
         "Magnetómetro: QMC6309",
         "MCU: nRF52840",
         "Peso: 10g",
-        "Autonomía: +50h",
+        "Autonomía: 35–45h",
         "LEDs de estado",
         "Carcasa compacta optimizada"
       ]
@@ -67,7 +67,7 @@ const EspecificacionesTecnicas = () => {
   ];
 
   const highlights = [
-    { icon: Battery, value: "+50h", label: "Batería" },
+    { icon: Battery, value: "35–45h", label: "Batería" },
     { icon: Feather, value: "10g", label: "Peso" },
     { icon: Radio, value: "25-35ms", label: "Latencia" },
     { icon: Zap, value: "6 ejes", label: "Precisión" },
