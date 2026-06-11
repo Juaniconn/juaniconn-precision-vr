@@ -5,7 +5,7 @@ export const SolutionSection = () => {
     {
       icon: Target,
       title: "Precisión de Tracking",
-      description: "Sensor ICM-45686 de 6 ejes con magnetómetro para movimientos naturales y fluidos en VR.",
+      description: "Sensor LSM6DSV de 6 ejes con magnetómetro para movimientos naturales y fluidos en VR.",
       highlight: "6 ejes de precisión"
     },
     {

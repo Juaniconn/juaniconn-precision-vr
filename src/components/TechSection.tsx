@@ -59,7 +59,7 @@ export const TechSection = () => {
                   </div>
                   <div>
                     <div className="text-xs text-muted-foreground">Sensor</div>
-                    <div className="text-lg font-bold text-secondary">ICM-45686</div>
+                    <div className="text-lg font-bold text-secondary">LSM6DSV</div>
                   </div>
                 </div>
               </div>

@@ -5,7 +5,7 @@ export const Features = () => {
   const features = [
     { icon: Battery, title: "+50 Horas de Batería", value: "+50h", description: "Sesiones largas sin interrupciones" },
     { icon: Feather, title: "Peso Ultraligero", value: "10g", description: "Olvidarás que los llevas puestos" },
-    { icon: Cpu, title: "Sensor ICM-45686", value: "6 ejes", description: "Alta estabilidad en cada movimiento" },
+    { icon: Cpu, title: "Sensor LSM6DSV", value: "6 ejes", description: "Alta estabilidad en cada movimiento" },
     { icon: Zap, title: "Latencia Ultra Baja", value: "25-35ms", description: "Respuesta fluida en tiempo real" },
     { icon: Wifi, title: "Compatible SlimeVR", value: "100%", description: "Nativo con el ecosistema SlimeVR" },
     { icon: Radio, title: "Dongle nRF52840", value: "Holyiot", description: "Dongle de alto rendimiento incluido" },

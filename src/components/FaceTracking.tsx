@@ -18,7 +18,7 @@ import ft3 from "@/assets/ft_3.jpg";
 import ft4 from "@/assets/ft_4.jpg";
 import ft5 from "@/assets/ft_5.jpg";
 
-const STRIPE_URL = "https://buy.stripe.com/eVq4gA6vHasdeETafH7g40s";
+const STRIPE_URL = "https://buy.stripe.com/9B628s7zL43PgN13Rj7g40u";
 
 export const FaceTracking = () => {
   const features = [

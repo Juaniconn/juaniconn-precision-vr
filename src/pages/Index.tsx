@@ -6,7 +6,9 @@ import { SolutionSection } from "@/components/SolutionSection";
 import { Kits } from "@/components/Kits";
 import { CustomSet } from "@/components/CustomSet";
 import { TechSection } from "@/components/TechSection";
+import { IMUComparison } from "@/components/IMUComparison";
 import { ExperienceSection } from "@/components/ExperienceSection";
+import { Gallery } from "@/components/Gallery";
 import { Testimonials } from "@/components/Testimonials";
 import { Shipping } from "@/components/Shipping";
 import { FAQ } from "@/components/FAQ";
@@ -40,13 +42,19 @@ const Index = () => {
       {/* 6️⃣ TECHNOLOGY & CONNECTIVITY */}
       <TechSection />
 
-      {/* 7️⃣ EXPERIENCE & TRACK RECORD */}
+      {/* 7️⃣ IMU COMPARISON */}
+      <IMUComparison />
+
+      {/* 8️⃣ EXPERIENCE & TRACK RECORD */}
       <ExperienceSection />
 
-      {/* 8️⃣ TESTIMONIALS */}
+      {/* 9️⃣ GALLERY */}
+      <Gallery />
+
+      {/* 🔟 TESTIMONIALS */}
       <Testimonials />
 
-      {/* 9️⃣ SHIPPING & SUPPORT */}
+      {/* SHIPPING & SUPPORT */}
       <Shipping />
 
       {/* 🔟 FAQ */}

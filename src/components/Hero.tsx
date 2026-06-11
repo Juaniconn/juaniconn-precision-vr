@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import heroTracker from "@/assets/hero-tracker.jpg";
 import trackerLifestyle from "@/assets/tracker-lifestyle.jpg";
 
-const STRIPE_URL = "https://buy.stripe.com/eVq4gA6vHasdeETafH7g40s";
+const STRIPE_URL = "https://buy.stripe.com/9B628s7zL43PgN13Rj7g40u";
 
 const useCount = (target: number, duration = 1800) => {
   const [value, setValue] = useState(0);
