@@ -83,9 +83,9 @@ export const Header = () => {
   ];
 
   const resourceItems = [
-    { name: "FAQ", href: "/faq", icon: HelpCircle },
-    { name: "Seguimiento de Pedidos", href: "/seguimiento-pedidos", icon: MapPin },
-    { name: "Especificaciones Técnicas", href: "/especificaciones-tecnicas", icon: Zap },
+    { name: "FAQ", href: "/faq", icon: HelpCircle, external: false },
+    { name: "Seguimiento de Pedidos", href: "/seguimiento-pedidos", icon: MapPin, external: false },
+    { name: "Especificaciones Técnicas", href: "/especificaciones-tecnicas", icon: Zap, external: false },
   ];
 
   const socialLinks = [
