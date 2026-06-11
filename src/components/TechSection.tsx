@@ -8,7 +8,7 @@ export const TechSection = () => {
     { icon: Radio, title: "Conexión Individual", description: "Cada tracker con su propio canal dedicado" },
     { icon: Signal, title: "Rango Extendido", description: "Funciona en espacios de 3×5m hasta 5×5m" },
     { icon: Cpu, title: "MCU nRF52840", description: "Procesador de bajo consumo y alta eficiencia" },
-    { icon: Battery, title: "+50h Autonomía", description: "Juega días sin recargar tus trackers" },
+    { icon: Battery, title: "35–45h Autonomía", description: "Juega días sin recargar tus trackers" },
   ];
 
   return (

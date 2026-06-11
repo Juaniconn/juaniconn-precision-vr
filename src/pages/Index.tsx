@@ -11,6 +11,7 @@ import { ExperienceSection } from "@/components/ExperienceSection";
 import { Gallery } from "@/components/Gallery";
 import { Testimonials } from "@/components/Testimonials";
 import { Shipping } from "@/components/Shipping";
+import { ShippingMap } from "@/components/ShippingMap";
 import { FAQ } from "@/components/FAQ";
 import { FinalCTA } from "@/components/FinalCTA";
 import { OrderTracking } from "@/components/OrderTracking";
@@ -53,6 +54,9 @@ const Index = () => {
 
       {/* 🔟 TESTIMONIALS */}
       <Testimonials />
+
+      {/* SHIPPING MAP - Worldwide */}
+      <ShippingMap />
 
       {/* SHIPPING & SUPPORT */}
       <Shipping />

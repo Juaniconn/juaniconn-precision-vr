@@ -6,7 +6,7 @@ const imus = [
     name: "LSM6DSV",
     badge: "Recomendado Beekonz",
     highlight: true,
-    pros: ["Fusión interna (sensor fusion on-chip)", "Drift ultra bajo", "Bajo consumo · +50h batería", "Ideal para FBT y baile en VRChat"],
+    pros: ["Fusión interna (sensor fusion on-chip)", "Drift ultra bajo", "Bajo consumo · 35–45h batería", "Ideal para FBT y baile en VRChat"],
     cons: [],
   },
   {
@@ -67,7 +67,7 @@ export const IMUComparison = () => {
           {[
             { icon: Target, title: "Drift Mínimo", desc: "Fusión interna que mantiene la orientación estable durante horas." },
             { icon: Zap, title: "Latencia 25–35ms", desc: "Respuesta instantánea para baile y movimientos rápidos." },
-            { icon: Battery, title: "Bajo Consumo", desc: "Más de 50 horas de batería en una sola carga." },
+            { icon: Battery, title: "Bajo Consumo", desc: "Entre 35 y 45 horas de batería en una sola carga." },
           ].map((f, i) => (
             <motion.div
               key={i}

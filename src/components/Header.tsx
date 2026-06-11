@@ -70,6 +70,7 @@ export const Header = () => {
     { name: "Starter Pack (6 Trackers)", href: "https://buy.stripe.com/eVq28sf2dbwhfIX3Rj7g40o", external: true },
     { name: "Advanced Pack (8 Trackers)", href: "https://buy.stripe.com/3cI9AUbQ10RDeETdrT7g40r", external: true },
     { name: "Pro Pack (10 Trackers)", href: "https://buy.stripe.com/28EfZi9HTcAlfIX73v7g40p", external: true },
+    { name: "Face Tracking", href: "https://buy.stripe.com/9B628s7zL43PgN13Rj7g40u", external: true },
     { name: "Crear mi Set", href: "https://discord.gg/ekr3ERWJQ6", external: true },
   ];
 
@@ -82,10 +83,9 @@ export const Header = () => {
   ];
 
   const resourceItems = [
-    { name: "FAQ", href: "/faq", icon: HelpCircle },
-    { name: "Seguimiento de Pedidos", href: "/seguimiento-pedidos", icon: MapPin },
-    { name: "Actualizaciones de Firmware", href: "https://github.com/DTQSYS/NRF52840-ICM45686-QMC6309", icon: Download, external: true },
-    { name: "Especificaciones Técnicas", href: "/especificaciones-tecnicas", icon: Zap },
+    { name: "FAQ", href: "/faq", icon: HelpCircle, external: false },
+    { name: "Seguimiento de Pedidos", href: "/seguimiento-pedidos", icon: MapPin, external: false },
+    { name: "Especificaciones Técnicas", href: "/especificaciones-tecnicas", icon: Zap, external: false },
   ];
 
   const socialLinks = [

@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export const Features = () => {
   const features = [
-    { icon: Battery, title: "+50 Horas de Batería", value: "+50h", description: "Sesiones largas sin interrupciones" },
+    { icon: Battery, title: "35–45 Horas de Batería", value: "35–45h", description: "Sesiones largas sin interrupciones" },
     { icon: Feather, title: "Peso Ultraligero", value: "10g", description: "Olvidarás que los llevas puestos" },
     { icon: Cpu, title: "Sensor LSM6DSV", value: "6 ejes", description: "Alta estabilidad en cada movimiento" },
     { icon: Zap, title: "Latencia Ultra Baja", value: "25-35ms", description: "Respuesta fluida en tiempo real" },
