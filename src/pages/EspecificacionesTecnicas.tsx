@@ -8,7 +8,7 @@ const EspecificacionesTecnicas = () => {
       icon: Cpu,
       title: "Hardware",
       items: [
-        "IMU: ICM-45686",
+        "IMU: LSM6DSV",
         "Magnetómetro: QMC6309",
         "MCU: nRF52840",
         "Peso: 10g",

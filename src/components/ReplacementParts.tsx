@@ -14,7 +14,7 @@ const parts = [
   },
   {
     name: "PCB de reemplazo",
-    description: "Placa con sensor ICM-45686",
+    description: "Placa con sensor LSM6DSV",
     image: "🔧"
   },
   {

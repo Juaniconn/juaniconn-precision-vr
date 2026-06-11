@@ -9,7 +9,7 @@ export const Kits = () => {
       description: "Perfecto para comenzar con Full Body Tracking.",
       price: "$5,999 MXN",
       items: [
-        "6 Trackers Beekonz ICM-45686",
+        "6 Trackers Beekonz LSM6DSV",
         "1 Dongle Holyiot nRF52840",
         "6 Straps elásticas premium",
         "Peso 10g · +50h batería",
@@ -24,7 +24,7 @@ export const Kits = () => {
       description: "Ideal para VRChat FBT completo.",
       price: "$7,499 MXN",
       items: [
-        "8 Trackers Beekonz ICM-45686",
+        "8 Trackers Beekonz LSM6DSV",
         "1 Dongle Holyiot nRF52840",
         "8 Straps elásticas premium",
         "Peso 10g · Latencia 25–35ms",
@@ -39,7 +39,7 @@ export const Kits = () => {
       description: "Para creadores, bailarines y setups avanzados.",
       price: "$8,999 MXN",
       items: [
-        "10 Trackers Beekonz ICM-45686",
+        "10 Trackers Beekonz LSM6DSV",
         "1 Dongle Holyiot nRF52840",
         "10 Straps elásticas premium",
         "Peso 10g · Máxima precisión",
