@@ -3,7 +3,7 @@ import { ArrowRight, Play, Zap, Globe, Truck, Gamepad2 } from "lucide-react";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import heroTracker from "@/assets/hero-tracker.jpg";
-import trackerLifestyle from "@/assets/tracker-lifestyle.jpg";
+import { Tracker3D } from "@/components/Tracker3D";
 
 const STRIPE_URL = "https://buy.stripe.com/eVq28sf2dbwhfIX3Rj7g40o";
 
