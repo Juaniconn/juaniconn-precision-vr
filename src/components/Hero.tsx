@@ -3,7 +3,7 @@ import { ArrowRight, Play, Zap, Globe, Truck, Gamepad2 } from "lucide-react";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import heroTracker from "@/assets/hero-tracker.jpg";
-import trackerLifestyle from "@/assets/tracker-lifestyle.jpg";
+import { Tracker3D } from "@/components/Tracker3D";
 
 const STRIPE_URL = "https://buy.stripe.com/eVq28sf2dbwhfIX3Rj7g40o";
 
@@ -181,30 +181,34 @@ export const Hero = () => {
             </motion.div>
           </div>
 
-          {/* Right column */}
+          {/* Right column - 3D rotating tracker */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 1.8 }}
             className="lg:col-span-5 relative hidden lg:block"
           >
-            <div className="absolute -inset-12 rounded-full blur-3xl opacity-60 animate-pulse-glow"
-              style={{ background: "radial-gradient(circle, hsl(34 100% 50% / 0.5), transparent 70%)" }} />
+            <div className="absolute -inset-12 rounded-full blur-3xl opacity-70 animate-pulse-glow"
+              style={{ background: "radial-gradient(circle, hsl(34 100% 50% / 0.55), transparent 70%)" }} />
 
-            <div className="relative rounded-3xl overflow-hidden border border-white/10 bg-card/50 backdrop-blur-sm">
-              <img
-                src={trackerLifestyle}
-                alt="Beekonz tracker en uso"
-                className="w-full h-[600px] object-cover"
-              />
-              <div className="absolute top-5 left-5 px-3 py-1.5 rounded-full bg-background/80 backdrop-blur-md border border-white/10">
-                <span className="text-xs uppercase tracking-widest font-semibold text-primary">● En Vivo</span>
+            <div className="relative rounded-3xl overflow-hidden border border-white/10 bg-gradient-to-b from-card/60 to-background/40 backdrop-blur-sm h-[600px]">
+              <div className="absolute inset-0">
+                <Tracker3D />
+              </div>
+
+              <div className="absolute top-5 left-5 px-3 py-1.5 rounded-full bg-background/80 backdrop-blur-md border border-white/10 z-10">
+                <span className="text-xs uppercase tracking-widest font-semibold text-primary">● Modelo 3D</span>
+              </div>
+              <div className="absolute top-5 right-5 px-3 py-1.5 rounded-full bg-background/80 backdrop-blur-md border border-white/10 z-10">
+                <span className="text-[10px] uppercase tracking-widest font-semibold text-foreground/80">
+                  LSM6DSV · 35-45h
+                </span>
               </div>
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 2.6, duration: 0.6 }}
-                className="absolute bottom-5 left-5 right-5 p-5 rounded-2xl bg-background/80 backdrop-blur-xl border border-white/10"
+                className="absolute bottom-5 left-5 right-5 p-5 rounded-2xl bg-background/80 backdrop-blur-xl border border-white/10 z-10"
               >
                 <div className="flex items-center justify-between">
                   <div>

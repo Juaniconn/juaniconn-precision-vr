@@ -1,34 +1,35 @@
 import { motion } from "framer-motion";
-import { MapPin, Plane, Globe2 } from "lucide-react";
+import { MapPin, Plane, Globe2, Truck } from "lucide-react";
 
-// Approximate equirectangular projection: lon [-180,180] -> x [0,1000], lat [85,-85] -> y [0,500]
+// Mexico bounding box approx: lon [-118, -86], lat [14.5, 32.7]
+const LON_MIN = -118;
+const LON_MAX = -86;
+const LAT_MIN = 14.5;
+const LAT_MAX = 32.7;
+const W = 1000;
+const H = 620;
+
 const project = (lon: number, lat: number) => ({
-  x: ((lon + 180) / 360) * 1000,
-  y: ((85 - lat) / 170) * 500,
+  x: ((lon - LON_MIN) / (LON_MAX - LON_MIN)) * W,
+  y: ((LAT_MAX - lat) / (LAT_MAX - LAT_MIN)) * H,
 });
 
 const CDMX = { lon: -99.13, lat: 19.43, name: "CDMX" };
 
-const destinations = [
-  { lon: -74.0, lat: 40.7, name: "Nueva York" },
-  { lon: -118.24, lat: 34.05, name: "Los Ángeles" },
-  { lon: -79.38, lat: 43.65, name: "Toronto" },
-  { lon: -3.7, lat: 40.41, name: "Madrid" },
-  { lon: 2.35, lat: 48.85, name: "París" },
-  { lon: -0.12, lat: 51.5, name: "Londres" },
-  { lon: 13.4, lat: 52.52, name: "Berlín" },
-  { lon: 139.69, lat: 35.68, name: "Tokio" },
-  { lon: 151.2, lat: -33.86, name: "Sídney" },
-  { lon: -46.63, lat: -23.55, name: "São Paulo" },
-  { lon: -58.38, lat: -34.6, name: "Buenos Aires" },
-  { lon: -70.66, lat: -33.45, name: "Santiago" },
-  { lon: -74.07, lat: 4.71, name: "Bogotá" },
-  // Nacionales
+const cities = [
   { lon: -103.35, lat: 20.66, name: "Guadalajara" },
   { lon: -100.31, lat: 25.68, name: "Monterrey" },
   { lon: -89.62, lat: 20.97, name: "Mérida" },
   { lon: -86.85, lat: 21.16, name: "Cancún" },
   { lon: -106.07, lat: 28.63, name: "Chihuahua" },
+  { lon: -110.31, lat: 24.14, name: "La Paz" },
+  { lon: -117.04, lat: 32.51, name: "Tijuana" },
+  { lon: -96.92, lat: 19.18, name: "Veracruz" },
+  { lon: -98.2, lat: 19.04, name: "Puebla" },
+  { lon: -101.18, lat: 19.7, name: "Morelia" },
+  { lon: -99.65, lat: 27.5, name: "Nuevo Laredo" },
+  { lon: -92.93, lat: 17.99, name: "Villahermosa" },
+  { lon: -96.72, lat: 17.06, name: "Oaxaca" },
 ];
 
 const origin = project(CDMX.lon, CDMX.lat);
@@ -40,12 +41,15 @@ const arcPath = (lon: number, lat: number) => {
   const dx = end.x - origin.x;
   const dy = end.y - origin.y;
   const dist = Math.hypot(dx, dy);
-  const lift = Math.min(160, dist * 0.45);
-  // Perpendicular offset upward
+  const lift = Math.min(120, dist * 0.35);
   const cx = mx;
   const cy = my - lift;
   return `M ${origin.x} ${origin.y} Q ${cx} ${cy} ${end.x} ${end.y}`;
 };
+
+// Simplified Mexico silhouette path (approximation in our viewBox)
+const MEXICO_PATH =
+  "M 50 180 L 90 150 L 140 130 L 180 110 L 230 95 L 270 90 L 310 110 L 340 145 L 360 180 L 380 200 L 410 215 L 445 235 L 470 260 L 495 285 L 520 310 L 545 335 L 575 360 L 605 380 L 640 395 L 680 410 L 720 425 L 760 440 L 800 455 L 840 470 L 870 485 L 895 500 L 910 480 L 920 455 L 925 425 L 915 400 L 895 380 L 870 365 L 840 350 L 810 335 L 780 320 L 750 305 L 720 290 L 690 275 L 660 260 L 630 250 L 605 240 L 580 235 L 555 230 L 530 220 L 510 200 L 495 180 L 480 160 L 465 145 L 445 130 L 420 120 L 395 115 L 365 110 L 335 100 L 305 85 L 270 70 L 230 60 L 190 65 L 150 80 L 115 100 L 85 130 L 60 160 Z";
 
 export const ShippingMap = () => {
   return (
@@ -62,34 +66,33 @@ export const ShippingMap = () => {
           className="text-center mb-12"
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 backdrop-blur-md border border-white/10 mb-6">
-            <Globe2 className="w-3.5 h-3.5 text-primary" />
+            <Truck className="w-3.5 h-3.5 text-primary" />
             <span className="text-xs uppercase tracking-[0.25em] font-semibold text-foreground/90">
-              Envíos Globales
+              Envíos Nacionales
             </span>
           </div>
           <h2 className="font-display text-5xl md:text-6xl lg:text-7xl tracking-tight">
-            <span className="block text-foreground">ENVIAMOS A TODO</span>
-            <span className="block text-gradient-gold">MÉXICO Y EL MUNDO</span>
+            <span className="block text-foreground">ENVIAMOS A TODA</span>
+            <span className="block text-gradient-gold">LA REPÚBLICA MEXICANA</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto mt-6">
             Desde nuestra base en <span className="text-primary font-semibold">Ciudad de México</span> llegamos a
-            todos los estados de la república y a más de 12 países alrededor del mundo.
+            los 32 estados de México. También realizamos{" "}
+            <span className="text-foreground font-semibold">envíos internacionales</span> a más de 12 países.
           </p>
         </motion.div>
 
-        {/* Animated world map */}
         <motion.div
           initial={{ opacity: 0, scale: 0.96 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
-          className="relative max-w-6xl mx-auto rounded-3xl overflow-hidden border border-border bg-card/40 backdrop-blur-sm p-4 md:p-8"
+          className="relative max-w-5xl mx-auto rounded-3xl overflow-hidden border border-border bg-card/40 backdrop-blur-sm p-4 md:p-8"
         >
-          <svg viewBox="0 0 1000 500" className="w-full h-auto" preserveAspectRatio="xMidYMid meet">
-            {/* Dotted world map (continent dot grid) */}
+          <svg viewBox={`0 0 ${W} ${H}`} className="w-full h-auto" preserveAspectRatio="xMidYMid meet">
             <defs>
-              <pattern id="dotPattern" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse">
-                <circle cx="1" cy="1" r="0.9" fill="hsl(var(--foreground) / 0.18)" />
+              <pattern id="mxDots" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
+                <circle cx="1.2" cy="1.2" r="1.1" fill="hsl(34 100% 50% / 0.35)" />
               </pattern>
               <radialGradient id="originGlow" cx="50%" cy="50%" r="50%">
                 <stop offset="0%" stopColor="hsl(34 100% 50%)" stopOpacity="0.9" />
@@ -100,26 +103,19 @@ export const ShippingMap = () => {
                 <stop offset="50%" stopColor="hsl(34 100% 50%)" stopOpacity="1" />
                 <stop offset="100%" stopColor="hsl(34 100% 50%)" stopOpacity="0.3" />
               </linearGradient>
+              <clipPath id="mxClip">
+                <path d={MEXICO_PATH} />
+              </clipPath>
             </defs>
 
-            {/* Continent silhouettes (simplified blobs) using dot pattern fill */}
-            <g opacity="0.9">
-              {/* North America */}
-              <path d="M120,90 Q180,70 250,100 Q310,120 320,180 Q300,230 260,260 Q200,280 160,250 Q110,210 100,160 Z" fill="url(#dotPattern)" />
-              {/* South America */}
-              <path d="M260,290 Q310,290 330,340 Q330,410 290,450 Q260,460 250,420 Q240,360 250,310 Z" fill="url(#dotPattern)" />
-              {/* Europe */}
-              <path d="M460,110 Q510,95 560,115 Q580,150 555,180 Q510,195 470,180 Q445,150 455,120 Z" fill="url(#dotPattern)" />
-              {/* Africa */}
-              <path d="M490,200 Q560,195 590,250 Q595,330 555,380 Q510,400 490,360 Q470,290 475,230 Z" fill="url(#dotPattern)" />
-              {/* Asia */}
-              <path d="M580,110 Q700,90 820,130 Q850,180 820,230 Q740,260 660,240 Q600,210 580,170 Z" fill="url(#dotPattern)" />
-              {/* Oceania */}
-              <path d="M810,340 Q870,330 900,360 Q905,400 870,415 Q820,415 800,385 Z" fill="url(#dotPattern)" />
+            {/* Mexico silhouette filled with dot pattern */}
+            <g>
+              <path d={MEXICO_PATH} fill="hsl(var(--card))" stroke="hsl(34 100% 50% / 0.4)" strokeWidth="1.5" />
+              <rect x="0" y="0" width={W} height={H} fill="url(#mxDots)" clipPath="url(#mxClip)" />
             </g>
 
-            {/* Arcs from CDMX */}
-            {destinations.map((d, i) => {
+            {/* Arcs from CDMX to each city */}
+            {cities.map((d, i) => {
               const path = arcPath(d.lon, d.lat);
               return (
                 <g key={d.name}>
@@ -127,30 +123,22 @@ export const ShippingMap = () => {
                     d={path}
                     fill="none"
                     stroke="url(#arcGradient)"
-                    strokeWidth="1.3"
+                    strokeWidth="1.6"
                     strokeLinecap="round"
                     initial={{ pathLength: 0, opacity: 0 }}
                     whileInView={{ pathLength: 1, opacity: 1 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 1.6, delay: 0.4 + i * 0.08, ease: "easeOut" }}
+                    transition={{ duration: 1.4, delay: 0.3 + i * 0.08, ease: "easeOut" }}
                   />
-                  {/* Plane traveling along the arc */}
-                  <motion.circle
-                    r="2.5"
-                    fill="hsl(34 100% 60%)"
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: [0, 1, 1, 0] }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 2, delay: 0.5 + i * 0.08, repeat: Infinity, repeatDelay: 4 }}
-                  >
-                    <animateMotion dur="2.2s" begin={`${0.5 + i * 0.08}s`} repeatCount="indefinite" path={path} />
-                  </motion.circle>
+                  <circle r="3" fill="hsl(34 100% 60%)">
+                    <animateMotion dur="2.4s" begin={`${0.4 + i * 0.08}s`} repeatCount="indefinite" path={path} />
+                  </circle>
                 </g>
               );
             })}
 
-            {/* Destination dots */}
-            {destinations.map((d, i) => {
+            {/* Destination dots & labels */}
+            {cities.map((d, i) => {
               const p = project(d.lon, d.lat);
               return (
                 <motion.g
@@ -158,36 +146,45 @@ export const ShippingMap = () => {
                   initial={{ opacity: 0, scale: 0 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: 1.6 + i * 0.06 }}
+                  transition={{ duration: 0.4, delay: 1.4 + i * 0.05 }}
                 >
-                  <circle cx={p.x} cy={p.y} r="6" fill="hsl(34 100% 50% / 0.2)" />
-                  <circle cx={p.x} cy={p.y} r="2.5" fill="hsl(34 100% 60%)" />
+                  <circle cx={p.x} cy={p.y} r="8" fill="hsl(34 100% 50% / 0.2)" />
+                  <circle cx={p.x} cy={p.y} r="3.5" fill="hsl(34 100% 60%)" />
+                  <text
+                    x={p.x + 8}
+                    y={p.y - 8}
+                    fill="hsl(var(--foreground))"
+                    fontSize="12"
+                    fontWeight="600"
+                  >
+                    {d.name}
+                  </text>
                 </motion.g>
               );
             })}
 
-            {/* CDMX origin pulse */}
-            <circle cx={origin.x} cy={origin.y} r="30" fill="url(#originGlow)" />
+            {/* CDMX origin */}
+            <circle cx={origin.x} cy={origin.y} r="35" fill="url(#originGlow)" />
             <motion.circle
               cx={origin.x}
               cy={origin.y}
-              r="6"
+              r="7"
               fill="hsl(34 100% 50%)"
               animate={{ scale: [1, 1.4, 1] }}
               transition={{ duration: 1.8, repeat: Infinity }}
               style={{ transformOrigin: `${origin.x}px ${origin.y}px` }}
             />
-            <circle cx={origin.x} cy={origin.y} r="3" fill="white" />
-            <text x={origin.x + 10} y={origin.y - 8} fill="hsl(34 100% 60%)" fontSize="11" fontWeight="700">
+            <circle cx={origin.x} cy={origin.y} r="3.5" fill="white" />
+            <text x={origin.x + 12} y={origin.y - 10} fill="hsl(34 100% 60%)" fontSize="14" fontWeight="800">
               CDMX
             </text>
           </svg>
 
-          {/* Floating stats */}
-          <div className="grid grid-cols-3 gap-3 md:gap-6 mt-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 mt-6">
             {[
               { icon: MapPin, value: "32", label: "Estados México" },
-              { icon: Plane, value: "12+", label: "Países" },
+              { icon: Truck, value: "2-4", label: "Días nacional" },
+              { icon: Plane, value: "12+", label: "Países (Internacional)" },
               { icon: Globe2, value: "100%", label: "Tracking incluido" },
             ].map((s, i) => (
               <motion.div
@@ -203,7 +200,7 @@ export const ShippingMap = () => {
                 </div>
                 <div>
                   <div className="font-display text-2xl text-foreground leading-none">{s.value}</div>
-                  <div className="text-xs uppercase tracking-widest text-muted-foreground mt-1">{s.label}</div>
+                  <div className="text-[10px] uppercase tracking-widest text-muted-foreground mt-1">{s.label}</div>
                 </div>
               </motion.div>
             ))}
@@ -211,7 +208,8 @@ export const ShippingMap = () => {
         </motion.div>
 
         <p className="text-center text-sm text-muted-foreground mt-6">
-          Envíos nacionales 2–4 días hábiles · Internacionales 5–10 días hábiles
+          Cada envío incluye <span className="text-primary font-semibold">número de rastreo</span>. Consulta tu pedido
+          en la sección de <a href="#order-tracking" className="text-primary underline underline-offset-4">Seguimiento de Pedidos</a>.
         </p>
       </div>
     </section>

@@ -1,14 +1,14 @@
 import { Star, Quote } from "lucide-react";
 import { motion } from "framer-motion";
-import green from "@/assets/product-green.jpg.asset.json";
-import blackBee from "@/assets/product-black-bee.jpg.asset.json";
-import jester from "@/assets/product-jester.jpg.asset.json";
+import green from "@/assets/product-green.jpg";
+import blackBee from "@/assets/product-black-bee.jpg";
+import jester from "@/assets/product-jester.jpg";
 
 export const Testimonials = () => {
   const testimonials = [
-    { name: "Carlos Mendoza", country: "México", image: green.url, text: "Precisión increíble. Nunca tuve mejor tracking en VRChat. Los movimientos se sienten naturales y fluidos.", role: "Creador de contenido VR" },
-    { name: "Sofía Ramírez", country: "Argentina", image: jester.url, text: "El envío llegó rapidísimo y el soporte en Discord es excelente. ¡24/7 de verdad!", role: "Bailarina VR" },
-    { name: "Diego Torres", country: "Colombia", image: blackBee.url, text: "Ligero, cómodo y estable. Puedo bailar horas sin que se muevan. Súper recomendado.", role: "Entusiasta VRChat" },
+    { name: "Carlos Mendoza", country: "México", image: green, text: "Precisión increíble. Nunca tuve mejor tracking en VRChat. Los movimientos se sienten naturales y fluidos.", role: "Creador de contenido VR" },
+    { name: "Sofía Ramírez", country: "Argentina", image: jester, text: "El envío llegó rapidísimo y el soporte en Discord es excelente. ¡24/7 de verdad!", role: "Bailarina VR" },
+    { name: "Diego Torres", country: "Colombia", image: blackBee, text: "Ligero, cómodo y estable. Puedo bailar horas sin que se muevan. Súper recomendado.", role: "Entusiasta VRChat" },
   ];
 
   return (
