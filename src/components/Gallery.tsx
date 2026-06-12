@@ -1,18 +1,18 @@
 import { motion } from "framer-motion";
-import green from "@/assets/product-green.jpg.asset.json";
-import yellow from "@/assets/product-yellow-hub.jpg.asset.json";
-import pastel from "@/assets/product-pastel.jpg.asset.json";
-import blackBee from "@/assets/product-black-bee.jpg.asset.json";
-import purple from "@/assets/product-purple-bee.jpg.asset.json";
-import jester from "@/assets/product-jester.jpg.asset.json";
+import green from "@/assets/product-green.jpg";
+import yellow from "@/assets/product-yellow-hub.jpg";
+import pastel from "@/assets/product-pastel.jpg";
+import blackBee from "@/assets/product-black-bee.jpg";
+import purple from "@/assets/product-purple-bee.jpg";
+import jester from "@/assets/product-jester.jpg";
 
 const photos = [
-  { src: blackBee.url, label: "Edición Bee · Negro con detalles dorados", span: "md:col-span-2 md:row-span-2" },
-  { src: green.url, label: "Tracker individual · Verde menta", span: "" },
-  { src: yellow.url, label: "Kit amarillo con Hub USB 3.0", span: "" },
-  { src: jester.url, label: "Edición Jester · Naranja + Azul", span: "md:col-span-2" },
-  { src: purple.url, label: "Edición Bee · Púrpura", span: "" },
-  { src: pastel.url, label: "Edición Pastel · Verde + Morado", span: "" },
+  { src: yellow, label: "Kit Amarillo · Hub USB 3.0 incluido" },
+  { src: blackBee, label: "Edición Bee · Negro con dorado" },
+  { src: green, label: "Edición Frog · Verde" },
+  { src: purple, label: "Edición Bee · Púrpura" },
+  { src: jester, label: "Edición Jester · Naranja + Azul" },
+  { src: pastel, label: "Edición Pastel · Verde + Morado" },
 ];
 
 export const Gallery = () => {
@@ -42,7 +42,7 @@ export const Gallery = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 max-w-6xl mx-auto">
           {photos.map((p, i) => (
             <motion.div
               key={i}
@@ -51,7 +51,7 @@ export const Gallery = () => {
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: i * 0.08 }}
               whileHover={{ y: -6 }}
-              className={`group relative rounded-2xl overflow-hidden border border-border bg-card aspect-square ${p.span}`}
+              className="group relative rounded-2xl overflow-hidden border border-border bg-card aspect-[4/5] sm:aspect-square"
             >
               <img
                 src={p.src}
@@ -59,9 +59,9 @@ export const Gallery = () => {
                 loading="lazy"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent opacity-60 group-hover:opacity-80 transition-opacity" />
-              <div className="absolute bottom-4 left-4 right-4">
-                <span className="inline-block text-xs font-semibold tracking-wider uppercase text-primary bg-background/80 backdrop-blur px-3 py-1.5 rounded-full border border-primary/30">
+              <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent opacity-70 group-hover:opacity-90 transition-opacity" />
+              <div className="absolute bottom-3 left-3 right-3">
+                <span className="inline-block text-[10px] sm:text-xs font-semibold tracking-wider uppercase text-primary bg-background/85 backdrop-blur px-2.5 py-1.5 rounded-full border border-primary/30">
                   {p.label}
                 </span>
               </div>
