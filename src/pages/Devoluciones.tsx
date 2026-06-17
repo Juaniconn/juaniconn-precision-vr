@@ -1,178 +1,77 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { Shield, RotateCcw, Headphones } from "lucide-react";
-
-const DiscordIcon = ({ className }: { className?: string }) => (
-  <svg className={className} viewBox="0 0 24 24" fill="currentColor">
-    <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
-  </svg>
-);
+import { Shield, RotateCcw, Headphones, AlertCircle } from "lucide-react";
 
 const Devoluciones = () => {
   return (
-    <main 
-      className="min-h-screen"
-      style={{
-        background: 'hsl(var(--background))'
-      }}
-    >
+    <main className="min-h-screen bg-background">
       <Header />
       <div className="pt-32 pb-20 px-4 relative overflow-hidden">
-        {/* Background pattern */}
         <div className="absolute inset-0 opacity-5">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `radial-gradient(circle at 2px 2px, hsl(var(--primary)) 1px, transparent 0)`,
-            backgroundSize: '40px 40px'
-          }} />
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage: `radial-gradient(circle at 2px 2px, hsl(var(--primary)) 1px, transparent 0)`,
+              backgroundSize: "40px 40px",
+            }}
+          />
         </div>
-        
+
         <div className="container mx-auto max-w-4xl relative z-10">
-          {/* Hero */}
           <div className="text-center mb-16 animate-fade-in">
-            <span 
-              className="text-sm font-semibold tracking-widest uppercase mb-4 block"
-              style={{ color: 'hsl(var(--primary))' }}
-            >
-              Políticas
-            </span>
-            <h1 
-              className="text-4xl md:text-5xl lg:text-6xl font-display mb-4"
-              style={{ color: 'hsl(var(--foreground))' }}
-            >
-              GARANTÍA Y <span style={{ color: 'hsl(var(--primary))' }}>DEVOLUCIONES</span>
+            <span className="text-sm font-semibold tracking-widest uppercase mb-4 block text-primary">Políticas</span>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display mb-4 text-foreground">
+              POLÍTICA DE <span className="text-primary">REEMBOLSO Y GARANTÍA</span>
             </h1>
-            <div 
-              className="w-24 h-1 mx-auto rounded-full"
-              style={{ backgroundColor: 'hsl(var(--primary))' }}
-            />
+            <div className="w-24 h-1 mx-auto rounded-full bg-primary" />
+            <p className="text-sm text-muted-foreground mt-6">
+              Cancelación de pedidos, devoluciones y garantía limitada Beekonz
+            </p>
           </div>
 
-          {/* Content */}
-          <div className="space-y-8 animate-fade-in" style={{ animationDelay: '0.1s' }}>
-            {/* Garantía */}
-            <div 
-              className="relative p-8 rounded-2xl overflow-hidden"
-              style={{
-                background: 'hsl(var(--card))',
-                border: '1px solid hsl(var(--border))',
-              }}
-            >
-              <div className="absolute top-0 right-0 w-64 h-64 bg-secondary/10 rounded-full blur-3xl" />
-              <div className="relative">
-                <div className="flex items-center gap-3 mb-6">
-                  <div 
-                    className="w-12 h-12 rounded-xl flex items-center justify-center"
-                    style={{ backgroundColor: 'hsl(var(--primary) / 0.15)' }}
-                  >
-                    <Shield className="w-6 h-6" style={{ color: 'hsl(var(--primary))' }} />
-                  </div>
-                  <h2 className="text-2xl font-display" style={{ color: 'hsl(var(--foreground))' }}>Garantía Beekonz</h2>
-                </div>
-                <div className="space-y-4 leading-relaxed" style={{ color: 'hsl(var(--foreground) / 0.9)' }}>
-                  <p>
-                    Todos nuestros trackers cuentan con <strong style={{ color: 'hsl(var(--foreground))' }}>90 días de garantía</strong> contra defectos de fabricación.
-                  </p>
-                  <p>
-                    La garantía incluye reparación o reemplazo sin costo adicional para el cliente.
-                  </p>
-                </div>
-              </div>
-            </div>
+          <div className="space-y-8 animate-fade-in">
+            <Section icon={RotateCcw} title="Cancelación de Pedidos">
+              <p>
+                Los pedidos solo pueden ser cancelados <strong className="text-foreground">antes</strong> de ser
+                enviados. Una vez que el pedido ha sido enviado, la venta es considerada final y no reembolsable.
+              </p>
+            </Section>
 
-            {/* Devoluciones */}
-            <div 
-              className="relative p-8 rounded-2xl overflow-hidden"
-              style={{
-                background: 'hsl(var(--card))',
-                border: '1px solid hsl(var(--border))',
-              }}
-            >
-              <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl" />
-              <div className="relative">
-                <div className="flex items-center gap-3 mb-6">
-                  <div 
-                    className="w-12 h-12 rounded-xl flex items-center justify-center"
-                    style={{ backgroundColor: 'hsl(var(--primary) / 0.15)' }}
-                  >
-                    <RotateCcw className="w-6 h-6" style={{ color: 'hsl(var(--primary))' }} />
-                  </div>
-                  <h2 className="text-2xl font-display" style={{ color: 'hsl(var(--foreground))' }}>Devoluciones</h2>
-                </div>
-                <div className="space-y-4 leading-relaxed" style={{ color: 'hsl(var(--foreground) / 0.9)' }}>
-                  <p>
-                    Aceptamos devoluciones dentro de los primeros <strong style={{ color: 'hsl(var(--foreground))' }}>7 días</strong> posteriores a la recepción del producto.
-                  </p>
-                  <p>
-                    El producto debe estar en perfecto estado, completo y con su empaque original.
-                  </p>
-                  <p>
-                    El cliente cubre el costo de envío de devolución, excepto en casos de defectos de fábrica.
-                  </p>
-                </div>
-              </div>
-            </div>
+            <Section icon={AlertCircle} title="Devoluciones y Reembolsos">
+              <p>
+                No aceptamos devoluciones ni ofrecemos reembolsos por productos ya entregados.
+              </p>
+              <p>
+                Si necesitas una reparación o reemplazo por un artículo defectuoso o que presente fallas, contáctanos
+                a través de nuestro{" "}
+                <a href="https://discord.gg/ekr3ERWJQ6" target="_blank" rel="noopener noreferrer" className="text-primary font-medium hover:underline">
+                  Discord oficial
+                </a>
+                . Asegúrate de incluir tu número de pedido e información de contacto para poder asistirte.
+              </p>
+            </Section>
 
-            {/* Proceso */}
-            <div 
-              className="relative p-8 rounded-2xl overflow-hidden"
-              style={{
-                background: 'hsl(var(--card))',
-                border: '1px solid hsl(var(--border))',
-              }}
-            >
-              <div className="absolute top-0 left-1/2 w-64 h-64 bg-secondary/10 rounded-full blur-3xl" />
-              <div className="relative">
-                <div className="flex items-center gap-3 mb-6">
-                  <div 
-                    className="w-12 h-12 rounded-xl flex items-center justify-center"
-                    style={{ backgroundColor: 'hsl(var(--primary) / 0.15)' }}
-                  >
-                    <Headphones className="w-6 h-6" style={{ color: 'hsl(var(--primary))' }} />
-                  </div>
-                  <h2 className="text-2xl font-display" style={{ color: 'hsl(var(--foreground))' }}>Proceso de Soporte</h2>
-                </div>
-                <div className="space-y-4 leading-relaxed" style={{ color: 'hsl(var(--foreground) / 0.9)' }}>
-                  <p>
-                    Para iniciar un proceso de garantía o devolución, contáctanos directamente a través de nuestro{" "}
-                    <a 
-                      href="https://discord.gg/ekr3ERWJQ6" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="font-medium hover:underline"
-                      style={{ color: 'hsl(var(--primary))' }}
-                    >
-                      Discord oficial
-                    </a>.
-                  </p>
-                  <p>
-                    Nuestro equipo te guiará paso a paso y resolverá cualquier duda.
-                  </p>
-                </div>
-              </div>
-            </div>
+            <Section icon={Shield} title="Garantía Limitada Beekonz — 180 días">
+              <p>
+                Todos los productos Beekonz están cubiertos por una <strong className="text-foreground">garantía
+                limitada de 180 días</strong>. Si un producto se confirma como defectuoso o presenta fallas dentro de
+                este período de garantía, enviaremos un reemplazo por la pieza dañada o defectuosa.
+              </p>
+              <p className="text-sm text-muted-foreground">
+                La garantía no cubre: daños por mal uso, modificaciones externas, descargas eléctricas, golpes o
+                desgaste normal.
+              </p>
+            </Section>
 
-            {/* CTA Button */}
-            <div className="text-center pt-8">
-              <a
-                href="https://discord.gg/ekr3ERWJQ6"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 px-8 py-4 font-semibold rounded-full transition-all duration-300 shadow-lg hover:shadow-xl group"
-                style={{
-                  backgroundColor: 'hsl(var(--primary))',
-                  color: 'hsl(var(--primary-foreground))',
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.boxShadow = '0 0 30px hsl(34 100% 50% / 0.5)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.boxShadow = '';
-                }}
-              >
-                <DiscordIcon className="w-5 h-5" />
-                <span>Contactar Soporte</span>
-              </a>
-            </div>
+            <Section icon={Headphones} title="Proceso de Soporte">
+              <p>
+                Para iniciar un proceso de garantía, contáctanos por{" "}
+                <a href="https://discord.gg/ekr3ERWJQ6" target="_blank" rel="noopener noreferrer" className="text-primary font-medium hover:underline">
+                  Discord
+                </a>
+                . Nuestro equipo te guiará paso a paso y resolverá cualquier duda en el menor tiempo posible.
+              </p>
+            </Section>
           </div>
         </div>
       </div>
@@ -180,5 +79,20 @@ const Devoluciones = () => {
     </main>
   );
 };
+
+const Section = ({ icon: Icon, title, children }: { icon: any; title: string; children: React.ReactNode }) => (
+  <div className="relative p-8 rounded-2xl overflow-hidden bg-card border border-border">
+    <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl" />
+    <div className="relative">
+      <div className="flex items-center gap-3 mb-6">
+        <div className="w-12 h-12 rounded-xl flex items-center justify-center bg-primary/15">
+          <Icon className="w-6 h-6 text-primary" />
+        </div>
+        <h2 className="text-2xl font-display text-foreground">{title}</h2>
+      </div>
+      <div className="space-y-4 leading-relaxed text-foreground/90">{children}</div>
+    </div>
+  </div>
+);
 
 export default Devoluciones;

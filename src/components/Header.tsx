@@ -15,7 +15,7 @@ import {
   Zap,
   MapPin
 } from "lucide-react";
-import logo from "@/assets/beekonz_logo_light.png";
+const logo = "/Beekonz_White_Logo.png";
 
 const DiscordIcon = ({ className }: { className?: string }) => (
   <svg className={className} viewBox="0 0 24 24" fill="currentColor">
@@ -106,7 +106,9 @@ export const Header = () => {
             to="/" 
             className="flex items-center gap-2 px-3 py-2 rounded-full hover:bg-muted/50 transition-all duration-300 group"
           >
-            <div className="bg-white rounded-full px-3 py-1"><img src={logo} alt="Beekonz" className="h-5 w-auto" /></div>
+            <div className="px-2 py-1"><img src={logo} alt="Beekonz" className="h-6 w-auto" /></div>
+
+
 
           </NavLink>
 

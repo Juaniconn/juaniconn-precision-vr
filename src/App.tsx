@@ -9,6 +9,8 @@ import Mision from "./pages/Mision";
 import Contacto from "./pages/Contacto";
 import PoliticaPrivacidad from "./pages/PoliticaPrivacidad";
 import PoliticaVenta from "./pages/PoliticaVenta";
+import PoliticaEnvios from "./pages/PoliticaEnvios";
+
 import Devoluciones from "./pages/Devoluciones";
 import FAQPage from "./pages/FAQPage";
 import EspecificacionesTecnicas from "./pages/EspecificacionesTecnicas";
@@ -31,6 +33,8 @@ const App = () => (
           <Route path="/contacto" element={<Contacto />} />
           <Route path="/politica-privacidad" element={<PoliticaPrivacidad />} />
           <Route path="/politica-venta" element={<PoliticaVenta />} />
+          <Route path="/politica-envios" element={<PoliticaEnvios />} />
+
           <Route path="/garantia-devoluciones" element={<Devoluciones />} />
           <Route path="/faq" element={<FAQPage />} />
           <Route path="/especificaciones-tecnicas" element={<EspecificacionesTecnicas />} />

@@ -52,35 +52,37 @@ export const Hero = () => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
 
   useEffect(() => {
-    const t = setTimeout(() => setIntroDone(true), 1600);
+    const t = setTimeout(() => setIntroDone(true), 1100);
     return () => clearTimeout(t);
   }, []);
 
+
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-background pt-28 pb-20">
-      {/* Cinematic intro overlay */}
+      {/* Cinematic intro overlay (shorter so page never gets stuck on black) */}
       <motion.div
         initial={{ scaleY: 1 }}
         animate={{ scaleY: 0 }}
-        transition={{ duration: 1.1, delay: 0.6, ease: [0.85, 0, 0.15, 1] }}
+        transition={{ duration: 0.8, delay: 0.3, ease: [0.85, 0, 0.15, 1] }}
         style={{ transformOrigin: "top" }}
         className="absolute inset-0 z-30 bg-background pointer-events-none"
       />
       <motion.div
         initial={{ opacity: 1 }}
         animate={{ opacity: 0 }}
-        transition={{ duration: 0.6, delay: 1.4 }}
+        transition={{ duration: 0.4, delay: 0.9 }}
         className="absolute inset-0 z-30 flex items-center justify-center pointer-events-none"
       >
         <motion.span
           initial={{ letterSpacing: "1em", opacity: 0 }}
           animate={{ letterSpacing: "0.3em", opacity: introDone ? 0 : 1 }}
-          transition={{ duration: 1, ease: "easeOut" }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
           className="font-display text-primary text-3xl md:text-6xl tracking-[0.3em]"
         >
           BEEKONZ
         </motion.span>
       </motion.div>
+
 
       {/* Cinematic background image */}
       <div className="absolute inset-0">
