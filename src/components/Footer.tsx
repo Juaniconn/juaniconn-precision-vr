@@ -1,6 +1,6 @@
 import { NavLink } from "./NavLink";
 import { ExternalLink } from "lucide-react";
-import logo from "@/assets/beekonz_logo_light.png";
+const logo = "/Beekonz_White_Logo.png";
 
 const DiscordIcon = ({ className }: { className?: string }) => (
   <svg className={className} viewBox="0 0 24 24" fill="currentColor">
@@ -48,9 +48,10 @@ export const Footer = () => {
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div className="space-y-4">
-            <div className="flex items-center gap-2 bg-white rounded-lg px-3 py-2 w-fit">
-              <img src={logo} alt="Beekonz" className="h-7 w-auto" />
+            <div className="flex items-center gap-2 w-fit">
+              <img src={logo} alt="Beekonz" className="h-10 w-auto" />
             </div>
+
             <p className="text-muted-foreground text-sm leading-relaxed">
               Precisión que se siente. Libertad que se vive.
             </p>
@@ -140,12 +141,21 @@ export const Footer = () => {
               </li>
               <li>
                 <NavLink 
+                  to="/politica-envios" 
+                  className="text-muted-foreground hover:text-secondary transition-all duration-300 flex items-center gap-2 group"
+                >
+                  <span className="group-hover:translate-x-1 transition-transform duration-300">Política de Envíos</span>
+                </NavLink>
+              </li>
+              <li>
+                <NavLink 
                   to="/garantia-devoluciones" 
                   className="text-muted-foreground hover:text-secondary transition-all duration-300 flex items-center gap-2 group"
                 >
-                  <span className="group-hover:translate-x-1 transition-transform duration-300">Garantía y Devoluciones</span>
+                  <span className="group-hover:translate-x-1 transition-transform duration-300">Garantía y Reembolsos</span>
                 </NavLink>
               </li>
+
               <li>
                 <NavLink 
                   to="/terminos-condiciones" 

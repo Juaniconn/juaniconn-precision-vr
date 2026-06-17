@@ -1,180 +1,173 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { Shield, Database, Lock } from "lucide-react";
-
-const DiscordIcon = ({ className }: { className?: string }) => (
-  <svg className={className} viewBox="0 0 24 24" fill="currentColor">
-    <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
-  </svg>
-);
+import { Shield, Database, Lock, Globe, Users, FileText } from "lucide-react";
 
 const PoliticaPrivacidad = () => {
   return (
-    <main 
-      className="min-h-screen"
-      style={{
-        background: 'hsl(var(--background))'
-      }}
-    >
+    <main className="min-h-screen bg-background">
       <Header />
       <div className="pt-32 pb-20 px-4 relative overflow-hidden">
-        {/* Background pattern */}
         <div className="absolute inset-0 opacity-5">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `radial-gradient(circle at 2px 2px, hsl(var(--primary)) 1px, transparent 0)`,
-            backgroundSize: '40px 40px'
-          }} />
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage: `radial-gradient(circle at 2px 2px, hsl(var(--primary)) 1px, transparent 0)`,
+              backgroundSize: "40px 40px",
+            }}
+          />
         </div>
-        
+
         <div className="container mx-auto max-w-4xl relative z-10">
-          {/* Hero */}
           <div className="text-center mb-16 animate-fade-in">
-            <span 
-              className="text-sm font-semibold tracking-widest uppercase mb-4 block"
-              style={{ color: 'hsl(var(--primary))' }}
-            >
-              Legal
-            </span>
-            <h1 
-              className="text-4xl md:text-5xl lg:text-6xl font-display mb-4"
-              style={{ color: 'hsl(var(--foreground))' }}
-            >
-              POLÍTICA DE <span style={{ color: 'hsl(var(--primary))' }}>PRIVACIDAD</span>
+            <span className="text-sm font-semibold tracking-widest uppercase mb-4 block text-primary">Legal</span>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display mb-4 text-foreground">
+              POLÍTICA DE <span className="text-primary">PRIVACIDAD</span>
             </h1>
-            <div 
-              className="w-24 h-1 mx-auto rounded-full"
-              style={{ backgroundColor: 'hsl(var(--primary))' }}
-            />
+            <div className="w-24 h-1 mx-auto rounded-full bg-primary" />
+            <p className="text-sm text-muted-foreground mt-6">Última actualización: 17 de junio de 2026</p>
           </div>
 
-          {/* Content */}
-          <div className="space-y-8 animate-fade-in" style={{ animationDelay: '0.1s' }}>
-            {/* Protección de Datos */}
-            <div 
-              className="relative p-8 rounded-2xl overflow-hidden"
-              style={{
-                background: 'hsl(var(--card))',
-                border: '1px solid hsl(var(--border))',
-              }}
-            >
-              <div className="absolute top-0 right-0 w-64 h-64 bg-secondary/10 rounded-full blur-3xl" />
-              <div className="relative">
-                <div className="flex items-center gap-3 mb-6">
-                  <div 
-                    className="w-12 h-12 rounded-xl flex items-center justify-center"
-                    style={{ backgroundColor: 'hsl(var(--primary) / 0.15)' }}
-                  >
-                    <Shield className="w-6 h-6" style={{ color: 'hsl(var(--primary))' }} />
-                  </div>
-                  <h2 className="text-2xl font-display" style={{ color: 'hsl(var(--foreground))' }}>Protección de Datos</h2>
-                </div>
-                <p className="leading-relaxed" style={{ color: 'hsl(var(--foreground) / 0.9)' }}>
-                  Protegemos tu información con seriedad. Solo recolectamos datos esenciales para procesar compras y ofrecer soporte.
-                </p>
-              </div>
-            </div>
+          <div className="space-y-8 animate-fade-in">
+            <Section icon={FileText} title="Introducción">
+              <p>
+                Beekonz opera esta tienda en línea y sitio web (beekonz.shop), incluyendo toda la información,
+                contenido, funciones, herramientas, productos y servicios relacionados (los "Servicios"). Esta Política
+                de Privacidad describe cómo recopilamos, usamos y divulgamos tu información personal cuando usas
+                nuestros Servicios o te comunicas con nosotros.
+              </p>
+              <p>Al utilizar los Servicios, reconoces haber leído y comprendido esta Política de Privacidad.</p>
+            </Section>
 
-            {/* Uso de Información */}
-            <div 
-              className="relative p-8 rounded-2xl overflow-hidden"
-              style={{
-                background: 'hsl(var(--card))',
-                border: '1px solid hsl(var(--border))',
-              }}
-            >
-              <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl" />
-              <div className="relative">
-                <div className="flex items-center gap-3 mb-6">
-                  <div 
-                    className="w-12 h-12 rounded-xl flex items-center justify-center"
-                    style={{ backgroundColor: 'hsl(var(--primary) / 0.15)' }}
-                  >
-                    <Database className="w-6 h-6" style={{ color: 'hsl(var(--primary))' }} />
-                  </div>
-                  <h2 className="text-2xl font-display" style={{ color: 'hsl(var(--foreground))' }}>Uso de Información</h2>
-                </div>
-                <div className="space-y-4" style={{ color: 'hsl(var(--foreground) / 0.9)' }}>
-                  <p className="leading-relaxed">
-                    Nunca vendemos ni compartimos tu información con terceros. Tus datos se utilizan exclusivamente para:
-                  </p>
-                  <ul className="list-none space-y-3 ml-2">
-                    <li className="flex items-center gap-3">
-                      <div className="w-2 h-2 rounded-full" style={{ backgroundColor: 'hsl(var(--primary))' }} />
-                      Procesar y enviar pedidos
-                    </li>
-                    <li className="flex items-center gap-3">
-                      <div className="w-2 h-2 rounded-full" style={{ backgroundColor: 'hsl(var(--primary))' }} />
-                      Comunicación post-compra
-                    </li>
-                    <li className="flex items-center gap-3">
-                      <div className="w-2 h-2 rounded-full" style={{ backgroundColor: 'hsl(var(--primary))' }} />
-                      Soporte técnico
-                    </li>
-                    <li className="flex items-center gap-3">
-                      <div className="w-2 h-2 rounded-full" style={{ backgroundColor: 'hsl(var(--primary))' }} />
-                      Mejora de productos y servicios
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+            <Section icon={Database} title="Información Personal que Recopilamos">
+              <p>Podemos recopilar información personal incluyendo:</p>
+              <ul className="space-y-2 list-none">
+                {[
+                  "Nombre, dirección de facturación y de envío",
+                  "Correo electrónico y número de teléfono",
+                  "Información de pago y de transacción",
+                  "Credenciales y preferencias de cuenta",
+                  "Mensajes enviados a través del formulario de contacto o Discord",
+                  "Dispositivo, navegador, dirección IP y datos de uso",
+                ].map((item) => (
+                  <li key={item} className="flex items-center gap-3">
+                    <span className="w-2 h-2 rounded-full bg-primary" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </Section>
 
-            {/* Tus Derechos */}
-            <div 
-              className="relative p-8 rounded-2xl overflow-hidden"
-              style={{
-                background: 'hsl(var(--card))',
-                border: '1px solid hsl(var(--border))',
-              }}
-            >
-              <div className="absolute top-0 left-1/2 w-64 h-64 bg-secondary/10 rounded-full blur-3xl" />
-              <div className="relative">
-                <div className="flex items-center gap-3 mb-6">
-                  <div 
-                    className="w-12 h-12 rounded-xl flex items-center justify-center"
-                    style={{ backgroundColor: 'hsl(var(--primary) / 0.15)' }}
-                  >
-                    <Lock className="w-6 h-6" style={{ color: 'hsl(var(--primary))' }} />
-                  </div>
-                  <h2 className="text-2xl font-display" style={{ color: 'hsl(var(--foreground))' }}>Tus Derechos</h2>
-                </div>
-                <p className="leading-relaxed" style={{ color: 'hsl(var(--foreground) / 0.9)' }}>
-                  Puedes solicitar la eliminación total de tus datos en cualquier momento contactándonos a través de nuestro{" "}
-                  <a 
-                    href="https://discord.gg/ekr3ERWJQ6" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="font-medium hover:underline"
-                    style={{ color: 'hsl(var(--primary))' }}
-                  >
-                    Discord oficial
-                  </a>.
-                </p>
-              </div>
-            </div>
+            <Section icon={Shield} title="Cómo Usamos tu Información">
+              <p>Usamos la información personal para:</p>
+              <ul className="space-y-2 list-none">
+                {[
+                  "Procesar y cumplir con tus pedidos",
+                  "Brindar soporte al cliente vía Discord y formulario web",
+                  "Enviar actualizaciones de envío y pedido",
+                  "Prevenir fraude y proteger las transacciones",
+                  "Cumplir con obligaciones legales",
+                  "Mejorar nuestra tienda y servicios",
+                ].map((item) => (
+                  <li key={item} className="flex items-center gap-3">
+                    <span className="w-2 h-2 rounded-full bg-primary" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <p className="font-semibold text-foreground">No vendemos tu información personal.</p>
+            </Section>
 
-            {/* CTA Button */}
-            <div className="text-center pt-8">
-              <a
-                href="https://discord.gg/ekr3ERWJQ6"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 px-8 py-4 font-semibold rounded-full transition-all duration-300 shadow-lg hover:shadow-xl group"
-                style={{
-                  backgroundColor: 'hsl(var(--primary))',
-                  color: 'hsl(var(--primary-foreground))',
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.boxShadow = '0 0 30px hsl(34 100% 50% / 0.5)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.boxShadow = '';
-                }}
-              >
-                <DiscordIcon className="w-5 h-5" />
-                <span>Contactar Soporte</span>
-              </a>
-            </div>
+            <Section icon={Users} title="Cómo Compartimos la Información">
+              <p>Podemos compartir información personal con:</p>
+              <ul className="space-y-2 list-none">
+                {[
+                  "Procesadores de pago (Stripe)",
+                  "Proveedores de envío y logística",
+                  "Plataformas de seguimiento de pedidos (ClickUp)",
+                  "Proveedores de prevención de fraude y analítica",
+                  "Autoridades legales cuando la ley lo requiera",
+                ].map((item) => (
+                  <li key={item} className="flex items-center gap-3">
+                    <span className="w-2 h-2 rounded-full bg-primary" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <p>Estos proveedores solo procesan la información necesaria para prestar sus servicios.</p>
+            </Section>
+
+            <Section icon={Lock} title="Seguridad y Retención">
+              <p>Aplicamos medidas razonables para proteger tu información. Sin embargo, ningún sistema puede garantizar seguridad absoluta.</p>
+              <p>Retenemos la información personal únicamente durante el tiempo necesario para:</p>
+              <ul className="space-y-2 list-none">
+                {["Prestar nuestros servicios", "Cumplir obligaciones legales", "Resolver disputas", "Hacer cumplir acuerdos"].map((item) => (
+                  <li key={item} className="flex items-center gap-3">
+                    <span className="w-2 h-2 rounded-full bg-primary" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </Section>
+
+            <Section icon={Shield} title="Tus Derechos">
+              <p>Dependiendo de tu ubicación, puedes tener derecho a:</p>
+              <ul className="space-y-2 list-none">
+                {[
+                  "Acceder a tu información personal",
+                  "Solicitar corrección o eliminación",
+                  "Solicitar una copia de tus datos",
+                  "Optar por no recibir comunicaciones de marketing",
+                ].map((item) => (
+                  <li key={item} className="flex items-center gap-3">
+                    <span className="w-2 h-2 rounded-full bg-primary" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <p>
+                Las solicitudes pueden enviarse a través de nuestro{" "}
+                <a href="https://discord.gg/ekr3ERWJQ6" target="_blank" rel="noopener noreferrer" className="text-primary font-medium hover:underline">
+                  Discord oficial
+                </a>
+                .
+              </p>
+            </Section>
+
+            <Section icon={Users} title="Privacidad de Menores">
+              <p>
+                Nuestros Servicios no están destinados a menores de edad. No recopilamos intencionalmente información
+                personal de menores.
+              </p>
+            </Section>
+
+            <Section icon={Globe} title="Transferencias Internacionales">
+              <p>
+                Tu información puede ser procesada en países distintos al tuyo, incluyendo Estados Unidos, donde las
+                leyes de protección de datos pueden diferir.
+              </p>
+            </Section>
+
+            <Section icon={FileText} title="Cambios a esta Política">
+              <p>
+                Podemos actualizar esta Política de Privacidad de vez en cuando. Las actualizaciones se publicarán en
+                esta página con la fecha revisada.
+              </p>
+            </Section>
+
+            <Section icon={Lock} title="Contacto">
+              <p>
+                Para preguntas sobre esta Política de Privacidad o para ejercer tus derechos de privacidad, contáctanos
+                a través de nuestro{" "}
+                <a href="https://discord.gg/ekr3ERWJQ6" target="_blank" rel="noopener noreferrer" className="text-primary font-medium hover:underline">
+                  Discord oficial
+                </a>{" "}
+                o visita{" "}
+                <a href="https://beekonz.shop" className="text-primary font-medium hover:underline">
+                  beekonz.shop
+                </a>
+                .
+              </p>
+            </Section>
           </div>
         </div>
       </div>
@@ -182,5 +175,20 @@ const PoliticaPrivacidad = () => {
     </main>
   );
 };
+
+const Section = ({ icon: Icon, title, children }: { icon: any; title: string; children: React.ReactNode }) => (
+  <div className="relative p-8 rounded-2xl overflow-hidden bg-card border border-border">
+    <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl" />
+    <div className="relative">
+      <div className="flex items-center gap-3 mb-6">
+        <div className="w-12 h-12 rounded-xl flex items-center justify-center bg-primary/15">
+          <Icon className="w-6 h-6 text-primary" />
+        </div>
+        <h2 className="text-2xl font-display text-foreground">{title}</h2>
+      </div>
+      <div className="space-y-4 leading-relaxed text-foreground/90">{children}</div>
+    </div>
+  </div>
+);
 
 export default PoliticaPrivacidad;
